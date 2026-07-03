@@ -4,6 +4,7 @@ const languageSelect = document.querySelector("[data-language-select]");
 const productSelect = document.querySelector("#productSelect");
 const rfqForm = document.querySelector("#rfqForm");
 const formStatus = document.querySelector("[data-form-status]");
+const rfqEmail = "info@jsgpump.com";
 
 const languages = ["en", "zh", "fr", "de", "id", "it", "ko", "es"];
 const langAttrs = {
@@ -197,14 +198,16 @@ const english = {
     links: [
       ["Diaphragm air pumps", "Diaphragm liquid pumps", "Piston air pumps", "Mini compressors"],
       ["Medical", "Cosmetic", "Liquid dispensing", "Automation"],
-      ["sales@jsgpump.com", "Submit RFQ", "View catalog pages"]
+      ["info@jsgpump.com", "Submit RFQ", "View catalog pages"]
     ],
     copyright: "© 2026 Shenzhen Jingsuguang Technology Co., Ltd."
   },
   status: {
     required: "Please complete all required fields before submitting.",
     email: "Please enter a valid business email address.",
-    success: "Thank you. Please send this RFQ to sales@jsgpump.com for {product} model matching.",
+    sending: "Sending your RFQ...",
+    success: "Thank you. Your RFQ has been sent to info@jsgpump.com.",
+    serverError: "We could not send the RFQ right now. Please email info@jsgpump.com directly.",
     commentRequired: "Please enter a name and comment.",
     commentSuccess: "Your email client should open with the message prepared.",
     application: "Application: {industry}. Please recommend a suitable micro pump solution."
@@ -238,7 +241,7 @@ const copy = {
     industriesHeading: { eyebrow: "应用行业", title: "适用于对泵稳定性和噪音控制要求高的设备类别。" },
     rfq: { ...english.rfq, eyebrow: "工程询盘", title: "提交泵需求，获取匹配系列建议。", body: "请提供介质、流量、压力、真空、电压、工作周期、噪音目标、尺寸限制、启动负载、环境，以及需要单泵还是泵加配件模块。", strip: "OEM 和 ODM 泵项目工程选型建议", labels: ["姓名 *", "公司 *", "邮箱 *", "国家 / 地区", "产品类型", "年采购量", "介质 / 流量 / 压力 / 真空 / 电压", "应用说明 *"], quantityPlaceholder: "例如 5,000 件/年", requirementsPlaceholder: "例如 空气，12V，5 L/min，-70 kPa，低噪音", messagePlaceholder: "请说明设备类型、负载启动、环境、尺寸限制和配件需求。", submit: "提交询盘" },
     footer: { ...english.footer, headings: ["产品", "应用", "询盘"], copyright: "© 2026 深圳市精塑光科技有限公司" },
-    status: { ...english.status, required: "请先填写所有必填项。", email: "请输入有效的商务邮箱。", success: "谢谢。请将此询盘发送至 sales@jsgpump.com，我们将为 {product} 匹配型号。", commentRequired: "请填写姓名和问题。", commentSuccess: "邮件客户端应已打开并生成内容。", application: "应用：{industry}。请推荐合适的微型泵方案。" }
+    status: { ...english.status, required: "请先填写所有必填项。", email: "请输入有效的商务邮箱。", sending: "正在发送询盘...", success: "谢谢，您的询盘已发送至 info@jsgpump.com。", serverError: "暂时无法发送询盘，请直接邮件联系 info@jsgpump.com。", commentRequired: "请填写姓名和问题。", commentSuccess: "邮件客户端应已打开并生成内容。", application: "应用：{industry}。请推荐合适的微型泵方案。" }
   },
   fr: {
     ...english,
@@ -255,7 +258,7 @@ const copy = {
     askSpecs: "Demander les specs",
     rfq: { ...english.rfq, eyebrow: "RFQ technique", title: "Envoyez vos exigences. Recevez une recommandation de série.", strip: "Recommandations techniques pour projets OEM et ODM", labels: ["Nom *", "Société *", "Email *", "Pays / Région", "Type de produit", "Quantité annuelle", "Fluide / débit / pression / vide / tension", "Description de l'application *"], submit: "Envoyer RFQ" },
     footer: { ...english.footer, headings: ["Produits", "Applications", "RFQ"] },
-    status: { ...english.status, required: "Veuillez remplir tous les champs obligatoires.", email: "Veuillez saisir une adresse email professionnelle valide.", success: "Merci. Veuillez envoyer cette RFQ à sales@jsgpump.com pour la sélection {product}.", commentRequired: "Veuillez saisir un nom et une question.", commentSuccess: "Votre client email devrait s'ouvrir avec le message préparé.", application: "Application : {industry}. Veuillez recommander une micro-pompe adaptée." }
+    status: { ...english.status, required: "Veuillez remplir tous les champs obligatoires.", email: "Veuillez saisir une adresse email professionnelle valide.", sending: "Envoi de votre RFQ...", success: "Merci. Votre RFQ a été envoyée à info@jsgpump.com.", serverError: "Impossible d'envoyer la RFQ maintenant. Veuillez écrire à info@jsgpump.com.", commentRequired: "Veuillez saisir un nom et une question.", commentSuccess: "Votre client email devrait s'ouvrir avec le message préparé.", application: "Application : {industry}. Veuillez recommander une micro-pompe adaptée." }
   },
   de: {
     ...english,
@@ -272,7 +275,7 @@ const copy = {
     askSpecs: "Daten anfragen",
     rfq: { ...english.rfq, eyebrow: "Technische Anfrage", title: "Senden Sie Ihre Pumpenanforderungen. Sie erhalten eine passende Serienempfehlung.", strip: "Technische Empfehlungen für OEM- und ODM-Projekte", labels: ["Name *", "Unternehmen *", "E-Mail *", "Land / Region", "Produkttyp", "Jahresmenge", "Medium / Durchfluss / Druck / Vakuum / Spannung", "Anwendungsbeschreibung *"], submit: "RFQ senden" },
     footer: { ...english.footer, headings: ["Produkte", "Anwendungen", "RFQ"] },
-    status: { ...english.status, required: "Bitte füllen Sie alle Pflichtfelder aus.", email: "Bitte geben Sie eine gültige geschäftliche E-Mail-Adresse ein.", success: "Danke. Bitte senden Sie diese RFQ an sales@jsgpump.com zur Modellauswahl für {product}.", commentRequired: "Bitte geben Sie Namen und Frage ein.", commentSuccess: "Ihr E-Mail-Client sollte mit der vorbereiteten Nachricht geöffnet werden.", application: "Anwendung: {industry}. Bitte empfehlen Sie eine geeignete Mikropumpenlösung." }
+    status: { ...english.status, required: "Bitte füllen Sie alle Pflichtfelder aus.", email: "Bitte geben Sie eine gültige geschäftliche E-Mail-Adresse ein.", sending: "Ihre RFQ wird gesendet...", success: "Danke. Ihre RFQ wurde an info@jsgpump.com gesendet.", serverError: "Die RFQ konnte nicht gesendet werden. Bitte schreiben Sie an info@jsgpump.com.", commentRequired: "Bitte geben Sie Namen und Frage ein.", commentSuccess: "Ihr E-Mail-Client sollte mit der vorbereiteten Nachricht geöffnet werden.", application: "Anwendung: {industry}. Bitte empfehlen Sie eine geeignete Mikropumpenlösung." }
   },
   id: {
     ...english,
@@ -910,6 +913,15 @@ const setPlaceholders = (selector, values) => {
   });
 };
 
+const setRfqLabels = (labels) => {
+  const fieldNames = ["name", "company", "email", "country", "product", "quantity", "requirements", "message"];
+  fieldNames.forEach((fieldName, index) => {
+    const field = rfqForm?.elements[fieldName];
+    const label = field?.closest("label")?.querySelector("span");
+    if (label && labels[index]) label.textContent = labels[index];
+  });
+};
+
 const applyLanguage = (lang) => {
   const active = copy[lang] ? lang : "en";
   const t = copy[active];
@@ -997,7 +1009,7 @@ const applyLanguage = (lang) => {
   setText("#rfq h2", t.rfq.title);
   setText("#rfq .rfq-copy p:not(.eyebrow)", t.rfq.body);
   setText(".contact-strip span", t.rfq.strip);
-  setTexts(".rfq-form label span", t.rfq.labels);
+  setRfqLabels(t.rfq.labels);
   setPlaceholders(".rfq-form input[name='quantity'], .rfq-form input[name='requirements'], .rfq-form textarea[name='message']", [
     t.rfq.quantityPlaceholder,
     t.rfq.requirementsPlaceholder,
@@ -1156,12 +1168,30 @@ document.querySelectorAll("[data-industry]").forEach((link) => {
   });
 });
 
-rfqForm?.addEventListener("submit", (event) => {
+const getFormValue = (name) => (rfqForm?.elements[name]?.value || "").trim();
+
+const buildRfqPayload = (selectedProduct) => {
+  return {
+    name: getFormValue("name"),
+    company: getFormValue("company"),
+    email: getFormValue("email"),
+    country: getFormValue("country"),
+    product: selectedProduct,
+    quantity: getFormValue("quantity"),
+    requirements: getFormValue("requirements"),
+    message: getFormValue("message"),
+    website: getFormValue("website"),
+    pageUrl: window.location.href
+  };
+};
+
+rfqForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
   const status = window.__activeCopy?.status || english.status;
   const requiredFields = Array.from(rfqForm.querySelectorAll("[required]"));
   const invalidField = requiredFields.find((field) => !field.value.trim());
   const email = rfqForm.elements.email;
+  const submitButton = rfqForm.querySelector("button[type='submit']");
 
   if (invalidField) {
     invalidField.focus();
@@ -1176,8 +1206,28 @@ rfqForm?.addEventListener("submit", (event) => {
   }
 
   const selectedOption = productSelect?.selectedOptions[0]?.textContent || rfqForm.elements.product.value;
-  formStatus.textContent = status.success.replace("{product}", selectedOption);
-  rfqForm.classList.add("is-submitted");
+  const payload = buildRfqPayload(selectedOption);
+
+  formStatus.textContent = status.sending;
+  submitButton && (submitButton.disabled = true);
+
+  try {
+    const response = await fetch("/api/rfq", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
+
+    if (!response.ok) throw new Error("RFQ request failed");
+
+    formStatus.textContent = status.success;
+    rfqForm.classList.add("is-submitted");
+    rfqForm.reset();
+  } catch (error) {
+    formStatus.textContent = status.serverError;
+  } finally {
+    submitButton && (submitButton.disabled = false);
+  }
 });
 
 applyLanguage(detectInitialLanguage());
