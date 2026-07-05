@@ -18,6 +18,17 @@ const langAttrs = {
   es: "es"
 };
 
+const languageOptionLabels = {
+  en: "EN English",
+  zh: "CN 简体中文",
+  fr: "FR Français",
+  de: "DE Deutsch",
+  id: "ID Bahasa Indonesia",
+  it: "IT Italiano",
+  ko: "KR 한국어",
+  es: "ES Español"
+};
+
 const baseProducts = [
   "BD-01/02/03/04 Diaphragm Air Pumps",
   "BD-01W/02W/03W/04W/07W Diaphragm Liquid Pumps",
@@ -929,6 +940,7 @@ const applyLanguage = (lang) => {
   document.documentElement.lang = langAttrs[active];
   document.title = t.metaTitle;
   document.querySelector("meta[name='description']")?.setAttribute("content", t.metaDescription || english.metaDescription);
+  refreshLanguageOptionLabels();
   languageSelect && (languageSelect.value = active);
 
   setText(".brand small", t.brandSmall);
@@ -1033,6 +1045,7 @@ const applyLanguage = (lang) => {
   setText(".footer-bottom span", t.footer.copyright);
 
   window.__activeCopy = t;
+  applyStaticPageLanguage(active);
 };
 
 function setTextFrom(root, selector, value) {
@@ -1044,6 +1057,381 @@ function setSectionHeading(sectionSelector, heading) {
   setText(`${sectionSelector} .section-heading .eyebrow`, heading.eyebrow);
   setText(`${sectionSelector} .section-heading h2`, heading.title);
   setText(`${sectionSelector} .section-heading p:not(.eyebrow)`, heading.body);
+}
+
+const staticPageLocales = {
+  zh: {
+    metaSuffix: "JSG DC Pump",
+    brandSmall: "微型泵与流体控制",
+    nav: ["首页", "产品", "应用", "博客", "下载", "常见问题", "关于", "联系"],
+    navCta: "获取报价",
+    languageLabel: "语言",
+    primaryCta: "提交工程询价",
+    catalogCta: "查看产品目录",
+    asideTitle: "发送询价参数",
+    asideBody: "请提供介质、流量、压力、真空度、电压、工作周期、噪音目标、尺寸限制、应用场景和年用量。",
+    asideCta: "开始询价",
+    footerBody: "专业微型泵供应商，集研发、生产、销售和服务于一体，覆盖 BD 系列气泵、液泵、活塞泵、压缩机、配件和 OEM 流体控制产品。",
+    footerHeadings: ["产品", "资源", "联系"],
+    footerLinks: {
+      "Product categories": "产品分类",
+      "Applications": "应用",
+      "Download": "下载",
+      "FAQ": "常见问题",
+      "Blog": "博客",
+      "Submit RFQ": "提交询价",
+      "Contact page": "联系页面"
+    },
+    exact: {
+      "JSG DC Pump": "JSG DC Pump",
+      "Product category": "产品分类",
+      "Engineering article": "工程文章",
+      "Micro Pump Product Categories": "微型泵产品分类",
+      "Micro Pump FAQ": "微型泵常见问题",
+      "Page not found": "页面未找到",
+      "The page may have moved during the product and application content expansion. Use the links below to continue browsing JSG micro pump solutions.": "页面可能在产品和应用内容扩展期间移动。请使用下方入口继续浏览 JSG 微型泵解决方案。",
+      "Browse Products": "浏览产品",
+      "View Applications": "查看应用",
+      "Start with the product family that matches your medium, pressure, vacuum, flow, duty cycle, and installation space. Each category page includes engineering ranges, typical applications, and RFQ selection notes.": "请先根据介质、压力、真空度、流量、工作周期和安装空间选择合适的产品系列。每个分类页都包含工程参数范围、典型应用和询价选型要点。",
+      "Common questions from OEM buyers selecting micro air pumps, vacuum pumps, liquid pumps, piston pumps, compressors, and fluid control modules.": "面向 OEM 买家的常见问题，覆盖微型气泵、真空泵、液泵、活塞泵、压缩机和流体控制模块选型。",
+      "Explore Pages": "浏览页面",
+      "How to choose a category": "如何选择产品分类",
+      "Engineering Range": "工程参数范围",
+      "Typical Applications": "典型应用",
+      "Selection Notes": "选型要点",
+      "Related Product Pages": "相关产品页面",
+      "Catalog Preview": "目录预览",
+      "Content focus": "内容重点",
+      "Common equipment": "常见设备",
+      "Selection focus": "选型重点",
+      "RFQ details": "询价信息",
+      "Products": "产品",
+      "Resources": "资源",
+      "Contact": "联系",
+      "Home": "首页",
+      "About": "关于",
+      "Micro Diaphragm Air Pumps": "微型隔膜气泵",
+      "Miniature Vacuum Pumps": "微型真空泵",
+      "Diaphragm Liquid Pumps": "隔膜液泵",
+      "Micro Piston Pumps": "微型活塞泵",
+      "Mini Compressors": "微型压缩机",
+      "Gas Sampling Pumps": "气体采样泵",
+      "Ink Pumps": "墨水泵",
+      "Medical Diaphragm Pumps": "医疗隔膜泵",
+      "Pump Accessories and Controls": "泵配件与控制",
+      "Micro Pumps for Medical Equipment": "医疗设备用微型泵",
+      "Medical and diagnostic devices need compact pumps with stable output, oil-free operation, low noise, material compatibility, and repeatable OEM supply.": "医疗和诊断设备需要输出稳定、无油运行、低噪音、材料兼容且可稳定供货的紧凑型泵。",
+      "What voltage options are available?": "可选电压有哪些？",
+      "Common DC options include 3V, 6V, 12V, and 24V depending on model. Some selected products support other voltage configurations.": "常见直流电压包括 3V、6V、12V 和 24V，具体取决于型号。部分产品可支持其它电压配置。",
+      "What information is needed for a recommendation?": "推荐型号需要哪些信息？",
+      "Please provide medium, flow, pressure or vacuum, voltage, duty cycle, noise target, space limit, environment, and annual quantity.": "请提供介质、流量、压力或真空度、电压、工作周期、噪音目标、空间限制、使用环境和年用量。",
+      "Can JSG customize pumps?": "JSG 可以定制泵吗？",
+      "Yes. Options can include voltage, motor type, diaphragm material, fittings, tubing, control accessories, and pump plus accessory modules.": "可以。可选项包括电压、电机类型、隔膜材料、接头、管路、控制配件，以及泵加配件模块。",
+      "Can I request samples?": "可以申请样品吗？",
+      "Sample support depends on model availability and project requirements. Send the application and target parameters for matching.": "样品支持取决于型号库存和项目要求。请发送应用场景和目标参数用于匹配。",
+      "Which certifications are supported?": "支持哪些认证资料？",
+      "JSG works from an ISO 9001:2015 quality foundation and can support CE / RoHS documentation for selected projects.": "JSG 以 ISO 9001:2015 质量体系为基础，可为部分项目支持 CE / RoHS 资料。",
+      "How should I compare flow and pressure data?": "如何比较流量和压力数据？",
+      "Compare useful flow at your real working pressure or vacuum, not only free-flow data. Tubing, filters, valves, fittings, altitude, and enclosure layout can change final performance.": "应比较实际工作压力或真空度下的有效流量，而不是只看空载流量。管路、过滤器、阀门、接头、海拔和结构布局都会影响最终性能。",
+      "Do you provide pump plus accessory modules?": "是否提供泵加配件模块？",
+      "Yes. For OEM projects, JSG can match pumps with tubing, filters, check valves, silencers, shock absorbers, PWM controllers, flow meters, and other fluid-control parts.": "可以。针对 OEM 项目，JSG 可匹配管路、过滤器、单向阀、消音器、减震件、PWM 控制器、流量计等流体控制部件。",
+      "How do I choose between diaphragm and piston pumps?": "隔膜泵和活塞泵如何选择？",
+      "Use diaphragm pumps for compact air, vacuum, gas, and liquid paths where size and clean operation matter. Use piston pumps when the design needs stronger pressure, stronger vacuum, or higher mechanical output.": "当尺寸和清洁运行更重要时，可选隔膜泵用于气体、真空、气路或液路；当需要更高压力、更强真空或更大机械输出时，可选活塞泵。",
+      "How do I reduce micro pump noise?": "如何降低微型泵噪音？",
+      "Noise depends on the complete system. Use suitable motor speed, soft mounting, shock absorption, silencers, stable voltage, correct tubing size, and final-enclosure testing.": "噪音取决于完整系统。建议使用合适电机转速、软连接安装、减震、消音器、稳定电压、合适管径，并在最终外壳中测试。",
+      "Can the same pump handle air and liquid?": "同一款泵能同时用于空气和液体吗？",
+      "Some diaphragm platforms have air and liquid variants, but materials, valves, sealing, flow, and test standards are different. Confirm the medium before selecting a model.": "部分隔膜平台有气体和液体版本，但材料、阀片、密封、流量和测试标准不同。选型前必须确认介质。",
+      "What affects pump lifetime?": "哪些因素影响泵寿命？",
+      "Lifetime depends on motor type, load, duty cycle, temperature, medium, pressure or vacuum level, vibration, voltage stability, and whether the pump runs dry or against blocked flow.": "寿命取决于电机类型、负载、工作周期、温度、介质、压力或真空水平、振动、电压稳定性，以及是否干转或堵转运行。",
+      "What should be tested before mass production?": "量产前应测试哪些项目？",
+      "Validate startup current, useful flow, pressure or vacuum, heat rise, noise, vibration, leakage, material compatibility, duty cycle, and lifetime in the final product structure.": "应在最终产品结构中验证启动电流、有效流量、压力或真空、温升、噪音、振动、泄漏、材料兼容性、工作周期和寿命。"
+    },
+    replacements: [
+      ["Micro Pump", "微型泵"],
+      ["micro pump", "微型泵"],
+      ["Diaphragm", "隔膜"],
+      ["diaphragm", "隔膜"],
+      ["Vacuum", "真空"],
+      ["vacuum", "真空"],
+      ["Liquid", "液体"],
+      ["liquid", "液体"],
+      ["Piston", "活塞"],
+      ["piston", "活塞"],
+      ["Mini Compressor", "微型压缩机"],
+      ["Mini Compressors", "微型压缩机"],
+      ["Gas Sampling", "气体采样"],
+      ["Ink", "墨水"],
+      ["Medical", "医疗"],
+      ["Accessories", "配件"],
+      ["OEM", "OEM"],
+      ["air pumps", "气泵"],
+      ["air pump", "气泵"],
+      ["pumps", "泵"],
+      ["pump", "泵"],
+      ["flow", "流量"],
+      ["pressure", "压力"],
+      ["voltage", "电压"],
+      ["noise", "噪音"],
+      ["duty cycle", "工作周期"],
+      ["applications", "应用"],
+      ["selection", "选型"]
+    ]
+  },
+  fr: {
+    nav: ["Accueil", "Produits", "Applications", "Blog", "Téléchargement", "FAQ", "À propos", "Contact"],
+    brandSmall: "Micro-pompes et contrôle des fluides",
+    navCta: "Demander un devis",
+    languageLabel: "Langue",
+    primaryCta: "Demander un devis technique",
+    catalogCta: "Demander le catalogue",
+    asideTitle: "Envoyer les détails RFQ",
+    asideBody: "Indiquez le fluide, le débit, la pression, le vide, la tension, le cycle, le bruit cible, l'encombrement, l'application et la quantité annuelle.",
+    asideCta: "Démarrer RFQ",
+    exact: { "Home": "Accueil", "Products": "Produits", "Resources": "Ressources", "Contact": "Contact", "Explore Pages": "Explorer les pages", "Engineering Range": "Plage technique", "Typical Applications": "Applications typiques", "Selection Notes": "Notes de sélection", "Related Product Pages": "Pages produit liées", "Page not found": "Page introuvable", "Browse Products": "Voir les produits", "View Applications": "Voir les applications" },
+    replacements: [["Micro Pump", "Micro-pompe"], ["Diaphragm", "Diaphragme"], ["Vacuum", "Vide"], ["Liquid", "Liquide"], ["Piston", "Piston"], ["Mini Compressor", "Mini-compresseur"], ["Gas Sampling", "Échantillonnage gaz"], ["Accessories", "Accessoires"], ["Product Categories", "Catégories de produits"]]
+  },
+  de: {
+    nav: ["Start", "Produkte", "Anwendungen", "Blog", "Download", "FAQ", "Über uns", "Kontakt"],
+    brandSmall: "Mikropumpen & Fluidsteuerung",
+    navCta: "Angebot anfragen",
+    languageLabel: "Sprache",
+    primaryCta: "Technisches Angebot anfragen",
+    catalogCta: "Katalog anfordern",
+    asideTitle: "RFQ-Daten senden",
+    asideBody: "Medium, Durchfluss, Druck, Vakuum, Spannung, Arbeitszyklus, Geräuschziel, Bauraum, Anwendung und Jahresmenge angeben.",
+    asideCta: "RFQ starten",
+    exact: { "Home": "Start", "Products": "Produkte", "Resources": "Ressourcen", "Contact": "Kontakt", "Explore Pages": "Seiten ansehen", "Engineering Range": "Technischer Bereich", "Typical Applications": "Typische Anwendungen", "Selection Notes": "Auswahlhinweise", "Related Product Pages": "Verwandte Produktseiten", "Page not found": "Seite nicht gefunden", "Browse Products": "Produkte ansehen", "View Applications": "Anwendungen ansehen" },
+    replacements: [["Micro Pump", "Mikropumpe"], ["Diaphragm", "Membran"], ["Vacuum", "Vakuum"], ["Liquid", "Flüssigkeit"], ["Piston", "Kolben"], ["Mini Compressor", "Minikompressor"], ["Gas Sampling", "Gasprobenahme"], ["Accessories", "Zubehör"], ["Product Categories", "Produktkategorien"]]
+  },
+  id: {
+    nav: ["Beranda", "Produk", "Aplikasi", "Blog", "Unduhan", "FAQ", "Tentang", "Kontak"],
+    brandSmall: "Pompa mikro & kontrol fluida",
+    navCta: "Minta penawaran",
+    languageLabel: "Bahasa",
+    primaryCta: "Minta penawaran teknis",
+    catalogCta: "Minta katalog",
+    asideTitle: "Kirim detail RFQ",
+    asideBody: "Sertakan media, aliran, tekanan, vakum, tegangan, duty cycle, target kebisingan, batas ukuran, aplikasi, dan jumlah tahunan.",
+    asideCta: "Mulai RFQ",
+    exact: { "Home": "Beranda", "Products": "Produk", "Resources": "Sumber daya", "Contact": "Kontak", "Explore Pages": "Jelajahi halaman", "Engineering Range": "Rentang teknis", "Typical Applications": "Aplikasi umum", "Selection Notes": "Catatan pemilihan", "Related Product Pages": "Halaman produk terkait", "Page not found": "Halaman tidak ditemukan", "Browse Products": "Lihat produk", "View Applications": "Lihat aplikasi" },
+    replacements: [["Micro Pump", "Pompa mikro"], ["Diaphragm", "Diafragma"], ["Vacuum", "Vakum"], ["Liquid", "Cairan"], ["Piston", "Piston"], ["Mini Compressor", "Kompresor mini"], ["Gas Sampling", "Sampling gas"], ["Accessories", "Aksesori"], ["Product Categories", "Kategori produk"]]
+  },
+  it: {
+    nav: ["Home", "Prodotti", "Applicazioni", "Blog", "Download", "FAQ", "Chi siamo", "Contatto"],
+    brandSmall: "Micro pompe e controllo fluidi",
+    navCta: "Richiedi preventivo",
+    languageLabel: "Lingua",
+    primaryCta: "Richiedi preventivo tecnico",
+    catalogCta: "Richiedi catalogo",
+    asideTitle: "Invia dettagli RFQ",
+    asideBody: "Includere fluido, portata, pressione, vuoto, tensione, ciclo di lavoro, rumore target, spazio, applicazione e quantità annuale.",
+    asideCta: "Avvia RFQ",
+    exact: { "Home": "Home", "Products": "Prodotti", "Resources": "Risorse", "Contact": "Contatto", "Explore Pages": "Esplora pagine", "Engineering Range": "Intervallo tecnico", "Typical Applications": "Applicazioni tipiche", "Selection Notes": "Note di selezione", "Related Product Pages": "Pagine prodotto correlate", "Page not found": "Pagina non trovata", "Browse Products": "Sfoglia prodotti", "View Applications": "Vedi applicazioni" },
+    replacements: [["Micro Pump", "Micro pompa"], ["Diaphragm", "Diaframma"], ["Vacuum", "Vuoto"], ["Liquid", "Liquido"], ["Piston", "Pistone"], ["Mini Compressor", "Mini compressore"], ["Gas Sampling", "Campionamento gas"], ["Accessories", "Accessori"], ["Product Categories", "Categorie prodotto"]]
+  },
+  ko: {
+    nav: ["홈", "제품", "응용", "블로그", "다운로드", "FAQ", "회사", "문의"],
+    brandSmall: "마이크로 펌프 및 유체 제어",
+    navCta: "견적 요청",
+    languageLabel: "언어",
+    primaryCta: "엔지니어링 견적 요청",
+    catalogCta: "카탈로그 요청",
+    asideTitle: "RFQ 세부 정보 보내기",
+    asideBody: "매체, 유량, 압력, 진공, 전압, 듀티 사이클, 소음 목표, 크기 제한, 응용 분야 및 연간 수량을 포함하십시오.",
+    asideCta: "RFQ 시작",
+    exact: { "Home": "홈", "Products": "제품", "Resources": "자료", "Contact": "문의", "Explore Pages": "페이지 보기", "Engineering Range": "엔지니어링 범위", "Typical Applications": "일반 응용", "Selection Notes": "선정 참고", "Related Product Pages": "관련 제품 페이지", "Page not found": "페이지를 찾을 수 없음", "Browse Products": "제품 보기", "View Applications": "응용 보기" },
+    replacements: [["Micro Pump", "마이크로 펌프"], ["Diaphragm", "다이어프램"], ["Vacuum", "진공"], ["Liquid", "액체"], ["Piston", "피스톤"], ["Mini Compressor", "미니 컴프레서"], ["Gas Sampling", "가스 샘플링"], ["Accessories", "액세서리"], ["Product Categories", "제품 카테고리"]]
+  },
+  es: {
+    nav: ["Inicio", "Productos", "Aplicaciones", "Blog", "Descarga", "FAQ", "Acerca", "Contacto"],
+    brandSmall: "Micro bombas y control de fluidos",
+    navCta: "Solicitar cotización",
+    languageLabel: "Idioma",
+    primaryCta: "Solicitar cotización técnica",
+    catalogCta: "Solicitar catálogo",
+    asideTitle: "Enviar detalles RFQ",
+    asideBody: "Incluya medio, caudal, presión, vacío, voltaje, ciclo de trabajo, ruido objetivo, límite de tamaño, aplicación y cantidad anual.",
+    asideCta: "Iniciar RFQ",
+    exact: { "Home": "Inicio", "Products": "Productos", "Resources": "Recursos", "Contact": "Contacto", "Explore Pages": "Explorar páginas", "Engineering Range": "Rango técnico", "Typical Applications": "Aplicaciones típicas", "Selection Notes": "Notas de selección", "Related Product Pages": "Páginas de producto relacionadas", "Page not found": "Página no encontrada", "Browse Products": "Ver productos", "View Applications": "Ver aplicaciones" },
+    replacements: [["Micro Pump", "Micro bomba"], ["Diaphragm", "Diafragma"], ["Vacuum", "Vacío"], ["Liquid", "Líquido"], ["Piston", "Pistón"], ["Mini Compressor", "Mini compresor"], ["Gas Sampling", "Muestreo de gas"], ["Accessories", "Accesorios"], ["Product Categories", "Categorías de producto"]]
+  }
+};
+
+const staticSharedExact = {
+  fr: {
+    "Micro Pump Product Categories": "Catégories de micro-pompes",
+    "Start with the product family that matches your medium, pressure, vacuum, flow, duty cycle, and installation space. Each category page includes engineering ranges, typical applications, and RFQ selection notes.": "Commencez par la famille de produits correspondant au fluide, à la pression, au vide, au débit, au cycle de travail et à l'espace disponible. Chaque page de catégorie présente les plages techniques, les applications typiques et les notes de sélection RFQ.",
+    "Micro Pump FAQ": "FAQ micro-pompes",
+    "Common questions from OEM buyers selecting micro air pumps, vacuum pumps, liquid pumps, piston pumps, compressors, and fluid control modules.": "Questions fréquentes des acheteurs OEM concernant les micro-pompes à air, pompes à vide, pompes liquides, pompes à piston, compresseurs et modules de contrôle des fluides.",
+    "Micro Diaphragm Air Pumps": "Micro-pompes à air à diaphragme",
+    "Miniature Vacuum Pumps": "Mini pompes à vide",
+    "Diaphragm Liquid Pumps": "Pompes liquides à diaphragme",
+    "Micro Piston Pumps": "Micro-pompes à piston",
+    "Mini Compressors": "Mini-compresseurs",
+    "Gas Sampling Pumps": "Pompes d'échantillonnage de gaz",
+    "Ink Pumps": "Pompes à encre",
+    "Medical Diaphragm Pumps": "Pompes médicales à diaphragme",
+    "Pump Accessories and Controls": "Accessoires et commandes de pompe",
+    "Micro Pumps for Medical Equipment": "Micro-pompes pour équipements médicaux",
+    "Medical and diagnostic devices need compact pumps with stable output, oil-free operation, low noise, material compatibility, and repeatable OEM supply.": "Les dispositifs médicaux et de diagnostic nécessitent des pompes compactes avec sortie stable, fonctionnement sans huile, faible bruit, compatibilité des matériaux et approvisionnement OEM répétable.",
+    "Medical equipment needs compact pumps with stable flow, vacuum, pressure, low noise, and reliable lifetime for diagnostic, therapy, suction, and sample handling systems.": "Les équipements médicaux nécessitent des pompes compactes avec débit, vide, pression, faible bruit et durée de vie stables pour les systèmes de diagnostic, de thérapie, d'aspiration et de manipulation d'échantillons."
+  },
+  de: {
+    "Micro Pump Product Categories": "Mikropumpen-Produktkategorien",
+    "Start with the product family that matches your medium, pressure, vacuum, flow, duty cycle, and installation space. Each category page includes engineering ranges, typical applications, and RFQ selection notes.": "Beginnen Sie mit der Produktfamilie, die zu Medium, Druck, Vakuum, Durchfluss, Arbeitszyklus und Bauraum passt. Jede Kategorieseite enthält technische Bereiche, typische Anwendungen und RFQ-Auswahlhinweise.",
+    "Micro Pump FAQ": "Mikropumpen FAQ",
+    "Common questions from OEM buyers selecting micro air pumps, vacuum pumps, liquid pumps, piston pumps, compressors, and fluid control modules.": "Häufige Fragen von OEM-Käufern zur Auswahl von Mikroluftpumpen, Vakuumpumpen, Flüssigkeitspumpen, Kolbenpumpen, Kompressoren und Fluidsteuerungsmodulen.",
+    "Micro Diaphragm Air Pumps": "Mikro-Membranluftpumpen",
+    "Miniature Vacuum Pumps": "Miniatur-Vakuumpumpen",
+    "Diaphragm Liquid Pumps": "Membran-Flüssigkeitspumpen",
+    "Micro Piston Pumps": "Mikro-Kolbenpumpen",
+    "Mini Compressors": "Minikompressoren",
+    "Gas Sampling Pumps": "Gasprobenahmepumpen",
+    "Ink Pumps": "Tintenpumpen",
+    "Medical Diaphragm Pumps": "Medizinische Membranpumpen",
+    "Pump Accessories and Controls": "Pumpenzubehör und Steuerungen",
+    "Micro Pumps for Medical Equipment": "Mikropumpen für medizinische Geräte",
+    "Medical and diagnostic devices need compact pumps with stable output, oil-free operation, low noise, material compatibility, and repeatable OEM supply.": "Medizinische und diagnostische Geräte benötigen kompakte Pumpen mit stabiler Leistung, ölfreiem Betrieb, geringer Geräuschentwicklung, Materialverträglichkeit und wiederholbarer OEM-Lieferung.",
+    "Medical equipment needs compact pumps with stable flow, vacuum, pressure, low noise, and reliable lifetime for diagnostic, therapy, suction, and sample handling systems.": "Medizinische Geräte benötigen kompakte Pumpen mit stabilem Durchfluss, Vakuum, Druck, geringer Geräuschentwicklung und zuverlässiger Lebensdauer für Diagnose-, Therapie-, Saug- und Probenhandhabungssysteme."
+  },
+  id: {
+    "Micro Pump Product Categories": "Kategori produk pompa mikro",
+    "Start with the product family that matches your medium, pressure, vacuum, flow, duty cycle, and installation space. Each category page includes engineering ranges, typical applications, and RFQ selection notes.": "Mulai dari keluarga produk yang sesuai dengan media, tekanan, vakum, aliran, duty cycle, dan ruang pemasangan. Setiap halaman kategori memuat rentang teknis, aplikasi umum, dan catatan pemilihan RFQ.",
+    "Micro Pump FAQ": "FAQ pompa mikro",
+    "Common questions from OEM buyers selecting micro air pumps, vacuum pumps, liquid pumps, piston pumps, compressors, and fluid control modules.": "Pertanyaan umum dari pembeli OEM saat memilih pompa udara mikro, pompa vakum, pompa cairan, pompa piston, kompresor, dan modul kontrol fluida.",
+    "Micro Diaphragm Air Pumps": "Pompa udara diafragma mikro",
+    "Miniature Vacuum Pumps": "Pompa vakum mini",
+    "Diaphragm Liquid Pumps": "Pompa cairan diafragma",
+    "Micro Piston Pumps": "Pompa piston mikro",
+    "Mini Compressors": "Kompresor mini",
+    "Gas Sampling Pumps": "Pompa sampling gas",
+    "Ink Pumps": "Pompa tinta",
+    "Medical Diaphragm Pumps": "Pompa diafragma medis",
+    "Pump Accessories and Controls": "Aksesori dan kontrol pompa",
+    "Micro Pumps for Medical Equipment": "Pompa mikro untuk peralatan medis",
+    "Medical and diagnostic devices need compact pumps with stable output, oil-free operation, low noise, material compatibility, and repeatable OEM supply.": "Perangkat medis dan diagnostik membutuhkan pompa kompak dengan keluaran stabil, operasi bebas oli, kebisingan rendah, kompatibilitas material, dan pasokan OEM yang konsisten.",
+    "Medical equipment needs compact pumps with stable flow, vacuum, pressure, low noise, and reliable lifetime for diagnostic, therapy, suction, and sample handling systems.": "Peralatan medis membutuhkan pompa kompak dengan aliran, vakum, tekanan, kebisingan rendah, dan umur pakai yang stabil untuk sistem diagnostik, terapi, hisap, dan penanganan sampel."
+  },
+  it: {
+    "Micro Pump Product Categories": "Categorie di micro pompe",
+    "Start with the product family that matches your medium, pressure, vacuum, flow, duty cycle, and installation space. Each category page includes engineering ranges, typical applications, and RFQ selection notes.": "Inizia dalla famiglia di prodotti adatta a fluido, pressione, vuoto, portata, ciclo di lavoro e spazio di installazione. Ogni categoria include intervalli tecnici, applicazioni tipiche e note RFQ.",
+    "Micro Pump FAQ": "FAQ micro pompe",
+    "Common questions from OEM buyers selecting micro air pumps, vacuum pumps, liquid pumps, piston pumps, compressors, and fluid control modules.": "Domande comuni degli acquirenti OEM sulla scelta di micro pompe aria, pompe vuoto, pompe liquido, pompe pistone, compressori e moduli di controllo fluidi.",
+    "Micro Diaphragm Air Pumps": "Micro pompe aria a diaframma",
+    "Miniature Vacuum Pumps": "Mini pompe vuoto",
+    "Diaphragm Liquid Pumps": "Pompe liquido a diaframma",
+    "Micro Piston Pumps": "Micro pompe pistone",
+    "Mini Compressors": "Mini compressori",
+    "Gas Sampling Pumps": "Pompe campionamento gas",
+    "Ink Pumps": "Pompe inchiostro",
+    "Medical Diaphragm Pumps": "Pompe medicali a diaframma",
+    "Pump Accessories and Controls": "Accessori e controlli pompa",
+    "Micro Pumps for Medical Equipment": "Micro pompe per apparecchiature medicali",
+    "Medical and diagnostic devices need compact pumps with stable output, oil-free operation, low noise, material compatibility, and repeatable OEM supply.": "I dispositivi medicali e diagnostici richiedono pompe compatte con uscita stabile, funzionamento oil-free, bassa rumorosità, compatibilità dei materiali e fornitura OEM ripetibile.",
+    "Medical equipment needs compact pumps with stable flow, vacuum, pressure, low noise, and reliable lifetime for diagnostic, therapy, suction, and sample handling systems.": "Le apparecchiature medicali richiedono pompe compatte con portata, vuoto, pressione, bassa rumorosità e durata affidabile per diagnostica, terapia, aspirazione e gestione campioni."
+  },
+  ko: {
+    "Micro Pump Product Categories": "마이크로 펌프 제품 카테고리",
+    "Start with the product family that matches your medium, pressure, vacuum, flow, duty cycle, and installation space. Each category page includes engineering ranges, typical applications, and RFQ selection notes.": "매체, 압력, 진공, 유량, 듀티 사이클 및 설치 공간에 맞는 제품군부터 선택하십시오. 각 카테고리 페이지에는 엔지니어링 범위, 일반 응용 및 RFQ 선정 참고 사항이 포함됩니다.",
+    "Micro Pump FAQ": "마이크로 펌프 FAQ",
+    "Common questions from OEM buyers selecting micro air pumps, vacuum pumps, liquid pumps, piston pumps, compressors, and fluid control modules.": "마이크로 에어 펌프, 진공 펌프, 액체 펌프, 피스톤 펌프, 컴프레서 및 유체 제어 모듈을 선택하는 OEM 구매자의 자주 묻는 질문입니다.",
+    "Micro Diaphragm Air Pumps": "마이크로 다이어프램 에어 펌프",
+    "Miniature Vacuum Pumps": "소형 진공 펌프",
+    "Diaphragm Liquid Pumps": "다이어프램 액체 펌프",
+    "Micro Piston Pumps": "마이크로 피스톤 펌프",
+    "Mini Compressors": "미니 컴프레서",
+    "Gas Sampling Pumps": "가스 샘플링 펌프",
+    "Ink Pumps": "잉크 펌프",
+    "Medical Diaphragm Pumps": "의료용 다이어프램 펌프",
+    "Pump Accessories and Controls": "펌프 액세서리 및 제어",
+    "Micro Pumps for Medical Equipment": "의료 장비용 마이크로 펌프",
+    "Medical and diagnostic devices need compact pumps with stable output, oil-free operation, low noise, material compatibility, and repeatable OEM supply.": "의료 및 진단 장비에는 안정적인 출력, 오일 프리 작동, 낮은 소음, 재료 호환성 및 반복 가능한 OEM 공급을 갖춘 소형 펌프가 필요합니다.",
+    "Medical equipment needs compact pumps with stable flow, vacuum, pressure, low noise, and reliable lifetime for diagnostic, therapy, suction, and sample handling systems.": "의료 장비에는 진단, 치료, 흡입 및 샘플 처리 시스템을 위해 안정적인 유량, 진공, 압력, 낮은 소음 및 신뢰성 있는 수명을 가진 소형 펌프가 필요합니다."
+  },
+  es: {
+    "Micro Pump Product Categories": "Categorías de micro bombas",
+    "Start with the product family that matches your medium, pressure, vacuum, flow, duty cycle, and installation space. Each category page includes engineering ranges, typical applications, and RFQ selection notes.": "Comience con la familia de productos que coincida con el medio, presión, vacío, caudal, ciclo de trabajo y espacio de instalación. Cada categoría incluye rangos técnicos, aplicaciones típicas y notas RFQ.",
+    "Micro Pump FAQ": "FAQ de micro bombas",
+    "Common questions from OEM buyers selecting micro air pumps, vacuum pumps, liquid pumps, piston pumps, compressors, and fluid control modules.": "Preguntas frecuentes de compradores OEM al seleccionar micro bombas de aire, bombas de vacío, bombas de líquido, bombas de pistón, compresores y módulos de control de fluidos.",
+    "Micro Diaphragm Air Pumps": "Micro bombas de aire de diafragma",
+    "Miniature Vacuum Pumps": "Mini bombas de vacío",
+    "Diaphragm Liquid Pumps": "Bombas líquidas de diafragma",
+    "Micro Piston Pumps": "Micro bombas de pistón",
+    "Mini Compressors": "Mini compresores",
+    "Gas Sampling Pumps": "Bombas de muestreo de gas",
+    "Ink Pumps": "Bombas de tinta",
+    "Medical Diaphragm Pumps": "Bombas médicas de diafragma",
+    "Pump Accessories and Controls": "Accesorios y controles de bomba",
+    "Micro Pumps for Medical Equipment": "Micro bombas para equipos médicos",
+    "Medical and diagnostic devices need compact pumps with stable output, oil-free operation, low noise, material compatibility, and repeatable OEM supply.": "Los dispositivos médicos y de diagnóstico necesitan bombas compactas con salida estable, operación sin aceite, bajo ruido, compatibilidad de materiales y suministro OEM repetible.",
+    "Medical equipment needs compact pumps with stable flow, vacuum, pressure, low noise, and reliable lifetime for diagnostic, therapy, suction, and sample handling systems.": "Los equipos médicos necesitan bombas compactas con caudal, vacío, presión, bajo ruido y vida útil estable para diagnóstico, terapia, succión y manejo de muestras."
+  }
+};
+
+Object.entries(staticSharedExact).forEach(([lang, exact]) => {
+  Object.assign(staticPageLocales[lang].exact, exact);
+});
+
+const refreshLanguageOptionLabels = () => {
+  document.querySelectorAll("[data-language-select] option").forEach((option) => {
+    option.textContent = languageOptionLabels[option.value] || option.textContent;
+  });
+};
+
+const translateStaticText = (source, locale) => {
+  const text = source.trim();
+  if (!text || !locale) return source;
+  if (locale.exact?.[text]) return locale.exact[text];
+  if (text.includes("@") || /^\d/.test(text)) return source;
+  let translated = text;
+  (locale.replacements || []).forEach(([from, to]) => {
+    translated = translated.replaceAll(from, to);
+  });
+  return translated;
+};
+
+const localizeStaticNode = (node, locale, active) => {
+  if (!node || node.closest("script, style")) return;
+  if (!node.dataset.i18nSource) node.dataset.i18nSource = node.textContent.trim();
+  node.textContent = active === "en" ? node.dataset.i18nSource : translateStaticText(node.dataset.i18nSource, locale);
+};
+
+function applyStaticPageLanguage(active) {
+  const isStaticPage = Boolean(document.querySelector(".page-hero"));
+  if (!isStaticPage) return;
+
+  const locale = staticPageLocales[active];
+  refreshLanguageOptionLabels();
+  languageSelect && (languageSelect.value = active);
+
+  if (active === "en" || !locale) {
+    document.querySelectorAll("[data-i18n-source]").forEach((node) => {
+      node.textContent = node.dataset.i18nSource;
+    });
+    return;
+  }
+
+  setText(".language-select span", locale.languageLabel);
+  setText(".brand small", locale.brandSmall);
+  setTexts(".nav-links a", locale.nav);
+  setText(".nav-cta", locale.navCta);
+  setTexts(".page-hero .hero-actions a", [locale.primaryCta, locale.catalogCta]);
+  setText(".page-aside h2", locale.asideTitle);
+  setText(".page-aside p", locale.asideBody);
+  setText(".page-aside .btn", locale.asideCta);
+  setText(".site-footer p", locale.footerBody || locale.asideBody);
+  setTexts(".site-footer h3", locale.footerHeadings || [locale.exact?.Products, locale.exact?.Resources, locale.exact?.Contact]);
+  document.querySelectorAll(".site-footer a, .breadcrumbs a, .breadcrumbs span[aria-current='page']").forEach((node) => {
+    if (locale.footerLinks?.[node.textContent.trim()]) node.textContent = locale.footerLinks[node.textContent.trim()];
+    else localizeStaticNode(node, locale, active);
+  });
+
+  document
+    .querySelectorAll(".page-hero .eyebrow, .page-hero h1, .page-hero p, .page-block h2, .page-list li, .page-card-link strong, .page-card-link span, .page-media-card figcaption, .page-link-grid a")
+    .forEach((node) => localizeStaticNode(node, locale, active));
+
+  const h1 = document.querySelector(".page-hero h1")?.textContent.trim();
+  if (h1) document.title = `${h1} | ${locale.metaSuffix || "JSG DC Pump"}`;
 }
 
 const localizeDcPumpArticle = (article, index, lang) => {

@@ -17,6 +17,21 @@ const nav = [
 
 const rfqPath = "/#rfq";
 
+const languageSelectHtml = `
+        <label class="language-select">
+          <span>Language</span>
+          <select data-language-select aria-label="Select language">
+            <option value="en">EN English</option>
+            <option value="zh">CN 简体中文</option>
+            <option value="fr">FR Français</option>
+            <option value="de">DE Deutsch</option>
+            <option value="id">ID Bahasa Indonesia</option>
+            <option value="it">IT Italiano</option>
+            <option value="ko">KR 한국어</option>
+            <option value="es">ES Español</option>
+          </select>
+        </label>`;
+
 const productPages = [
   {
     slug: "micro-diaphragm-air-pump",
@@ -846,7 +861,7 @@ const renderPage = (page) => {
       <div class="nav-links" data-nav-links>
           ${navHtml(page.slug)}
       </div>
-      <div class="nav-actions"><a class="btn btn-primary nav-cta" href="${rfqPath}">Request a Quote</a></div>
+      <div class="nav-actions">${languageSelectHtml}<a class="btn btn-primary nav-cta" href="${rfqPath}">Request a Quote</a></div>
     </nav>
   </header>
   <main id="main">
