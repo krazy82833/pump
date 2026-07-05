@@ -1223,6 +1223,9 @@ rfqForm?.addEventListener("submit", async (event) => {
     formStatus.textContent = status.success;
     rfqForm.classList.add("is-submitted");
     rfqForm.reset();
+    window.setTimeout(() => {
+      window.location.href = "/thank-you/";
+    }, 700);
   } catch (error) {
     formStatus.textContent = status.serverError;
   } finally {
@@ -1230,7 +1233,11 @@ rfqForm?.addEventListener("submit", async (event) => {
   }
 });
 
-applyLanguage(detectInitialLanguage());
+if (languageSelect) {
+  applyLanguage(detectInitialLanguage());
+} else {
+  window.__activeCopy = english;
+}
 
 const revealObserver = new IntersectionObserver(
   (entries) => {
