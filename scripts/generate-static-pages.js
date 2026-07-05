@@ -173,6 +173,153 @@ const productPages = [
   }
 ];
 
+const modelPages = [
+  {
+    slug: "product/bd-01-micro-diaphragm-air-pump",
+    category: "micro-diaphragm-air-pump",
+    model: "BD-01",
+    title: "BD-01 Micro Diaphragm Air Pump",
+    description: "BD-01 micro diaphragm air pump for compact OEM devices requiring low-flow clean air, pressure, vacuum, and small installation size.",
+    h1: "BD-01 Micro Diaphragm Air Pump",
+    intro: "BD-01 is a compact diaphragm air pump platform for low-flow air and vacuum tasks in portable devices, medical modules, sampling paths, and small pneumatic assemblies.",
+    range: [["Type", "Micro diaphragm air / vacuum pump"], ["Flow", "0.3-1 L/min"], ["Pressure", "0.5-1 bar"], ["Vacuum", "-30 to -60 kPa"], ["Voltage", "3V, 6V, 12V options"], ["Weight class", "18-24g compact platform"]],
+    applications: ["Portable medical devices", "Low-flow gas sampling", "Small suction modules", "Compact pneumatic systems"],
+    selection: ["Use BD-01 when installation space is tight and required flow is modest.", "Confirm useful flow after tubing, filters, and valves.", "Ask for motor and voltage matching before sample confirmation."]
+  },
+  {
+    slug: "product/bd-02-micro-air-vacuum-pump",
+    category: "micro-diaphragm-air-pump",
+    model: "BD-02",
+    title: "BD-02 Micro Air and Vacuum Pump",
+    description: "BD-02 micro air and vacuum pump for compact OEM pressure and suction systems with 6V, 12V, and 24V options.",
+    h1: "BD-02 Micro Air and Vacuum Pump",
+    intro: "BD-02 is a mid-compact diaphragm platform for equipment that needs more airflow than tiny low-flow pumps while keeping package size and noise under control.",
+    range: [["Type", "Diaphragm air / vacuum pump"], ["Flow", "1-4 L/min"], ["Pressure", "0.5-1.5 bar"], ["Vacuum", "-30 to -65 kPa"], ["Voltage", "6V, 12V, 24V options"], ["Motor", "Brush and brushless options on selected configurations"]],
+    applications: ["Medical suction modules", "Air sampling", "Beauty devices", "Small appliance air paths"],
+    selection: ["Use BD-02 for compact devices that need balanced airflow and size.", "Evaluate brushless options when lifetime or duty cycle matters.", "Test noise inside the final enclosure."]
+  },
+  {
+    slug: "product/bd-03-diaphragm-air-pump",
+    category: "micro-diaphragm-air-pump",
+    model: "BD-03",
+    title: "BD-03 Diaphragm Air Pump",
+    description: "BD-03 diaphragm air pump for OEM airflow, vacuum, and compact pneumatic modules requiring 3-7 L/min class flow.",
+    h1: "BD-03 Diaphragm Air Pump",
+    intro: "BD-03 supports medium-flow air and vacuum applications where compact size, controllable noise, and stable output are needed.",
+    range: [["Type", "Diaphragm air / vacuum pump"], ["Flow", "3-7 L/min"], ["Pressure", "2-3 bar"], ["Vacuum", "-45 to -70 kPa"], ["Voltage", "6V, 12V, 24V options"], ["Power", "7-12W class"]],
+    applications: ["Gas sampling", "Analytical instruments", "Beauty equipment", "Compact pneumatic modules"],
+    selection: ["Use BD-03 when the system needs stronger output than BD-01/BD-02.", "Validate heat rise and noise under real duty cycle.", "Confirm tubing diameter to prevent avoidable pressure loss."]
+  },
+  {
+    slug: "product/bd-04-high-flow-diaphragm-pump",
+    category: "micro-diaphragm-air-pump",
+    model: "BD-04",
+    title: "BD-04 High Flow Diaphragm Air Pump",
+    description: "BD-04 high flow diaphragm air pump for stronger vacuum, pressure, and 7-22 L/min class OEM airflow systems.",
+    h1: "BD-04 High Flow Diaphragm Air Pump",
+    intro: "BD-04 is selected for higher-flow diaphragm air and vacuum systems requiring stronger suction, pressure, and OEM-ready integration.",
+    range: [["Type", "High-flow diaphragm air / vacuum pump"], ["Flow", "7-22 L/min"], ["Pressure", "2.5-3.5 bar"], ["Vacuum", "-75 to -85 kPa"], ["Voltage", "6V, 9V, 12V, 24V options"], ["Material options", "EPDM / FKM diaphragm options on selected versions"]],
+    applications: ["Vacuum sampling", "Medical and beauty equipment", "Industrial suction", "Appliance air modules"],
+    selection: ["Use BD-04 when airflow and vacuum reserve are more important than minimum size.", "Plan shock absorption and acoustic treatment.", "Confirm startup current and power supply margin."]
+  },
+  {
+    slug: "product/bd-01w-micro-liquid-pump",
+    category: "diaphragm-liquid-pump",
+    model: "BD-01W",
+    title: "BD-01W Micro Diaphragm Liquid Pump",
+    description: "BD-01W micro diaphragm liquid pump for compact dispensing, small transfer, and low-flow OEM liquid paths.",
+    h1: "BD-01W Micro Diaphragm Liquid Pump",
+    intro: "BD-01W is a compact self-priming liquid pump platform for small-volume transfer and dispensing where installation space is limited.",
+    range: [["Type", "Micro diaphragm liquid pump"], ["Water flow", "100-200 mL/min"], ["Vacuum", "Approx. -30 kPa class"], ["Voltage", "3V, 6V, 12V options"], ["Function", "Self-priming compact liquid transfer"], ["Material", "Confirm diaphragm and valve material by liquid chemistry"]],
+    applications: ["Small dispensing systems", "Portable liquid devices", "Laboratory dosing", "Beauty instruments"],
+    selection: ["Use BD-01W for low-flow transfer and compact dosing.", "Confirm liquid chemistry before material selection.", "Test dry-start and bubble behavior in the final system."]
+  },
+  {
+    slug: "product/bd-02w-mini-liquid-pump",
+    category: "diaphragm-liquid-pump",
+    model: "BD-02W",
+    title: "BD-02W Mini Diaphragm Liquid Pump",
+    description: "BD-02W mini diaphragm liquid pump for 200-500 mL/min class transfer, dispensing, and OEM fluid-control modules.",
+    h1: "BD-02W Mini Diaphragm Liquid Pump",
+    intro: "BD-02W fits compact liquid systems that need moderate flow with self-priming capability and configurable voltage options.",
+    range: [["Type", "Diaphragm liquid pump"], ["Water flow", "200-500 mL/min"], ["Vacuum", "Approx. -30 kPa class"], ["Voltage", "6V, 12V, 24V options"], ["Motor", "Brush and brushless options on selected models"], ["Use", "Dispensing, transfer, small fluid modules"]],
+    applications: ["Water purifier modules", "Ink and fluid transfer", "Cleaning systems", "Small filling equipment"],
+    selection: ["Check inlet height and outlet restriction under real tubing layout.", "Match diaphragm material to the liquid.", "Validate leakage and valve behavior before production."]
+  },
+  {
+    slug: "product/bd-04w-diaphragm-liquid-pump",
+    category: "diaphragm-liquid-pump",
+    model: "BD-04W",
+    title: "BD-04W Diaphragm Liquid Pump",
+    description: "BD-04W diaphragm liquid pump for higher-flow OEM liquid transfer, dispensing, cleaning, and fluid-control systems.",
+    h1: "BD-04W Diaphragm Liquid Pump",
+    intro: "BD-04W supports higher-flow liquid paths where equipment needs compact self-priming transfer and stable output.",
+    range: [["Type", "Diaphragm liquid pump"], ["Water flow", "Up to 1-1.5 L/min class"], ["Vacuum", "Approx. -30 kPa class"], ["Voltage", "6V, 9V, 12V, 24V options"], ["Diaphragm", "EPDM / FKM options on selected configurations"], ["Function", "Transfer, cleaning, dispensing"]],
+    applications: ["Cleaning systems", "Beverage modules", "Water transfer", "OEM liquid assemblies"],
+    selection: ["Use BD-04W when the device needs higher liquid flow.", "Measure useful flow after tubing and filters.", "Confirm pressure, leakage, and material compatibility together."]
+  },
+  {
+    slug: "product/bd-07w-high-pressure-liquid-pump",
+    category: "diaphragm-liquid-pump",
+    model: "BD-07W",
+    title: "BD-07W High Pressure Liquid Pump",
+    description: "BD-07W high pressure diaphragm liquid pump for water purifier, compact pressure transfer, and 10 bar class OEM liquid systems.",
+    h1: "BD-07W High Pressure Liquid Pump",
+    intro: "BD-07W is a higher-pressure diaphragm liquid pump option for compact systems that need stronger outlet pressure than standard miniature liquid pumps.",
+    range: [["Type", "High-pressure diaphragm liquid pump"], ["Water flow", "Approx. 1 L/min class"], ["Pressure", "Up to 10 bar class"], ["Vacuum", "Approx. -30 kPa class"], ["Voltage", "12V, 24V options"], ["Use", "High-pressure compact liquid modules"]],
+    applications: ["Water purifier systems", "Beverage equipment", "Pressure cleaning", "Compact liquid pressure modules"],
+    selection: ["Use BD-07W when outlet pressure is the primary requirement.", "Confirm tubing, fittings, and seals are pressure-rated.", "Validate heat, current, and duty cycle at target pressure."]
+  },
+  {
+    slug: "product/bd-07-micro-piston-pump",
+    category: "micro-piston-pump",
+    model: "BD-07",
+    title: "BD-07 Micro Piston Pump",
+    description: "BD-07 micro piston pump for high-pressure air, strong vacuum, medical, cosmetic, power tool, and automation equipment.",
+    h1: "BD-07 Micro Piston Pump",
+    intro: "BD-07 is an oil-free piston pump platform for compact devices requiring higher pressure and stronger suction than diaphragm pump platforms.",
+    range: [["Type", "Micro piston air / vacuum pump"], ["Flow", "15-40 L/min"], ["Pressure", "4.5-6.5 bar"], ["Vacuum", "-80 to -85 kPa"], ["Voltage", "12V, 24V options"], ["Power", "24-70W class depending on configuration"]],
+    applications: ["Medical rehabilitation", "Cosmetic equipment", "Power tools", "Automation and robotics"],
+    selection: ["Use BD-07 for compact high-pressure or high-vacuum air systems.", "Plan thermal and vibration control early.", "Confirm continuous and peak pressure separately."]
+  },
+  {
+    slug: "product/bd-79-high-pressure-piston-pump",
+    category: "micro-piston-pump",
+    model: "BD-79",
+    title: "BD-79 High Pressure Piston Pump",
+    description: "BD-79 high pressure piston pump for stronger OEM air pressure, vacuum, and compact compressor-like systems.",
+    h1: "BD-79 High Pressure Piston Pump",
+    intro: "BD-79 extends the piston platform for stronger output requirements where airflow, pressure, and vacuum reserve are central to the device design.",
+    range: [["Type", "High-pressure piston air / vacuum pump"], ["Flow", "30-45 L/min class"], ["Pressure", "Up to 7 bar class"], ["Vacuum", "-80 to -85 kPa"], ["Voltage", "12V, 24V options"], ["Use", "High-output pressure and suction systems"]],
+    applications: ["Compact pressure systems", "Industrial modules", "Robotics", "Specialized medical and beauty devices"],
+    selection: ["Use BD-79 for stronger pressure reserve than BD-07 class platforms.", "Validate power supply margin and heat rise.", "Include relief, damping, and noise control in the module."]
+  },
+  {
+    slug: "product/bd-08-mini-compressor",
+    category: "mini-compressor",
+    model: "BD-08",
+    title: "BD-08 Mini Compressor",
+    description: "BD-08 mini compressor for compact high-flow pressure systems, rehabilitation equipment, foam cleaning, 3D printing, and portable tools.",
+    h1: "BD-08 Mini Compressor",
+    intro: "BD-08 is a compact oil-free mini compressor platform for systems needing higher airflow and pressure from a DC-powered module.",
+    range: [["Type", "Mini compressor"], ["Flow", "40-80 L/min"], ["Pressure", "2-7 bar"], ["Vacuum", "Selected configurations to -85 kPa"], ["Voltage", "12V, 24V options"], ["Power", "60-150W class"]],
+    applications: ["Rehabilitation equipment", "Foam cleaning", "3D printing accessories", "Portable tools", "Environmental monitoring"],
+    selection: ["Use BD-08 when high airflow matters as much as pressure.", "Test thermal behavior inside the final enclosure.", "Add pressure relief and acoustic treatment where needed."]
+  },
+  {
+    slug: "product/pump-accessory-control-module",
+    category: "pump-accessories",
+    model: "Accessory Module",
+    title: "Pump Accessory and Control Module",
+    description: "Pump accessory and control module options including tubing, filters, check valves, silencers, shock absorbers, PWM controllers, and flow meters.",
+    h1: "Pump Accessory and Control Module",
+    intro: "Accessory modules help OEM teams reduce noise, control pressure loss, protect the pump path, stabilize flow, and simplify installation.",
+    range: [["Tubing", "PU / silicone options"], ["Valves", "Check valves and solenoid valves"], ["Noise", "Silencers, mufflers, absorbing cotton"], ["Protection", "Filters and shock absorbers"], ["Control", "PWM controller and selected flow feedback options"], ["Assembly", "Pump plus accessory module support"]],
+    applications: ["Noise reduction", "Filtration", "Flow routing", "OEM fluid-control assemblies"],
+    selection: ["Select tubing and fittings by pressure loss and sealing needs.", "Match filter size to contamination risk and maintenance interval.", "Validate the full module rather than pump-only data."]
+  }
+];
+
 const infoPages = [
   {
     slug: "contact",
@@ -270,6 +417,16 @@ const blogPages = [
   ]
 }));
 
+productPages.forEach((page) => {
+  const matches = modelPages.filter((model) => model.category === page.slug);
+  if (!matches.length) return;
+  page.cards = matches.map((model) => ({
+    title: model.h1,
+    body: model.description,
+    href: `/${model.slug}/`
+  }));
+});
+
 const overviewPages = [
   {
     slug: "products",
@@ -303,7 +460,7 @@ const overviewPages = [
   }
 ];
 
-const allPages = [...overviewPages, ...infoPages, ...productPages, ...blogPages];
+const allPages = [...overviewPages, ...infoPages, ...productPages, ...modelPages, ...blogPages];
 
 const escapeHtml = (value) =>
   String(value)
@@ -382,7 +539,7 @@ const renderRelatedProducts = () => `
         </section>`;
 
 const renderPage = (page) => {
-  const isProduct = productPages.includes(page);
+  const isProduct = productPages.includes(page) || modelPages.includes(page);
   const isBlog = page.slug.startsWith("blog/");
   const canonical = `${siteUrl}/${page.slug}/`;
   const structuredData = {
@@ -391,6 +548,7 @@ const renderPage = (page) => {
     name: page.h1,
     description: page.description,
     url: canonical,
+    ...(page.model ? { model: page.model, category: page.category } : {}),
     publisher: {
       "@type": "Organization",
       name: "JSG DC Pump",
