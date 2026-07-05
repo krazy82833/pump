@@ -23,12 +23,6 @@ const languageSelectHtml = `
           <select data-language-select aria-label="Select language">
             <option value="en">EN English</option>
             <option value="zh">CN 简体中文</option>
-            <option value="fr">FR Français</option>
-            <option value="de">DE Deutsch</option>
-            <option value="id">ID Bahasa Indonesia</option>
-            <option value="it">IT Italiano</option>
-            <option value="ko">KR 한국어</option>
-            <option value="es">ES Español</option>
           </select>
         </label>`;
 
@@ -843,7 +837,7 @@ const renderPage = (page) => {
   <meta property="og:type" content="${isBlog ? "article" : "website"}">
   ${page.noindex ? '<meta name="robots" content="noindex,follow">' : ""}
   <link rel="canonical" href="${canonical}">
-  <link rel="stylesheet" href="/assets/css/styles.css?v=20260705-seo-pages">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20260705-jsg-redesign">
   <script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@graph": schemaGraph })}</script>
 </head>
 <body>
@@ -905,9 +899,9 @@ const renderPage = (page) => {
       <div><h3>Resources</h3><a href="/applications/">Applications</a><a href="/download/">Download</a><a href="/faq/">FAQ</a><a href="/blog/">Blog</a></div>
       <div><h3>Contact</h3><a href="mailto:info@jsgpump.com">info@jsgpump.com</a><a href="${rfqPath}">Submit RFQ</a><a href="/contact/">Contact page</a></div>
     </div>
-    <div class="footer-bottom"><span>&copy; 2026 Shenzhen Jingsuguang Technology Co., Ltd.</span></div>
+    <div class="footer-bottom"><span>&copy; 2026 Shenzhen Jingsuguang Technology Co., Ltd.</span><a class="deerflow-link" href="https://deerflow.tech" target="_blank" rel="noopener">Created By Deerflow</a></div>
   </footer>
-  <script src="/assets/js/main.js?v=20260705-seo-pages"></script>
+  <script src="/assets/js/main.js?v=20260705-jsg-redesign-5"></script>
 </body>
 </html>
 `;

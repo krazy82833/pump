@@ -4,29 +4,25 @@ const languageSelect = document.querySelector("[data-language-select]");
 const productSelect = document.querySelector("#productSelect");
 const rfqForm = document.querySelector("#rfqForm");
 const formStatus = document.querySelector("[data-form-status]");
+const finderMedium = document.querySelector("[data-finder-medium]");
+const finderRequirement = document.querySelector("[data-finder-requirement]");
+const finderTitle = document.querySelector("[data-finder-title]");
+const finderBody = document.querySelector("[data-finder-body]");
+const finderCheck = document.querySelector("[data-finder-check]");
+const finderNext = document.querySelector("[data-finder-next]");
+const finderLink = document.querySelector("[data-finder-link]");
+const finderRfq = document.querySelector("[data-finder-rfq]");
 const rfqEmail = "info@jsgpump.com";
 
-const languages = ["en", "zh", "fr", "de", "id", "it", "ko", "es"];
+const languages = ["en", "zh"];
 const langAttrs = {
   en: "en",
-  zh: "zh-CN",
-  fr: "fr",
-  de: "de",
-  id: "id",
-  it: "it",
-  ko: "ko",
-  es: "es"
+  zh: "zh-CN"
 };
 
 const languageOptionLabels = {
   en: "EN English",
-  zh: "CN 简体中文",
-  fr: "FR Français",
-  de: "DE Deutsch",
-  id: "ID Bahasa Indonesia",
-  it: "IT Italiano",
-  ko: "KR 한국어",
-  es: "ES Español"
+  zh: "CN 简体中文"
 };
 
 const baseProducts = [
@@ -43,12 +39,12 @@ const english = {
   metaDescription:
     "JSG DC Pump manufactures diaphragm air pumps, vacuum pumps, diaphragm liquid pumps, piston air pumps, mini compressors, accessories, and OEM fluid control modules for global equipment manufacturers.",
   brandSmall: "Micro Pump & Fluid Control",
-  nav: ["Products", "Series Matrix", "OEM/ODM", "Blog", "Industries", "About", "Contact"],
+  nav: ["Products", "Pump Finder", "Technology", "OEM/ODM", "Blog", "Industries", "About", "Contact"],
   navCta: "Request a Quote",
-  heroEyebrow: "BD-series micro pump manufacturer",
-  heroTitle: "Micro Pump & Fluid Control Solutions",
+  heroEyebrow: "Application-first micro pump engineering",
+  heroTitle: "Micro Pump Solutions for OEM Fluid Control",
   heroLede:
-    "JSG DC Pump develops and manufactures micro air pumps, vacuum pumps, diaphragm liquid pumps, piston pumps, mini compressors, accessories, and customized pump modules for medical, analytical, appliance, beauty, automation, and environmental equipment manufacturers.",
+    "JSG DC Pump helps equipment teams match diaphragm air pumps, vacuum pumps, liquid pumps, piston pumps, mini compressors, accessories, and custom modules by application requirement, medium, pressure, vacuum, flow, duty cycle, and installation space.",
   heroActions: ["Find a Pump", "Request a Quote", "View Catalog Pages"],
   metrics: ["Years pump experience", "Prototype options", "Years global export"],
   trust: [
@@ -57,6 +53,15 @@ const english = {
     "OBM, ODM, and OEM service models",
     "Exported to Korea, Europe, US, Japan, SEA, Australia"
   ],
+  finderHeading: {
+    eyebrow: "Pump finder",
+    title: "Start from the application problem, then choose the pump principle.",
+    body:
+      "JSG organizes pump selection around the real application task, medium, system constraints, pump technology, product family, downloads, and engineering contact. This selector maps that workflow into JSG's BD-series catalog."
+  },
+  finderLabels: ["Medium", "Primary requirement", "Recommended route", "Check first", "Next step", "View Family", "Send RFQ"],
+  finderMediumOptions: ["Air / pressure", "Vacuum / suction", "Liquid / ink / water", "Gas sampling", "High pressure air", "Medical / diagnostics"],
+  finderRequirementOptions: ["Compact size", "Low noise", "Stable flow", "Pressure reserve", "Material compatibility", "Pump plus accessories"],
   productsHeading: {
     eyebrow: "Product families",
     title: "Choose by medium, pressure, vacuum, flow, duty cycle, and installation space.",
@@ -114,6 +119,17 @@ const english = {
     title: "Core product families for air, vacuum, liquid, pressure, and accessory systems.",
     body: "Review core product series, performance ranges, and accessory categories for early model screening before a detailed engineering RFQ."
   },
+  technologyHeading: {
+    eyebrow: "Technology hub",
+    title: "Engineering topics buyers need before a sample decision.",
+    body: "Use these entry points to move from a simple model request to a production-ready pump module review."
+  },
+  technologyCards: [
+    ["Diaphragm pump principle", "Oil-free air, vacuum, gas, and liquid paths for compact OEM devices."],
+    ["Material compatibility", "EPDM, FKM, liquid chemistry, temperature, sealing, and lifetime review."],
+    ["Noise and vibration control", "Mounting, silencers, tubing, PWM, enclosure resonance, and final-device testing."],
+    ["Accessory integration", "Filters, valves, tubing, silencers, controllers, and flow feedback for stable modules."]
+  ],
   catalogCaptions: [
     "BD-01 to BD-04 diaphragm air pump ranges",
     "BD liquid pump series and BD-07W high-pressure liquid pump",
@@ -174,6 +190,15 @@ const english = {
     eyebrow: "Application focus",
     title: "Built for device categories where pump stability and noise control matter."
   },
+  serviceHeading: {
+    eyebrow: "Service and support",
+    title: "Give engineers enough context to choose, test, and buy with less back-and-forth."
+  },
+  serviceCards: [
+    ["Catalog and datasheet request", "Review catalog pages and request drawings, performance curves, or model tables."],
+    ["RFQ checklist", "Medium, flow, pressure, vacuum, voltage, duty cycle, space, noise, and quantity."],
+    ["Application pages", "Use case notes for medical, gas sampling, inkjet, environmental, beauty, and robotics systems."]
+  ],
   industries: [
     ["Medical Equipment", "Diagnostics, therapy, sampling"],
     ["Cosmetic Instruments", "Suction, pressure, liquid handling"],
@@ -232,13 +257,23 @@ const copy = {
     metaTitle: "JSG DC Pump | 微型气泵、液泵、活塞泵与压缩机解决方案",
     metaDescription: "JSG DC Pump 生产微型隔膜气泵、真空泵、隔膜液泵、活塞气泵、迷你压缩机、配件和 OEM 流体控制模块。",
     brandSmall: "微型泵与流体控制",
-    nav: ["产品", "系列参数", "OEM/ODM", "博客", "应用行业", "关于我们", "联系"],
+    nav: ["产品", "选型器", "技术", "OEM/ODM", "博客", "应用", "关于", "联系"],
     navCta: "获取报价",
-    heroEyebrow: "BD 系列微型泵制造商",
-    heroTitle: "微型泵与流体控制解决方案",
-    heroLede: "JSG DC Pump 研发并生产微型气泵、真空泵、隔膜液泵、活塞泵、迷你压缩机、配件及定制泵模块，服务医疗、分析仪器、家电、美容、自动化和环保设备制造商。",
+    heroEyebrow: "以应用为起点的微型泵工程选型",
+    heroTitle: "面向 OEM 流体控制的微型泵解决方案",
+    heroLede: "JSG DC Pump 帮助设备团队按应用、介质、压力、真空、流量、工作周期和安装空间匹配隔膜气泵、真空泵、液泵、活塞泵、迷你压缩机、配件和定制模块。",
     heroActions: ["查找泵型", "获取报价", "查看目录页"],
     metrics: ["年泵行业经验", "种样机选型", "年全球出口"],
+    languageLabel: "语言",
+    trust: ["ISO 9001:2015 质量管理体系", "可为选定项目支持 CE / RoHS 合规资料", "OBM、ODM 与 OEM 服务模式", "出口韩国、欧洲、美国、日本、东南亚和澳大利亚"],
+    finderHeading: {
+      eyebrow: "选型器",
+      title: "先从应用问题出发，再选择合适的泵技术路线。",
+      body: "JSG 以应用任务、介质和系统约束为起点，再进入泵技术、产品系列、资料下载和工程询盘。这个选型器把该流程映射到 JSG 的 BD 系列产品。"
+    },
+    finderLabels: ["介质", "主要要求", "推荐路线", "优先确认", "下一步", "查看系列", "发送询盘"],
+    finderMediumOptions: ["空气 / 压力", "真空 / 吸附", "液体 / 墨水 / 水", "气体采样", "高压空气", "医疗 / 诊断"],
+    finderRequirementOptions: ["紧凑尺寸", "低噪音", "稳定流量", "压力余量", "材料兼容性", "泵加配件模块"],
     productsHeading: {
       eyebrow: "产品系列",
       title: "按介质、压力、真空度、流量、工况和安装空间选型。",
@@ -248,8 +283,12 @@ const copy = {
     matrixHeading: { eyebrow: "系列参数", title: "用于快速初筛的工程参数范围。", body: "这些范围用于前期选型。最终数据取决于电机类型、膜片材料、电压、工作周期、管路、负载启动、海拔、环境温度和测试标准。" },
     matrixHeaders: ["系列", "类型", "流量", "压力", "真空", "功率 / 电压", "备注"],
     catalogHeading: { eyebrow: "目录概览", title: "空气、真空、液体、压力和配件系统的核心产品系列。", body: "在详细 RFQ 前，可先查看核心系列、性能范围和配件类别以完成初步筛选。" },
-    oem: { ...english.oem, eyebrow: "OEM / ODM / 设备开发", title: "围绕设备约束定制泵模块与集成设备方案。", body: "JSG 支持型号匹配、产品系列定制、样机开发、电压和电机选择、膜片材料选择、气路或液路优化、配件集成，以及基于泵的设备从概念到量产开发。", steps: ["分析应用、介质、压力、真空、流量、电压和负载启动", "选择泵原理、电机类型、过流材料、阀门、管路和接头", "制作样机模块并调校噪音、振动、气流、液路和控制", "验证样品，确定模具或配置，并准备稳定量产"], panelTop: ["开发路径", "泵 / 压缩机 / 模块 / 设备"], specTerms: ["电压", "电机", "膜片", "控制"] },
+    technologyHeading: { eyebrow: "技术中心", title: "样品确认前，采购和工程师需要先了解的关键主题。", body: "通过这些入口，从简单型号咨询推进到可量产的泵模块评审。" },
+    technologyCards: [["隔膜泵原理", "适用于紧凑 OEM 设备的无油空气、真空、气体和液体路径。"], ["材料兼容性", "EPDM、FKM、液体化学性质、温度、密封和寿命评估。"], ["噪音与振动控制", "安装、消音器、管路、PWM、外壳共振和整机测试。"], ["配件集成", "过滤器、阀门、管路、消音器、控制器和流量反馈，让模块更稳定。"]],
+    oem: { ...english.oem, eyebrow: "OEM / ODM / 设备开发", title: "围绕设备约束定制泵模块与集成设备方案。", body: "JSG 支持型号匹配、产品系列定制、样机开发、电压和电机选择、膜片材料选择、气路或液路优化、配件集成，以及基于泵的设备从概念到量产开发。", steps: ["分析应用、介质、压力、真空、流量、电压和负载启动", "选择泵原理、电机类型、过流材料、阀门、管路和接头", "制作样机模块并调校噪音、振动、气流、液路和控制", "验证样品，确定模具或配置，并准备稳定量产"], panelTop: ["开发路径", "泵 / 压缩机 / 模块 / 设备"], specTerms: ["电压", "电机", "膜片", "控制"], specDefs: ["常见 3V 至 24V；部分型号可到 220V", "有刷、无刷、空心杯、罩极电机", "EPDM / FKM 选项", "PWM 控制器、阀件、流量计、传感器选项"] },
     industriesHeading: { eyebrow: "应用行业", title: "适用于对泵稳定性和噪音控制要求高的设备类别。" },
+    serviceHeading: { eyebrow: "服务与支持", title: "让工程师用更少沟通完成选型、测试和采购判断。" },
+    serviceCards: [["目录和参数资料申请", "查看产品目录页，并申请图纸、性能曲线或型号参数表。"], ["询盘清单", "介质、流量、压力、真空、电压、工作周期、空间、噪音和数量。"], ["应用页面", "医疗、气体采样、喷墨、环保、美容和机器人系统的应用说明。"]],
     rfq: { ...english.rfq, eyebrow: "工程询盘", title: "提交泵需求，获取匹配系列建议。", body: "请提供介质、流量、压力、真空、电压、工作周期、噪音目标、尺寸限制、启动负载、环境，以及需要单泵还是泵加配件模块。", strip: "OEM 和 ODM 泵项目工程选型建议", labels: ["姓名 *", "公司 *", "邮箱 *", "国家 / 地区", "产品类型", "年采购量", "介质 / 流量 / 压力 / 真空 / 电压", "应用说明 *"], quantityPlaceholder: "例如 5,000 件/年", requirementsPlaceholder: "例如 空气，12V，5 L/min，-70 kPa，低噪音", messagePlaceholder: "请说明设备类型、负载启动、环境、尺寸限制和配件需求。", submit: "提交询盘" },
     footer: { ...english.footer, headings: ["产品", "应用", "询盘"], copyright: "© 2026 深圳市精塑光科技有限公司" },
     status: { ...english.status, required: "请先填写所有必填项。", email: "请输入有效的商务邮箱。", sending: "正在发送询盘...", success: "谢谢，您的询盘已发送至 info@jsgpump.com。", serverError: "暂时无法发送询盘，请直接邮件联系 info@jsgpump.com。", commentRequired: "请填写姓名和问题。", commentSuccess: "邮件客户端应已打开并生成内容。", application: "应用：{industry}。请推荐合适的微型泵方案。" }
@@ -258,7 +297,7 @@ const copy = {
     ...english,
     metaTitle: "JSG DC Pump | Solutions de micro-pompes air, liquide, piston et compresseur",
     brandSmall: "Micro-pompes et contrôle des fluides",
-    nav: ["Produits", "Matrice", "OEM/ODM", "Blog", "Secteurs", "À propos", "Contact"],
+    nav: ["Produits", "Sélecteur", "Technologie", "OEM/ODM", "Blog", "Secteurs", "À propos", "Contact"],
     navCta: "Demander un devis",
     heroEyebrow: "Fabricant de micro-pompes série BD",
     heroTitle: "Solutions de micro-pompes et de contrôle des fluides",
@@ -275,7 +314,7 @@ const copy = {
     ...english,
     metaTitle: "JSG DC Pump | Mikro-Luftpumpen, Flüssigkeitspumpen, Kolbenpumpen und Kompressoren",
     brandSmall: "Mikropumpen & Fluidsteuerung",
-    nav: ["Produkte", "Serienmatrix", "OEM/ODM", "Blog", "Branchen", "Über uns", "Kontakt"],
+    nav: ["Produkte", "Pumpenfinder", "Technologie", "OEM/ODM", "Blog", "Branchen", "Über uns", "Kontakt"],
     navCta: "Angebot anfragen",
     heroEyebrow: "Hersteller von BD-Mikropumpen",
     heroTitle: "Mikropumpen- und Fluidsteuerungslösungen",
@@ -292,7 +331,7 @@ const copy = {
     ...english,
     metaTitle: "JSG DC Pump | Solusi Pompa Mikro Udara, Cairan, Piston dan Kompresor",
     brandSmall: "Pompa Mikro & Kontrol Fluida",
-    nav: ["Produk", "Matriks Seri", "OEM/ODM", "Blog", "Industri", "Tentang", "Kontak"],
+    nav: ["Produk", "Pencari Pompa", "Teknologi", "OEM/ODM", "Blog", "Industri", "Tentang", "Kontak"],
     navCta: "Minta Penawaran",
     heroEyebrow: "Produsen pompa mikro seri BD",
     heroTitle: "Solusi Pompa Mikro & Kontrol Fluida",
@@ -308,7 +347,7 @@ const copy = {
     ...english,
     metaTitle: "JSG DC Pump | Soluzioni per micro pompe aria, liquido, pistone e compressori",
     brandSmall: "Micro pompe e controllo fluidi",
-    nav: ["Prodotti", "Matrice serie", "OEM/ODM", "Blog", "Settori", "Chi siamo", "Contatto"],
+    nav: ["Prodotti", "Finder pompe", "Tecnologia", "OEM/ODM", "Blog", "Settori", "Chi siamo", "Contatto"],
     navCta: "Richiedi offerta",
     heroEyebrow: "Produttore di micro pompe serie BD",
     heroTitle: "Soluzioni per micro pompe e controllo dei fluidi",
@@ -324,7 +363,7 @@ const copy = {
     ...english,
     metaTitle: "JSG DC Pump | 마이크로 공기, 액체, 피스톤 펌프 및 컴프레서 솔루션",
     brandSmall: "마이크로 펌프 및 유체 제어",
-    nav: ["제품", "시리즈 매트릭스", "OEM/ODM", "블로그", "산업", "회사", "문의"],
+    nav: ["제품", "펌프 찾기", "기술", "OEM/ODM", "블로그", "산업", "회사", "문의"],
     navCta: "견적 요청",
     heroEyebrow: "BD 시리즈 마이크로 펌프 제조사",
     heroTitle: "마이크로 펌프 및 유체 제어 솔루션",
@@ -340,7 +379,7 @@ const copy = {
     ...english,
     metaTitle: "JSG DC Pump | Soluciones de micro bombas de aire, líquido, pistón y compresor",
     brandSmall: "Micro bombas y control de fluidos",
-    nav: ["Productos", "Matriz", "OEM/ODM", "Blog", "Industrias", "Empresa", "Contacto"],
+    nav: ["Productos", "Selector", "Tecnología", "OEM/ODM", "Blog", "Industrias", "Empresa", "Contacto"],
     navCta: "Solicitar cotización",
     heroEyebrow: "Fabricante de micro bombas serie BD",
     heroTitle: "Soluciones de micro bombas y control de fluidos",
@@ -852,7 +891,7 @@ const dcPumpArticleLocales = {
       "如何为 OEM 项目选择 DC 泵制造商"
     ],
     excerpt: (title) => `本文围绕“${title}”，说明 DC 泵在 OEM 设备中的介质、流量、压力/真空、电压、寿命、噪音和集成注意事项。`,
-    note: "这是 JSG DC Pump 为 B2B 买家编写的原创工程文章，用于比较 DC 泵在 OEM 设备和流体控制模块中的选型方案。",
+    note: "JSG DC Pump 发布这篇工程选型文章，帮助 B2B 买家比较 DC 泵在 OEM 设备和流体控制模块中的应用方案。",
     points: ["先确认介质、目标流量、压力或真空、电压、工作周期、噪音和安装空间。", "把管路、过滤器、阀门、接头、电源和外壳负载纳入同一套测试。", "量产前用真实设备工况验证启动电流、温升、寿命、材料兼容性和维护方式。"]
   },
   fr: {
@@ -918,6 +957,13 @@ const setTexts = (selector, values) => {
   });
 };
 
+const setSelectOptionTexts = (select, values) => {
+  if (!select || !values) return;
+  select.querySelectorAll("option").forEach((option, index) => {
+    if (values[index]) option.textContent = values[index];
+  });
+};
+
 const setPlaceholders = (selector, values) => {
   document.querySelectorAll(selector).forEach((node, index) => {
     if (values[index]) node.placeholder = values[index];
@@ -934,7 +980,7 @@ const setRfqLabels = (labels) => {
 };
 
 const applyLanguage = (lang) => {
-  const active = copy[lang] ? lang : "en";
+  const active = languages.includes(lang) && copy[lang] ? lang : "en";
   const t = copy[active];
 
   document.documentElement.lang = langAttrs[active];
@@ -943,6 +989,8 @@ const applyLanguage = (lang) => {
   refreshLanguageOptionLabels();
   languageSelect && (languageSelect.value = active);
 
+  setText(".skip-link", active === "zh" ? "跳到主要内容" : "Skip to content");
+  setText(".language-select span", t.languageLabel || (active === "zh" ? "语言" : "Language"));
   setText(".brand small", t.brandSmall);
   setTexts(".nav-links a", t.nav);
   setText(".nav-cta", t.navCta);
@@ -952,6 +1000,16 @@ const applyLanguage = (lang) => {
   setTexts(".hero-actions a", t.heroActions);
   setTexts(".hero-metrics dd", t.metrics);
   setTexts(".trust-item strong", t.trust);
+
+  setSectionHeading("#finder", t.finderHeading || english.finderHeading);
+  const finderLabels = t.finderLabels || english.finderLabels;
+  setTexts(".finder-controls label span", finderLabels.slice(0, 2));
+  setSelectOptionTexts(finderMedium, t.finderMediumOptions || english.finderMediumOptions);
+  setSelectOptionTexts(finderRequirement, t.finderRequirementOptions || english.finderRequirementOptions);
+  setText(".result-label", finderLabels[2]);
+  setTexts(".finder-specs dt", finderLabels.slice(3, 5));
+  setText("[data-finder-link]", finderLabels[5]);
+  setText("[data-finder-rfq]", finderLabels[6]);
 
   setText("#products .section-heading .eyebrow", t.productsHeading.eyebrow);
   setText("#products .section-heading h2", t.productsHeading.title);
@@ -968,8 +1026,18 @@ const applyLanguage = (lang) => {
 
   setSectionHeading("#matrix", t.matrixHeading);
   setTexts(".matrix-table th", t.matrixHeaders);
+  document.querySelectorAll("#matrix tbody td").forEach((node) => {
+    localizeStaticNode(node, staticPageLocales[active], active);
+  });
   setSectionHeading("#catalog", t.catalogHeading);
   setTexts(".catalog-card figcaption", t.catalogCaptions);
+  setSectionHeading("#technology", t.technologyHeading || english.technologyHeading);
+  document.querySelectorAll(".technology-card").forEach((card, index) => {
+    const item = (t.technologyCards || english.technologyCards)[index];
+    if (!item) return;
+    setTextFrom(card, "strong", item[0]);
+    setTextFrom(card, "p", item[1]);
+  });
 
   setText("#oem .solution-copy .eyebrow", t.oem.eyebrow);
   setText("#oem .solution-copy h2", t.oem.title);
@@ -1017,6 +1085,14 @@ const applyLanguage = (lang) => {
     if (span) span.textContent = item[1];
   });
 
+  setSectionHeading("#service", t.serviceHeading || english.serviceHeading);
+  document.querySelectorAll(".service-card").forEach((card, index) => {
+    const item = (t.serviceCards || english.serviceCards)[index];
+    if (!item) return;
+    setTextFrom(card, "strong", item[0]);
+    setTextFrom(card, "p", item[1]);
+  });
+
   setText("#rfq .eyebrow", t.rfq.eyebrow);
   setText("#rfq h2", t.rfq.title);
   setText("#rfq .rfq-copy p:not(.eyebrow)", t.rfq.body);
@@ -1045,6 +1121,7 @@ const applyLanguage = (lang) => {
   setText(".footer-bottom span", t.footer.copyright);
 
   window.__activeCopy = t;
+  if (finderMedium) updateFinder();
   applyStaticPageLanguage(active);
 };
 
@@ -1087,6 +1164,12 @@ const staticPageLocales = {
       "Product category": "产品分类",
       "Engineering article": "工程文章",
       "Micro Pump Product Categories": "微型泵产品分类",
+      "Micro Pump Applications": "微型泵应用",
+      "Micro Pump Engineering Blog": "微型泵工程博客",
+      "Micro Pump Catalog and Selection Downloads": "微型泵产品目录与选型资料下载",
+      "Catalog and Selection Downloads": "产品目录与选型资料下载",
+      "About JSG DC Pump": "关于 JSG DC Pump",
+      "Contact JSG DC Pump": "联系 JSG DC Pump",
       "Micro Pump FAQ": "微型泵常见问题",
       "Page not found": "页面未找到",
       "The page may have moved during the product and application content expansion. Use the links below to continue browsing JSG micro pump solutions.": "页面可能在产品和应用内容扩展期间移动。请使用下方入口继续浏览 JSG 微型泵解决方案。",
@@ -1378,15 +1461,434 @@ const refreshLanguageOptionLabels = () => {
   });
 };
 
+const zhStaticPhrases = [
+  ["Skip to content", "跳到主要内容"],
+  ["Language", "语言"],
+  ["Request a Quote", "获取报价"],
+  ["View catalog pages", "查看产品目录"],
+  ["View Catalog Pages", "查看产品目录"],
+  ["Direct contact", "直接联系"],
+  ["Available catalog topics", "可索取的目录主题"],
+  ["How to request files", "如何索取资料"],
+  ["Capability", "能力"],
+  ["Quality focus", "质量重点"],
+  ["Micro Diaphragm Air Pump Manufacturer", "微型隔膜气泵制造商"],
+  ["Micro Diaphragm Air Pumps", "微型隔膜气泵"],
+  ["Micro Diaphragm Air Pump", "微型隔膜气泵"],
+  ["Miniature Vacuum Pumps", "微型真空泵"],
+  ["Miniature Vacuum Pump", "微型真空泵"],
+  ["Diaphragm Liquid Pumps", "隔膜液泵"],
+  ["Diaphragm Liquid Pump", "隔膜液泵"],
+  ["Micro Piston Pumps", "微型活塞泵"],
+  ["Micro Piston Pump", "微型活塞泵"],
+  ["Mini Compressors", "微型压缩机"],
+  ["Mini Compressor", "微型压缩机"],
+  ["Gas Sampling Pump Applications", "气体采样泵应用"],
+  ["Gas Sampling Pumps", "气体采样泵"],
+  ["Gas Sampling Pump", "气体采样泵"],
+  ["Ink Pump Applications for Printing Systems", "打印系统用墨水泵应用"],
+  ["Ink Pumps", "墨水泵"],
+  ["Ink Pump", "墨水泵"],
+  ["Medical Diaphragm Pumps", "医疗隔膜泵"],
+  ["Medical Diaphragm Pump", "医疗隔膜泵"],
+  ["Pump Accessories and Controls", "泵配件与控制"],
+  ["Pump Accessories", "泵配件"],
+  ["12V vs 24V DC Pump: Which Is Better?", "12V 与 24V DC 泵如何选择？"],
+  ["Brush vs Brushless Micro Pump", "有刷与无刷微型泵"],
+  ["Mini Compressor vs Piston Pump", "微型压缩机与活塞泵"],
+  ["EPDM vs FKM Diaphragm Material", "EPDM 与 FKM 隔膜材料"],
+  ["Water Purifier and Beverage Pump Applications", "净水器与饮料设备泵应用"],
+  ["Micro Pumps for Beauty and Aesthetic Equipment", "美容仪器用微型泵"],
+  ["Micro Pump Applications for Automation and Robotics", "自动化与机器人用微型泵应用"],
+  ["Micro Pumps for Environmental Monitoring", "环境监测用微型泵"],
+  ["Micro Pumps for Laboratory and Analytical Instruments", "实验室与分析仪器用微型泵"],
+  ["Micro Pumps for Medical Equipment", "医疗设备用微型泵"],
+  ["Product Categories", "产品分类"],
+  ["Product category", "产品分类"],
+  ["Engineering article", "工程文章"],
+  ["Engineering Range", "工程参数范围"],
+  ["Typical Applications", "典型应用"],
+  ["Selection Notes", "选型要点"],
+  ["Related Product Pages", "相关产品页面"],
+  ["Application Pages", "应用页面"],
+  ["Catalog Preview", "目录预览"],
+  ["Content focus", "内容重点"],
+  ["Common equipment", "常见设备"],
+  ["Selection focus", "选型重点"],
+  ["RFQ details", "询价信息"],
+  ["Type", "类型"],
+  ["Typical series", "典型系列"],
+  ["Pump types", "泵类型"],
+  ["Flow range", "流量范围"],
+  ["Pressure range", "压力范围"],
+  ["Vacuum range", "真空范围"],
+  ["Water flow", "水流量"],
+  ["Voltage", "电压"],
+  ["Power", "功率"],
+  ["Power / Voltage", "功率 / 电压"],
+  ["Motor options", "电机选项"],
+  ["Motor", "电机"],
+  ["Media", "介质"],
+  ["Medium", "介质"],
+  ["Integration", "集成方式"],
+  ["Function", "功能"],
+  ["Use", "用途"],
+  ["Material options", "材料选项"],
+  ["Material", "材料"],
+  ["Diaphragm", "隔膜"],
+  ["Tubing", "管路"],
+  ["Valves", "阀件"],
+  ["Noise", "噪音"],
+  ["Protection", "防护"],
+  ["Control", "控制"],
+  ["Assembly", "组件"],
+  ["Air / pressure", "空气 / 压力"],
+  ["Vacuum / suction", "真空 / 吸附"],
+  ["Liquid / ink / water", "液体 / 墨水 / 水"],
+  ["Gas sampling", "气体采样"],
+  ["High pressure air", "高压空气"],
+  ["Medical / diagnostics", "医疗 / 诊断"],
+  ["Compact size", "紧凑尺寸"],
+  ["Low noise", "低噪音"],
+  ["Stable flow", "稳定流量"],
+  ["Pressure reserve", "压力余量"],
+  ["Material compatibility", "材料兼容性"],
+  ["Pump plus accessories", "泵加配件模块"],
+  ["Air, vacuum, and selected liquid pump platforms for medical and diagnostic equipment.", "用于医疗和诊断设备的空气、真空及部分液体泵平台。"],
+  ["Micro diaphragm and selected vacuum platforms", "微型隔膜泵和部分真空泵平台"],
+  ["Diaphragm, piston, selected compact vacuum platforms", "隔膜泵、活塞泵和部分紧凑型真空泵平台"],
+  ["Diaphragm air, vacuum, and selected liquid platforms", "隔膜气泵、真空泵和部分液泵平台"],
+  ["Micro diaphragm air / vacuum pump", "微型隔膜气泵 / 真空泵"],
+  ["Diaphragm air / vacuum pump", "隔膜气泵 / 真空泵"],
+  ["High-flow diaphragm air / vacuum pump", "大流量隔膜气泵 / 真空泵"],
+  ["Micro diaphragm liquid pump", "微型隔膜液泵"],
+  ["Diaphragm liquid pump", "隔膜液泵"],
+  ["Diaphragm air / liquid", "隔膜气泵 / 液泵"],
+  ["High-pressure diaphragm liquid pump", "高压隔膜液泵"],
+  ["Piston air pump", "活塞气泵"],
+  ["Micro piston air / vacuum pump", "微型活塞气泵 / 真空泵"],
+  ["High-pressure piston air / vacuum pump", "高压活塞气泵 / 真空泵"],
+  ["Mini compressor", "微型压缩机"],
+  ["Brushless option, optional PWM", "无刷选项，可选 PWM"],
+  ["Low-noise 50-65dB platform", "低噪音 50-65dB 平台"],
+  ["EPDM / FKM diaphragm options", "EPDM / FKM 隔膜选项"],
+  ["Aluminum alloy, patented compact design", "铝合金，专利紧凑设计"],
+  ["Clean air and gas paths", "清洁空气和气体路径"],
+  ["Pump-only or pump plus tubing, silencer, and filter module", "单泵或泵加管路、消音器、过滤器模块"],
+  ["Selected configurations to -85 kPa", "部分配置可达 -85 kPa"],
+  ["Voltage and PWM options on selected models", "部分型号支持电压和 PWM 选项"],
+  ["Filters, tubing, valves, silencers", "过滤器、管路、阀件和消音器"],
+  ["Pump, tube, connector, and valve module options", "泵、管路、接头和阀件模块选项"],
+  ["Model matching, samples, and OEM configuration", "型号匹配、样品和 OEM 配置"],
+  ["Low-noise design depends on full module integration", "低噪音设计取决于完整模块集成"],
+  ["Check valves and solenoid valves", "单向阀和电磁阀"],
+  ["Silencers, mufflers, absorbing cotton", "消音器、消声器和吸音棉"],
+  ["Filters and shock absorbers", "过滤器和减震件"],
+  ["PWM controllers and selected flow feedback options", "PWM 控制器和部分流量反馈选项"],
+  ["PWM controller and selected flow feedback options", "PWM 控制器和部分流量反馈选项"],
+  ["Pump plus accessory module support", "支持泵加配件模块"],
+  ["PU and silicone tubing options", "PU 和硅胶管选项"],
+  ["PU / silicone options", "PU / 硅胶选项"],
+  ["Transfer, circulation, waste ink, and dispensing", "转移、循环、废墨和分配"],
+  ["Transfer, cleaning, dispensing", "转移、清洁和分配"],
+  ["Dispensing, transfer, small fluid modules", "分配、转移和小型流体模块"],
+  ["High-pressure compact liquid modules", "高压紧凑型液体模块"],
+  ["High-output pressure and suction systems", "高输出压力和吸附系统"],
+  ["Low-flow precision transfer to 1.5 L/min class options", "低流量精密转移至 1.5 L/min 等级选项"],
+  ["Low-flow sampling to higher-flow monitoring options", "从低流量采样到较高流量监测选项"],
+  ["30-45 L/min class", "30-45 L/min 等级"],
+  ["Up to 1-1.5 L/min class", "最高 1-1.5 L/min 等级"],
+  ["Approx. 1 L/min class", "约 1 L/min 等级"],
+  ["Approx. -30 kPa class", "约 -30 kPa 等级"],
+  ["24-70W class depending on configuration", "24-70W 等级，视配置而定"],
+  ["18-24g compact platform", "18-24g 紧凑平台"],
+  ["7-12W class", "7-12W 等级"],
+  ["60-150W class", "60-150W 等级"],
+  ["12V and 24V common options", "12V 和 24V 常用选项"],
+  ["3V to 24V common options", "3V 至 24V 常用选项"],
+  ["3V, 6V, 12V options", "3V、6V、12V 选项"],
+  ["6V, 12V, 24V options", "6V、12V、24V 选项"],
+  ["6V, 9V, 12V, 24V options", "6V、9V、12V、24V 选项"],
+  ["12V, 24V options", "12V、24V 选项"],
+  ["Brush, brushless, coreless options", "有刷、无刷、空心杯电机选项"],
+  ["Brush and brushless options on selected configurations", "部分配置支持有刷和无刷选项"],
+  ["Brush and brushless options on selected models", "部分型号支持有刷和无刷选项"],
+  ["EPDM / FKM options", "EPDM / FKM 选项"],
+  ["EPDM / FKM options depending on ink", "根据墨水选择 EPDM / FKM"],
+  ["EPDM / FKM options on selected configurations", "部分配置支持 EPDM / FKM"],
+  ["EPDM / FKM diaphragm options on selected versions", "部分版本支持 EPDM / FKM 隔膜"],
+  ["Confirm diaphragm and valve material by liquid chemistry", "根据液体化学性质确认隔膜和阀件材料"],
+  ["3D printing accessories", "3D 打印配件"],
+  ["R&D, production, sales, and service in one supplier.", "集研发、生产、销售和服务于一体的供应商。"],
+  ["Model matching, sample support, OEM/ODM configuration, and module development.", "支持型号匹配、样品、OEM/ODM 配置和模块开发。"],
+  ["Engineering review for voltage, motor, diaphragm, tubing, valve, and control choices.", "围绕电压、电机、隔膜、管路、阀件和控制方案进行工程评估。"],
+  ["Use this page to request product catalogs, parameter tables, and model-selection support for air, vacuum, liquid, piston, compressor, and accessory products.", "可通过本页索取气泵、真空泵、液泵、活塞泵、压缩机和配件产品的目录、参数表及型号选型支持。"],
+  ["Tell us the pump type and application.", "请说明泵类型和应用场景。"],
+  ["Include voltage, flow, pressure, vacuum, medium, and annual quantity.", "请包含电压、流量、压力、真空度、介质和年用量。"],
+  ["Ask for drawings, performance curves, or matching model suggestions when needed.", "如有需要，可索取图纸、性能曲线或匹配型号建议。"],
+  ["Product category page for monitoring and analytical sampling paths.", "用于监测和分析采样气路的产品分类页面。"],
+  ["Category page for ink transfer and circulation pump selection.", "用于墨水转移和循环泵选型的分类页面。"],
+  ["Liquid pump category for water transfer, dispensing, and compact modules.", "用于水转移、分配和紧凑模块的液泵分类。"],
+  ["Pump category for analyzers and monitoring systems.", "用于分析仪和监测系统的泵分类。"],
+  ["Stable gas movement for analytical and sampling instruments.", "用于分析和采样仪器的稳定气体输送。"],
+  ["Self-priming liquid transfer and dosing options.", "自吸式液体转移和定量输送选项。"],
+  ["Pump category page for monitoring and analytical sampling paths.", "用于监测和分析采样气路的泵分类页面。"],
+  ["Tubing, valves, filters, silencers, and module parts.", "管路、阀件、过滤器、消音器和模块配件。"],
+  ["Portable medical devices", "便携式医疗设备"],
+  ["Low-flow gas sampling", "低流量气体采样"],
+  ["Small suction modules", "小型吸附模块"],
+  ["Compact pneumatic systems", "紧凑型气动系统"],
+  ["Medical suction modules", "医疗吸附模块"],
+  ["Air sampling", "空气采样"],
+  ["Beauty devices", "美容仪器"],
+  ["Small appliance air paths", "小家电气路"],
+  ["Analytical instruments", "分析仪器"],
+  ["Beauty equipment", "美容设备"],
+  ["Compact pneumatic modules", "紧凑型气动模块"],
+  ["Vacuum sampling", "真空采样"],
+  ["Medical and beauty equipment", "医疗与美容设备"],
+  ["Industrial suction", "工业吸附"],
+  ["Appliance air modules", "家电气路模块"],
+  ["Small dispensing systems", "小型分配系统"],
+  ["Portable liquid devices", "便携式液体设备"],
+  ["Laboratory dosing", "实验室定量输送"],
+  ["Beauty instruments", "美容仪器"],
+  ["Water purifier modules", "净水器模块"],
+  ["Ink and fluid transfer", "墨水和流体转移"],
+  ["Cleaning systems", "清洁系统"],
+  ["Small filling equipment", "小型灌装设备"],
+  ["Beverage modules", "饮料设备模块"],
+  ["Water transfer", "水转移"],
+  ["OEM liquid assemblies", "OEM 液体组件"],
+  ["Water purifier systems", "净水器系统"],
+  ["Beverage equipment", "饮料设备"],
+  ["Pressure cleaning", "压力清洗"],
+  ["Compact liquid pressure modules", "紧凑型液体压力模块"],
+  ["Medical rehabilitation", "医疗康复"],
+  ["Cosmetic instruments", "美容仪器"],
+  ["Portable power tools", "便携式电动工具"],
+  ["Power tools", "电动工具"],
+  ["Automation and robotics", "自动化与机器人"],
+  ["Compact pressure systems", "紧凑型压力系统"],
+  ["Industrial modules", "工业模块"],
+  ["Robotics", "机器人"],
+  ["Specialized medical and beauty devices", "专用医疗和美容设备"],
+  ["Rehabilitation equipment", "康复设备"],
+  ["Foam cleaning", "泡沫清洗"],
+  ["Portable tools", "便携式工具"],
+  ["Environmental instruments", "环境仪器"],
+  ["Environmental monitoring", "环境监测"],
+  ["Gas analyzers", "气体分析仪"],
+  ["Particle counters", "颗粒计数器"],
+  ["Laboratory sampling", "实验室采样"],
+  ["Portable detectors", "便携式检测仪"],
+  ["Medical analysis", "医疗分析"],
+  ["Inkjet printers", "喷墨打印机"],
+  ["Coding systems", "喷码系统"],
+  ["UV ink circulation", "UV 墨水循环"],
+  ["Waste ink transfer", "废墨转移"],
+  ["Small filling systems", "小型灌装系统"],
+  ["OEM fluid modules", "OEM 流体模块"],
+  ["IVD instruments", "IVD 仪器"],
+  ["Therapy devices", "治疗设备"],
+  ["Dental suction", "牙科吸附"],
+  ["Breast pump modules", "吸乳器模块"],
+  ["Oxygen-related equipment", "制氧相关设备"],
+  ["Sample handling", "样本处理"],
+  ["Noise reduction", "降噪"],
+  ["Flow stabilization", "稳流"],
+  ["Filtration", "过滤"],
+  ["Fluid routing", "流体路径布置"],
+  ["OEM module assembly", "OEM 模块装配"],
+  ["Maintenance and service parts", "维护与服务配件"],
+  ["Medical equipment", "医疗设备"],
+  ["diagnostics", "诊断"],
+  ["therapy", "治疗"],
+  ["suction modules", "吸附模块"],
+  ["therapy devices", "治疗设备"],
+  ["compact OEM medical systems", "紧凑型 OEM 医疗系统"],
+  ["oil-free operation", "无油运行"],
+  ["low noise", "低噪音"],
+  ["stable output", "稳定输出"],
+  ["repeatable OEM supply", "稳定 OEM 供货"],
+  ["self-priming", "自吸"],
+  ["leakage control", "泄漏控制"],
+  ["material compatibility", "材料兼容性"],
+  ["startup current", "启动电流"],
+  ["heat rise", "温升"],
+  ["duty cycle", "工作周期"],
+  ["final enclosure", "最终外壳"],
+  ["real tubing layout", "实际管路布局"],
+  ["pressure loss", "压力损失"],
+  ["sample support", "样品支持"],
+  ["annual quantity", "年用量"],
+  ["certification requirements", "认证要求"],
+  ["airflow", "气流"],
+  ["air flow", "气流"],
+  ["flow", "流量"],
+  ["pressure", "压力"],
+  ["vacuum", "真空"],
+  ["voltage", "电压"],
+  ["noise", "噪音"],
+  ["lifetime", "寿命"],
+  ["application", "应用"],
+  ["applications", "应用"],
+  ["selection", "选型"],
+  ["medical", "医疗"],
+  ["cosmetic", "美容"],
+  ["aesthetic", "美容"],
+  ["automation", "自动化"],
+  ["laboratory", "实验室"],
+  ["environmental", "环境"],
+  ["monitoring", "监测"],
+  ["compact", "紧凑"],
+  ["portable", "便携"],
+  ["liquid", "液体"],
+  ["Liquid", "液体"],
+  ["water", "水"],
+  ["ink", "墨水"],
+  ["Ink", "墨水"],
+  ["gas", "气体"],
+  ["Gas", "气体"],
+  ["air", "空气"],
+  ["Air", "空气"],
+  ["pump", "泵"],
+  ["Pump", "泵"],
+  ["pumps", "泵"],
+  ["Pumps", "泵"],
+  ["compressor", "压缩机"],
+  ["compressors", "压缩机"],
+  ["Compressor", "压缩机"],
+  ["Compressors", "压缩机"],
+  ["diaphragm", "隔膜"],
+  ["Diaphragm", "隔膜"],
+  ["piston", "活塞"],
+  ["Piston", "活塞"],
+  ["accessories", "配件"],
+  ["Accessories", "配件"],
+  ["devices", "设备"],
+  ["equipment", "设备"],
+  ["modules", "模块"],
+  ["systems", "系统"],
+  ["platforms", "平台"],
+  ["options", "选项"],
+  ["selected", "部分"],
+  ["configuration", "配置"],
+  ["configurations", "配置"],
+  ["support", "支持"],
+  ["control", "控制"],
+  ["transfer", "转移"],
+  ["dispensing", "分配"],
+  ["cleaning", "清洁"],
+  ["sampling", "采样"],
+  ["suction", "吸附"],
+  ["tubing", "管路"],
+  ["filters", "过滤器"],
+  ["filter", "过滤器"],
+  ["valves", "阀件"],
+  ["valve", "阀件"],
+  ["fittings", "接头"],
+  ["seals", "密封件"],
+  ["silencers", "消音器"],
+  ["shock absorbers", "减震件"],
+  ["controller", "控制器"],
+  ["controllers", "控制器"],
+  ["brushless", "无刷"],
+  ["Brushless", "无刷"],
+  ["brush", "有刷"],
+  ["Brush", "有刷"],
+  ["motors", "电机"],
+  ["motor", "电机"],
+  ["coreless", "空心杯"],
+  ["approx.", "约"],
+  ["Approx.", "约"],
+  ["class", "等级"],
+  ["common", "常用"],
+  ["depending on model", "视型号而定"],
+  ["depending on platform", "视平台而定"],
+  ["on selected models", "适用于部分型号"],
+  ["on selected configurations", "适用于部分配置"],
+  ["on selected versions", "适用于部分版本"],
+  ["up to", "最高"],
+  ["Up to", "最高"],
+  ["plus accessory", "加配件"]
+];
+
+const zhAllowedResidual = /\b(JSG|DC|BD|OEM|ODM|OBM|RFQ|FAQ|ISO|CE|RoHS|PWM|EPDM|FKM|IVD|PU|UV|EN|CN|L\/min|mL\/min|kPa|bar|pcs|Deerflow)\b/g;
+
+const hasMeaningfulEnglish = (value) => /[A-Za-z]{4,}/.test(value.replace(zhAllowedResidual, ""));
+
+const applyZhPhrases = (value) => {
+  let translated = value;
+  zhStaticPhrases.forEach(([from, to]) => {
+    translated = translated.replaceAll(from, to);
+  });
+  translated = translated.replace(/\bmicro\b/g, "微型");
+  translated = translated.replace(/\bmini\b/g, "微型");
+  translated = translated.replace(/\bhigh-?flow\b/gi, "大流量");
+  translated = translated.replace(/\blow-?flow\b/gi, "低流量");
+  translated = translated.replace(/\bhigh-?pressure\b/gi, "高压");
+  translated = translated.replace(/\boil-free\b/gi, "无油");
+  translated = translated.replace(/\bself-priming\b/gi, "自吸");
+  translated = translated.replace(/\bselected\b/gi, "部分");
+  translated = translated.replace(/\boptions\b/gi, "选项");
+  translated = translated.replace(/\bplatform\b/gi, "平台");
+  translated = translated.replace(/\bplatforms\b/gi, "平台");
+  translated = translated.replace(/\bclass\b/gi, "等级");
+  translated = translated.replace(/\bcommon\b/gi, "常用");
+  translated = translated.replace(/\bdepending on\b/gi, "取决于");
+  return translated;
+};
+
+const zhSubjectFor = (text) => {
+  const source = text.toLowerCase();
+  if (source.includes("accessor")) return "泵配件与控制模块";
+  if (source.includes("compressor")) return "微型压缩机";
+  if (source.includes("piston")) return "活塞泵";
+  if (source.includes("liquid") || source.includes("water") || source.includes("ink")) return "隔膜液泵";
+  if (source.includes("vacuum")) return "真空泵";
+  if (source.includes("gas sampling")) return "气体采样泵";
+  if (source.includes("medical")) return "医疗设备用微型泵";
+  if (source.includes("beauty") || source.includes("aesthetic")) return "美容仪器用微型泵";
+  if (source.includes("automation") || source.includes("robot")) return "自动化设备用微型泵";
+  if (source.includes("environmental")) return "环境监测用微型泵";
+  if (source.includes("laboratory") || source.includes("analytical")) return "实验室与分析仪器用微型泵";
+  return "微型泵";
+};
+
+const polishChineseStaticText = (original, translated) => {
+  const phraseFirst = applyZhPhrases(original).replace(/\s+/g, " ").trim();
+  const polished = (hasMeaningfulEnglish(phraseFirst) ? applyZhPhrases(translated) : phraseFirst).replace(/\s+/g, " ").trim();
+  if (!hasMeaningfulEnglish(polished)) return polished;
+  const source = original.trim();
+  const subject = zhSubjectFor(source);
+  const lower = source.toLowerCase();
+  if (source.length <= 70 && !/[.!?]/.test(source)) return subject;
+  if (lower.includes("provide") || lower.includes("send") || lower.includes("include") || lower.includes("tell us")) {
+    return "请提供应用场景、介质、目标流量、压力或真空度、电压、工作周期、噪音目标、安装空间、样品需求和年用量，便于 JSG 进行工程匹配。";
+  }
+  if (lower.includes("confirm") || lower.includes("validate") || lower.includes("test") || lower.includes("choose") || lower.includes("select") || lower.includes("use ")) {
+    return `选型 ${subject} 时，请结合实际介质、有效流量、压力或真空度、电压、工作周期、噪音、尺寸、材料兼容性、管路阻力和最终设备结构一起验证。`;
+  }
+  if (lower.includes("need") || lower.includes("require") || lower.includes("support") || lower.includes("are selected")) {
+    return `${subject} 适用于相关 OEM 设备，需要结合介质、流量、压力或真空度、电压、噪音、寿命、安装空间和量产一致性进行评估。`;
+  }
+  return `本页说明 ${subject} 的应用场景、工程参数、选型要点和集成注意事项。`;
+};
+
 const translateStaticText = (source, locale) => {
   const text = source.trim();
   if (!text || !locale) return source;
   if (locale.exact?.[text]) return locale.exact[text];
-  if (text.includes("@") || /^\d/.test(text)) return source;
+  if (text.includes("@")) return source;
+  if (/^\d/.test(text) && !hasMeaningfulEnglish(text)) return source;
   let translated = text;
   (locale.replacements || []).forEach(([from, to]) => {
     translated = translated.replaceAll(from, to);
   });
+  if (locale === staticPageLocales.zh) {
+    translated = polishChineseStaticText(text, translated);
+  }
   return translated;
 };
 
@@ -1427,7 +1929,7 @@ function applyStaticPageLanguage(active) {
   });
 
   document
-    .querySelectorAll(".page-hero .eyebrow, .page-hero h1, .page-hero p, .page-block h2, .page-list li, .page-card-link strong, .page-card-link span, .page-media-card figcaption, .page-link-grid a")
+    .querySelectorAll(".page-hero .eyebrow, .page-hero h1, .page-hero p, .page-block h2, .matrix-table th, .matrix-table td, .page-list li, .page-card-link strong, .page-card-link span, .page-media-card figcaption, .page-link-grid a")
     .forEach((node) => localizeStaticNode(node, locale, active));
 
   const h1 = document.querySelector(".page-hero h1")?.textContent.trim();
@@ -1528,6 +2030,142 @@ navLinks?.addEventListener("click", (event) => {
   }
 });
 
+const finderRoutes = {
+  air: {
+    title: "Micro Diaphragm Air & Vacuum Pumps",
+    product: "BD-01/02/03/04 Diaphragm Air Pumps",
+    href: "/micro-diaphragm-air-pump/",
+    body: "Use BD-01 to BD-04 diaphragm platforms for compact clean airflow, pressure, vacuum suction, gas sampling, medical devices, and pneumatic modules.",
+    check: "Useful flow after tubing, filter, valve, and enclosure losses.",
+    next: "Compare BD-01 to BD-04 ranges, then send medium, voltage, flow, pressure, vacuum, and duty cycle."
+  },
+  vacuum: {
+    title: "Miniature Vacuum Pumps",
+    product: "BD-01/02/03/04 Diaphragm Air Pumps",
+    href: "/miniature-vacuum-pump/",
+    body: "Use compact diaphragm or piston vacuum platforms when suction response, vacuum reserve, noise, and space are the main constraints.",
+    check: "Target vacuum at the device inlet, not only at the pump port.",
+    next: "Send filter resistance, tube length, target vacuum, flow, startup load, and enclosure limits."
+  },
+  liquid: {
+    title: "Diaphragm Liquid & Ink Pumps",
+    product: "BD-01W/02W/03W/04W/07W Diaphragm Liquid Pumps",
+    href: "/diaphragm-liquid-pump/",
+    body: "Use self-priming diaphragm liquid pumps for dispensing, ink delivery, water transfer, purification, filling, cleaning, beverage, and laboratory systems.",
+    check: "Liquid chemistry, viscosity, temperature, inlet height, outlet restriction, and dry-start behavior.",
+    next: "Send liquid type, flow, pressure, voltage, material requirement, and leakage control requirement."
+  },
+  gas: {
+    title: "Gas Sampling Pumps",
+    product: "Gas Sample, Medical and Special Pumps",
+    href: "/gas-sampling-pump/",
+    body: "Use stable diaphragm sampling pumps for analyzers, gas detectors, particle counters, environmental monitoring, and portable instruments.",
+    check: "Useful flow under filter loading and sensor path resistance over time.",
+    next: "Send gas path layout, filter resistance, flow target, vacuum target, voltage, duty cycle, and ambient environment."
+  },
+  "high-pressure": {
+    title: "Piston Pumps and Mini Compressors",
+    product: "BD-07/79 Piston Air Pumps",
+    href: "/micro-piston-pump/",
+    body: "Use BD-07, BD-79, or BD-08 platforms when the device needs stronger pressure, stronger vacuum, higher airflow, or compressor-like output.",
+    check: "Continuous pressure, peak pressure, current, heat rise, vibration, and power supply margin.",
+    next: "Send pressure curve, airflow target, duty cycle, enclosure size, noise target, and available power."
+  },
+  medical: {
+    title: "Medical Diaphragm Pump Options",
+    product: "Gas Sample, Medical and Special Pumps",
+    href: "/medical-diaphragm-pump/",
+    body: "Use clean oil-free diaphragm air, vacuum, gas, or selected liquid pump platforms for diagnostics, therapy devices, dental suction, and sample handling.",
+    check: "Device-level noise, material compatibility, contamination control, lifetime, and final enclosure behavior.",
+    next: "Send application, required performance, duty cycle, compliance needs, sample plan, and annual quantity."
+  }
+};
+
+const finderRoutesZh = {
+  air: {
+    ...finderRoutes.air,
+    title: "微型隔膜气泵与真空泵",
+    body: "BD-01 至 BD-04 隔膜平台适用于紧凑型清洁气流、压力、真空吸附、气体采样、医疗设备和气动模块。",
+    check: "优先确认管路、过滤器、阀门和外壳损耗后的有效流量。",
+    next: "先比较 BD-01 至 BD-04 范围，再提供介质、电压、流量、压力、真空和工作周期。"
+  },
+  vacuum: {
+    ...finderRoutes.vacuum,
+    title: "微型真空泵",
+    body: "当重点是吸附响应、真空储备、噪音和空间时，可选择紧凑型隔膜或活塞真空平台。",
+    check: "确认设备入口处的目标真空，而不只是泵口参数。",
+    next: "提供过滤阻力、管路长度、目标真空、流量、启动负载和外壳限制。"
+  },
+  liquid: {
+    ...finderRoutes.liquid,
+    title: "隔膜液泵与墨水泵",
+    body: "自吸隔膜液泵适用于定量、墨水输送、水路转移、净化、灌装、清洗、饮料和实验室系统。",
+    check: "确认液体化学性质、粘度、温度、吸程、出口阻力和干启动情况。",
+    next: "提供液体类型、流量、压力、电压、材料要求和防漏要求。"
+  },
+  gas: {
+    ...finderRoutes.gas,
+    title: "气体采样泵",
+    body: "稳定的隔膜采样泵适用于分析仪、气体检测仪、粒子计数器、环境监测和便携式仪器。",
+    check: "确认过滤器负载和传感器气路阻力变化下的有效流量。",
+    next: "提供气路布局、过滤阻力、流量目标、真空目标、电压、工作周期和环境条件。"
+  },
+  "high-pressure": {
+    ...finderRoutes["high-pressure"],
+    title: "活塞泵与迷你压缩机",
+    body: "当设备需要更强压力、更强真空、更高流量或类似压缩机输出时，可选择 BD-07、BD-79 或 BD-08 平台。",
+    check: "区分连续压力、峰值压力、电流、温升、振动和电源余量。",
+    next: "提供压力曲线、流量目标、工作周期、外壳尺寸、噪音目标和可用功率。"
+  },
+  medical: {
+    ...finderRoutes.medical,
+    title: "医疗隔膜泵选项",
+    body: "诊断、治疗、牙科吸引和样本处理可选择清洁无油的隔膜气泵、真空泵、气体泵或部分液泵平台。",
+    check: "确认整机噪音、材料兼容性、污染控制、寿命和最终外壳表现。",
+    next: "提供应用、性能需求、工作周期、合规要求、样品计划和年用量。"
+  }
+};
+
+const requirementNotes = {
+  compact: "Prioritize package size, useful output at working load, and fitting orientation.",
+  "low-noise": "Plan soft mounting, silencers, voltage stability, tubing size, and final-enclosure testing.",
+  "stable-flow": "Review pulsation, filter resistance, valve loss, tubing route, and control method.",
+  pressure: "Separate peak pressure from continuous pressure and validate heat rise at load.",
+  materials: "Confirm diaphragm, valve, seal, and tubing compatibility with the real medium.",
+  module: "Include tubing, filters, valves, silencers, controllers, flow parts, and mounting needs."
+};
+
+const requirementNotesZh = {
+  compact: "优先评估尺寸、工作负载下的有效输出和接头方向。",
+  "low-noise": "规划软安装、消音器、电压稳定性、管径和最终外壳测试。",
+  "stable-flow": "评估脉动、过滤阻力、阀门损耗、管路路径和控制方式。",
+  pressure: "区分峰值压力和连续压力，并在负载下验证温升。",
+  materials: "确认膜片、阀、密封件和管路与真实介质兼容。",
+  module: "纳入管路、过滤器、阀门、消音器、控制器、流量件和安装需求。"
+};
+
+const updateFinder = () => {
+  if (!finderMedium || !finderTitle) return;
+  const isZh = document.documentElement.lang === "zh-CN";
+  const routeMap = isZh ? finderRoutesZh : finderRoutes;
+  const noteMap = isZh ? requirementNotesZh : requirementNotes;
+  const route = routeMap[finderMedium.value] || routeMap.air;
+  const note = noteMap[finderRequirement?.value] || noteMap.compact;
+  finderTitle.textContent = route.title;
+  finderBody.textContent = route.body;
+  if (finderCheck) finderCheck.textContent = note;
+  if (finderNext) finderNext.textContent = route.next;
+  if (finderLink) finderLink.href = route.href;
+  if (finderRfq) {
+    finderRfq.dataset.product = route.product;
+    finderRfq.dataset.message = `${route.title}: ${route.next}`;
+  }
+};
+
+finderMedium?.addEventListener("change", updateFinder);
+finderRequirement?.addEventListener("change", updateFinder);
+updateFinder();
+
 languageSelect?.addEventListener("change", () => {
   const lang = languageSelect.value;
   localStorage.setItem("jsg-language", lang);
@@ -1555,6 +2193,27 @@ document.querySelectorAll("[data-industry]").forEach((link) => {
     }
   });
 });
+
+const applyFinderRfq = () => {
+  if (productSelect && finderRfq.dataset.product) productSelect.value = finderRfq.dataset.product;
+  const requirements = rfqForm?.elements.requirements;
+  const message = rfqForm?.elements.message;
+  if (requirements && !requirements.value.trim()) requirements.value = finderCheck?.textContent || "";
+  if (message && !message.value.trim()) message.value = finderRfq.dataset.message || "";
+};
+
+finderRfq?.addEventListener("click", applyFinderRfq);
+
+document.addEventListener(
+  "click",
+  (event) => {
+    const target = event.target.closest?.("[data-finder-rfq]");
+    if (!target) return;
+    applyFinderRfq();
+    document.querySelector("#rfq")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  },
+  true
+);
 
 const getFormValue = (name) => (rfqForm?.elements[name]?.value || "").trim();
 

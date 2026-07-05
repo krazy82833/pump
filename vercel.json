@@ -31,18 +31,6 @@
     { "source": "/en", "destination": "/index.html?lang=en" },
     { "source": "/en/", "destination": "/index.html?lang=en" },
     { "source": "/zh", "destination": "/index.html?lang=zh" },
-    { "source": "/zh/", "destination": "/index.html?lang=zh" },
-    { "source": "/fr", "destination": "/index.html?lang=fr" },
-    { "source": "/fr/", "destination": "/index.html?lang=fr" },
-    { "source": "/de", "destination": "/index.html?lang=de" },
-    { "source": "/de/", "destination": "/index.html?lang=de" },
-    { "source": "/id", "destination": "/index.html?lang=id" },
-    { "source": "/id/", "destination": "/index.html?lang=id" },
-    { "source": "/it", "destination": "/index.html?lang=it" },
-    { "source": "/it/", "destination": "/index.html?lang=it" },
-    { "source": "/ko", "destination": "/index.html?lang=ko" },
-    { "source": "/ko/", "destination": "/index.html?lang=ko" },
-    { "source": "/es", "destination": "/index.html?lang=es" },
-    { "source": "/es/", "destination": "/index.html?lang=es" }
+    { "source": "/zh/", "destination": "/index.html?lang=zh" }
   ]
 }
