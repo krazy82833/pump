@@ -365,13 +365,21 @@ const infoPages = [
     title: "Micro Pump FAQ for OEM Buyers",
     description: "Frequently asked questions about JSG micro pump voltage, flow, pressure, vacuum, MOQ, customization, samples, certifications, and RFQ details.",
     h1: "Micro Pump FAQ",
+    faq: true,
     intro: "Common questions from OEM buyers selecting micro air pumps, vacuum pumps, liquid pumps, piston pumps, compressors, and fluid control modules.",
     sections: [
       ["What voltage options are available?", ["Common DC options include 3V, 6V, 12V, and 24V depending on model. Some selected products support other voltage configurations."]],
       ["What information is needed for a recommendation?", ["Please provide medium, flow, pressure or vacuum, voltage, duty cycle, noise target, space limit, environment, and annual quantity."]],
       ["Can JSG customize pumps?", ["Yes. Options can include voltage, motor type, diaphragm material, fittings, tubing, control accessories, and pump plus accessory modules."]],
       ["Can I request samples?", ["Sample support depends on model availability and project requirements. Send the application and target parameters for matching."]],
-      ["Which certifications are supported?", ["JSG works from an ISO 9001:2015 quality foundation and can support CE / RoHS documentation for selected projects."]]
+      ["Which certifications are supported?", ["JSG works from an ISO 9001:2015 quality foundation and can support CE / RoHS documentation for selected projects."]],
+      ["How should I compare flow and pressure data?", ["Compare useful flow at your real working pressure or vacuum, not only free-flow data. Tubing, filters, valves, fittings, altitude, and enclosure layout can change final performance."]],
+      ["Do you provide pump plus accessory modules?", ["Yes. For OEM projects, JSG can match pumps with tubing, filters, check valves, silencers, shock absorbers, PWM controllers, flow meters, and other fluid-control parts."]],
+      ["How do I choose between diaphragm and piston pumps?", ["Use diaphragm pumps for compact air, vacuum, gas, and liquid paths where size and clean operation matter. Use piston pumps when the design needs stronger pressure, stronger vacuum, or higher mechanical output."]],
+      ["How do I reduce micro pump noise?", ["Noise depends on the complete system. Use suitable motor speed, soft mounting, shock absorption, silencers, stable voltage, correct tubing size, and final-enclosure testing."]],
+      ["Can the same pump handle air and liquid?", ["Some diaphragm platforms have air and liquid variants, but materials, valves, sealing, flow, and test standards are different. Confirm the medium before selecting a model."]],
+      ["What affects pump lifetime?", ["Lifetime depends on motor type, load, duty cycle, temperature, medium, pressure or vacuum level, vibration, voltage stability, and whether the pump runs dry or against blocked flow."]],
+      ["What should be tested before mass production?", ["Validate startup current, useful flow, pressure or vacuum, heat rise, noise, vibration, leakage, material compatibility, duty cycle, and lifetime in the final product structure."]]
     ]
   },
   {
@@ -687,6 +695,50 @@ const renderMedia = (items) => `
           </div>
         </section>`;
 
+const getBreadcrumbItems = (page) => {
+  const items = [{ name: "Home", href: "/" }];
+  const modelPage = modelPages.includes(page);
+  const productPage = productPages.includes(page);
+  const blogPage = page.slug.startsWith("blog/");
+  const applicationPage = page.slug.startsWith("applications/");
+
+  if (page.slug === "products") {
+    items.push({ name: "Products", href: "/products/" });
+  } else if (modelPage) {
+    const category = productPages.find((item) => item.slug === page.category);
+    items.push({ name: "Products", href: "/products/" });
+    if (category) items.push({ name: category.h1, href: `/${category.slug}/` });
+    items.push({ name: page.h1, href: `/${page.slug}/` });
+  } else if (productPage) {
+    items.push({ name: "Products", href: "/products/" }, { name: page.h1, href: `/${page.slug}/` });
+  } else if (page.slug === "blog") {
+    items.push({ name: "Blog", href: "/blog/" });
+  } else if (blogPage) {
+    items.push({ name: "Blog", href: "/blog/" }, { name: page.h1, href: `/${page.slug}/` });
+  } else if (page.slug === "applications") {
+    items.push({ name: "Applications", href: "/applications/" });
+  } else if (applicationPage) {
+    items.push({ name: "Applications", href: "/applications/" }, { name: page.h1, href: `/${page.slug}/` });
+  } else {
+    items.push({ name: page.h1, href: `/${page.slug}/` });
+  }
+  return items;
+};
+
+const renderBreadcrumbs = (page) => {
+  const items = getBreadcrumbItems(page);
+  return `<nav class="breadcrumbs" aria-label="Breadcrumb">
+        ${items
+          .map((item, index) => {
+            const label = escapeHtml(item.name);
+            return index === items.length - 1
+              ? `<span aria-current="page">${label}</span>`
+              : `<a href="${item.href}">${label}</a><span class="crumb-separator">/</span>`;
+          })
+          .join("")}
+      </nav>`;
+};
+
 const renderSections = (page) => {
   const blocks = [];
   if (page.range) {
@@ -724,7 +776,8 @@ const renderPage = (page) => {
   const isProduct = productPages.includes(page) || modelPages.includes(page);
   const isBlog = page.slug.startsWith("blog/");
   const canonical = `${siteUrl}/${page.slug}/`;
-  const structuredData = {
+  const breadcrumbItems = getBreadcrumbItems(page);
+  const pageSchema = {
     "@context": "https://schema.org",
     "@type": isProduct ? "Product" : isBlog ? "Article" : "WebPage",
     name: page.h1,
@@ -738,6 +791,31 @@ const renderPage = (page) => {
       email: "info@jsgpump.com"
     }
   };
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: breadcrumbItems.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: `${siteUrl}${item.href === "/" ? "/" : item.href}`
+    }))
+  };
+  const schemaGraph = [pageSchema, breadcrumbSchema];
+  if (page.faq) {
+    schemaGraph.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: page.sections.map(([question, answers]) => ({
+        "@type": "Question",
+        name: question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: answers.join(" ")
+        }
+      }))
+    });
+  }
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -751,7 +829,7 @@ const renderPage = (page) => {
   ${page.noindex ? '<meta name="robots" content="noindex,follow">' : ""}
   <link rel="canonical" href="${canonical}">
   <link rel="stylesheet" href="/assets/css/styles.css?v=20260705-seo-pages">
-  <script type="application/ld+json">${JSON.stringify(structuredData)}</script>
+  <script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@graph": schemaGraph })}</script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -784,6 +862,7 @@ const renderPage = (page) => {
       </div>
     </section>
     <section class="section page-content">
+      ${renderBreadcrumbs(page)}
       <div class="page-layout">
         <div>
         ${renderSections(page)}
