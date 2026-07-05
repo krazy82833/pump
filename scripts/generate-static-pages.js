@@ -423,6 +423,162 @@ const blogPages = [
   ]
 }));
 
+const applicationPages = [
+  {
+    slug: "applications/medical-equipment",
+    title: "Micro Pumps for Medical Equipment",
+    description: "Micro air pumps, vacuum pumps, liquid pumps, and piston pumps for medical equipment, diagnostics, suction modules, therapy devices, and compact OEM medical systems.",
+    h1: "Micro Pumps for Medical Equipment",
+    intro: "Medical and diagnostic devices need compact pumps with stable output, oil-free operation, low noise, material compatibility, and repeatable OEM supply.",
+    cards: [
+      { title: "Medical Diaphragm Pumps", body: "Air, vacuum, and selected liquid pump platforms for medical and diagnostic equipment.", href: "/medical-diaphragm-pump/" },
+      { title: "BD-01 Micro Diaphragm Air Pump", body: "Low-flow compact pump option for small medical modules and portable devices.", href: "/product/bd-01-micro-diaphragm-air-pump/" },
+      { title: "BD-02 Micro Air and Vacuum Pump", body: "Balanced airflow and size for suction and compact pneumatic paths.", href: "/product/bd-02-micro-air-vacuum-pump/" },
+      { title: "BD-07 Micro Piston Pump", body: "Higher pressure and vacuum reserve for therapy and rehabilitation systems.", href: "/product/bd-07-micro-piston-pump/" }
+    ],
+    sections: [
+      ["Common equipment", ["IVD instruments, therapy devices, dental suction, breast pump modules, gas handling, and compact sample movement systems."]],
+      ["Selection focus", ["Oil-free flow path, acoustic behavior, useful vacuum or pressure, voltage, duty cycle, material compatibility, lifetime target, and final enclosure validation."]],
+      ["RFQ details", ["Provide device type, medium, target flow, pressure or vacuum, duty cycle, noise target, voltage, size limit, and expected annual quantity."]]
+    ]
+  },
+  {
+    slug: "applications/gas-sampling",
+    title: "Gas Sampling Pump Applications",
+    description: "Micro vacuum and gas sampling pump solutions for analyzers, environmental monitoring, particle counters, portable detectors, and laboratory sampling systems.",
+    h1: "Gas Sampling Pump Applications",
+    intro: "Gas sampling systems require stable useful flow against filters, tubing, sensors, and changing pressure loss over the life of the device.",
+    cards: [
+      { title: "Gas Sampling Pumps", body: "Pump category page for monitoring and analytical sampling paths.", href: "/gas-sampling-pump/" },
+      { title: "Miniature Vacuum Pumps", body: "Compact vacuum platforms for suction and sampling.", href: "/miniature-vacuum-pump/" },
+      { title: "BD-03 Diaphragm Air Pump", body: "Medium-flow diaphragm platform for stable sampling paths.", href: "/product/bd-03-diaphragm-air-pump/" },
+      { title: "BD-04 High Flow Diaphragm Air Pump", body: "Higher-flow option when filters and tubing add resistance.", href: "/product/bd-04-high-flow-diaphragm-pump/" }
+    ],
+    sections: [
+      ["Common equipment", ["Gas analyzers, environmental monitors, particle counters, portable detectors, laboratory sampling modules, and medical analysis devices."]],
+      ["Selection focus", ["Useful flow at the sensor path, vacuum margin, filter loading over time, gas compatibility, tubing pressure loss, noise, and lifetime."]],
+      ["RFQ details", ["Provide gas type, flow at working point, vacuum target, filter resistance, tubing length, voltage, duty cycle, and operating environment."]]
+    ]
+  },
+  {
+    slug: "applications/inkjet-printing",
+    title: "Ink Pump Applications for Printing Systems",
+    description: "Compact diaphragm liquid pumps for inkjet printers, coding systems, UV ink circulation, waste ink transfer, and precision fluid-control modules.",
+    h1: "Ink Pump Applications for Printing Systems",
+    intro: "Printing and coding systems need liquid pumps that handle ink chemistry, small flow paths, bubbles, long idle periods, and leak-sensitive layouts.",
+    cards: [
+      { title: "Ink Pumps", body: "Category page for ink transfer and circulation pump selection.", href: "/ink-pump/" },
+      { title: "BD-01W Micro Diaphragm Liquid Pump", body: "Low-flow compact transfer and dosing option.", href: "/product/bd-01w-micro-liquid-pump/" },
+      { title: "BD-02W Mini Diaphragm Liquid Pump", body: "Moderate-flow pump for compact ink and fluid modules.", href: "/product/bd-02w-mini-liquid-pump/" },
+      { title: "Diaphragm Liquid Pumps", body: "Broader liquid pump category for self-priming transfer and dispensing.", href: "/diaphragm-liquid-pump/" }
+    ],
+    sections: [
+      ["Common equipment", ["Inkjet printers, coding systems, UV ink circulation, waste ink transfer, small filling, and OEM fluid supply modules."]],
+      ["Selection focus", ["Ink chemistry, diaphragm and valve material, dry-start behavior, bubble handling, leakage control, tubing diameter, and idle recovery."]],
+      ["RFQ details", ["Provide ink type, viscosity, target flow, inlet height, outlet restriction, voltage, duty cycle, and connector requirements."]]
+    ]
+  },
+  {
+    slug: "applications/water-purifier",
+    title: "Pump Applications for Water Purifier and Beverage Modules",
+    description: "Diaphragm liquid pumps and high pressure liquid pump options for water purifiers, beverage dispensing, compact transfer, and pressure liquid modules.",
+    h1: "Water Purifier and Beverage Pump Applications",
+    intro: "Water and beverage modules often need self-priming liquid transfer, clean routing, stable pressure, compact size, and reliable sealing.",
+    cards: [
+      { title: "Diaphragm Liquid Pumps", body: "Liquid pump category for water transfer, dispensing, and compact modules.", href: "/diaphragm-liquid-pump/" },
+      { title: "BD-04W Diaphragm Liquid Pump", body: "Higher-flow compact liquid transfer platform.", href: "/product/bd-04w-diaphragm-liquid-pump/" },
+      { title: "BD-07W High Pressure Liquid Pump", body: "High-pressure option for water purifier and pressure modules.", href: "/product/bd-07w-high-pressure-liquid-pump/" },
+      { title: "Pump Accessories and Controls", body: "Tubing, valves, filters, silencers, and module parts.", href: "/pump-accessories/" }
+    ],
+    sections: [
+      ["Common equipment", ["Water purifiers, beverage dispensing systems, cleaning devices, compact water transfer modules, and small filling systems."]],
+      ["Selection focus", ["Required pressure, useful flow, self-priming height, seal reliability, food-contact planning, tubing loss, and service interval."]],
+      ["RFQ details", ["Provide liquid type, flow, pressure, inlet height, tubing layout, voltage, duty cycle, and expected annual quantity."]]
+    ]
+  },
+  {
+    slug: "applications/beauty-aesthetic-equipment",
+    title: "Micro Pumps for Beauty and Aesthetic Equipment",
+    description: "Micro vacuum pumps, air pumps, liquid pumps, and piston pumps for beauty equipment, aesthetic devices, suction modules, pressure systems, and liquid handling.",
+    h1: "Micro Pumps for Beauty and Aesthetic Equipment",
+    intro: "Beauty devices often combine compact suction, controlled pressure, liquid handling, low noise, and pleasant device-level acoustic behavior.",
+    cards: [
+      { title: "Miniature Vacuum Pumps", body: "Compact vacuum options for suction and aesthetic treatment devices.", href: "/miniature-vacuum-pump/" },
+      { title: "Micro Diaphragm Air Pumps", body: "Clean airflow and vacuum platforms for compact modules.", href: "/micro-diaphragm-air-pump/" },
+      { title: "BD-04 High Flow Diaphragm Air Pump", body: "Stronger vacuum and airflow option for suction devices.", href: "/product/bd-04-high-flow-diaphragm-pump/" },
+      { title: "BD-07 Micro Piston Pump", body: "High pressure and strong suction platform for demanding devices.", href: "/product/bd-07-micro-piston-pump/" }
+    ],
+    sections: [
+      ["Common equipment", ["Vacuum suction instruments, skin care devices, pressure massage systems, liquid delivery modules, and compact aesthetic treatment equipment."]],
+      ["Selection focus", ["Noise, vibration, suction feel, pressure stability, duty cycle, device enclosure resonance, tubing layout, and accessory matching."]],
+      ["RFQ details", ["Provide suction or pressure target, flow, voltage, noise requirement, treatment mode, duty cycle, and installation space."]]
+    ]
+  },
+  {
+    slug: "applications/automation-robotics",
+    title: "Micro Pump Applications for Automation and Robotics",
+    description: "Micro air pumps, vacuum pumps, piston pumps, compressors, and accessory modules for automation, robotics, vacuum handling, compact pneumatic systems, and tools.",
+    h1: "Micro Pump Applications for Automation and Robotics",
+    intro: "Automation and robotics systems need compact pumps that fit limited space while providing reliable pressure, vacuum, response, and controllable operation.",
+    cards: [
+      { title: "Micro Piston Pumps", body: "High-pressure and strong vacuum options for compact automation.", href: "/micro-piston-pump/" },
+      { title: "Mini Compressors", body: "Higher airflow and pressure modules for compact systems.", href: "/mini-compressor/" },
+      { title: "BD-79 High Pressure Piston Pump", body: "Strong output piston platform for pressure and suction systems.", href: "/product/bd-79-high-pressure-piston-pump/" },
+      { title: "BD-08 Mini Compressor", body: "High-flow compressor option for compact pressure modules.", href: "/product/bd-08-mini-compressor/" }
+    ],
+    sections: [
+      ["Common equipment", ["Vacuum handling, compact pneumatic grippers, robotics modules, portable tools, automation fixtures, and pressure or suction subsystems."]],
+      ["Selection focus", ["Response time, useful vacuum or pressure, duty cycle, heat rise, vibration, mounting, power supply margin, and control method."]],
+      ["RFQ details", ["Provide operating cycle, target pressure or vacuum, flow, voltage, load startup condition, enclosure size, and control requirement."]]
+    ]
+  },
+  {
+    slug: "applications/environmental-monitoring",
+    title: "Micro Pumps for Environmental Monitoring",
+    description: "Gas sampling pumps, vacuum pumps, diaphragm air pumps, and compact modules for environmental monitoring, analyzers, portable detectors, and sampling devices.",
+    h1: "Micro Pumps for Environmental Monitoring",
+    intro: "Environmental monitoring equipment needs stable sampling flow, reliable vacuum, long-life operation, and resistance planning for filters and tubing.",
+    cards: [
+      { title: "Gas Sampling Pumps", body: "Pump category for analyzers and monitoring systems.", href: "/gas-sampling-pump/" },
+      { title: "Miniature Vacuum Pumps", body: "Compact suction platforms for portable monitoring devices.", href: "/miniature-vacuum-pump/" },
+      { title: "BD-03 Diaphragm Air Pump", body: "Medium-flow sampling and airflow platform.", href: "/product/bd-03-diaphragm-air-pump/" },
+      { title: "BD-04 High Flow Diaphragm Air Pump", body: "Higher-flow reserve for stronger sampling paths.", href: "/product/bd-04-high-flow-diaphragm-pump/" }
+    ],
+    sections: [
+      ["Common equipment", ["Air quality monitors, gas detectors, particle counters, portable analyzers, environmental sampling devices, and laboratory monitoring systems."]],
+      ["Selection focus", ["Useful flow under filter resistance, gas compatibility, vacuum reserve, battery or DC power limits, duty cycle, noise, and life test conditions."]],
+      ["RFQ details", ["Provide gas path layout, filter resistance, flow target, vacuum target, voltage, duty cycle, ambient environment, and quantity."]]
+    ]
+  },
+  {
+    slug: "applications/laboratory-analytical-instruments",
+    title: "Micro Pumps for Laboratory and Analytical Instruments",
+    description: "Micro air, vacuum, gas sampling, and liquid pump options for laboratory instruments, analytical devices, dosing, sample movement, and compact fluid control.",
+    h1: "Micro Pumps for Laboratory and Analytical Instruments",
+    intro: "Laboratory and analytical instruments need controlled flow paths, clean movement of gas or liquid, compact integration, and repeatable output.",
+    cards: [
+      { title: "Gas Sampling Pumps", body: "Stable gas movement for analytical and sampling instruments.", href: "/gas-sampling-pump/" },
+      { title: "Diaphragm Liquid Pumps", body: "Self-priming liquid transfer and dosing options.", href: "/diaphragm-liquid-pump/" },
+      { title: "BD-01W Micro Diaphragm Liquid Pump", body: "Compact low-flow liquid transfer and dosing platform.", href: "/product/bd-01w-micro-liquid-pump/" },
+      { title: "BD-02 Micro Air and Vacuum Pump", body: "Compact air and vacuum platform for instrument modules.", href: "/product/bd-02-micro-air-vacuum-pump/" }
+    ],
+    sections: [
+      ["Common equipment", ["Analytical instruments, laboratory dosing, sample movement, compact gas paths, low-flow liquid handling, and small automation modules."]],
+      ["Selection focus", ["Flow stability, material compatibility, contamination control, pulse behavior, tubing loss, acoustic behavior, and service life."]],
+      ["RFQ details", ["Provide medium, chemical properties, target flow, pressure or vacuum, acceptable pulsation, voltage, duty cycle, and space limit."]]
+    ]
+  }
+];
+
+const applicationsIndex = infoPages.find((page) => page.slug === "applications");
+if (applicationsIndex) {
+  applicationsIndex.cards = applicationPages.map((page) => ({
+    title: page.h1,
+    body: page.description,
+    href: `/${page.slug}/`
+  }));
+}
+
 productPages.forEach((page) => {
   const matches = modelPages.filter((model) => model.category === page.slug);
   if (!matches.length) return;
@@ -466,7 +622,7 @@ const overviewPages = [
   }
 ];
 
-const allPages = [...overviewPages, ...infoPages, ...productPages, ...modelPages, ...blogPages];
+const allPages = [...overviewPages, ...infoPages, ...applicationPages, ...productPages, ...modelPages, ...blogPages];
 
 const escapeHtml = (value) =>
   String(value)
@@ -480,9 +636,11 @@ const navHtml = (currentSlug) =>
     .map(([label, href]) => {
       const isProductPage = currentSlug === "products" || productPages.some((page) => page.slug === currentSlug);
       const isBlogPage = currentSlug === "blog" || currentSlug.startsWith("blog/");
+      const isApplicationPage = currentSlug === "applications" || currentSlug.startsWith("applications/");
       const active =
         (href === "/products/" && isProductPage) ||
         (href === "/blog/" && isBlogPage) ||
+        (href === "/applications/" && isApplicationPage) ||
         (currentSlug && href === `/${currentSlug}/`);
       return `<a${active ? ' aria-current="page"' : ""} href="${href}">${label}</a>`;
     })
