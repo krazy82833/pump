@@ -349,6 +349,12 @@ const infoPages = [
     description: "Download and request JSG DC Pump catalogs, product selection tables, parameter ranges, and engineering RFQ support for micro pump projects.",
     h1: "Catalog and Selection Downloads",
     intro: "Use this page to request product catalogs, parameter tables, and model-selection support for air, vacuum, liquid, piston, compressor, and accessory products.",
+    media: [
+      ["/assets/img/catalog-diaphragm-air.jpg", "BD diaphragm air pump catalog page"],
+      ["/assets/img/catalog-liquid-pump.jpg", "BD diaphragm liquid pump catalog page"],
+      ["/assets/img/catalog-piston-air.jpg", "BD piston air pump catalog page"],
+      ["/assets/img/catalog-compressor-accessories.jpg", "BD mini compressor and pump accessories catalog page"]
+    ],
     sections: [
       ["Available catalog topics", ["BD-01 to BD-04 diaphragm air and vacuum pump ranges.", "BD liquid pump and BD-07W high-pressure liquid pump ranges.", "BD-07 / BD-79 piston air pump and BD-08 mini compressor ranges.", "Pump accessories: tubing, valves, filters, silencers, shock absorbers, controllers, and flow parts."]],
       ["How to request files", ["Tell us the pump type and application.", "Include voltage, flow, pressure, vacuum, medium, and annual quantity.", "Ask for drawings, performance curves, or matching model suggestions when needed."]]
@@ -508,6 +514,21 @@ const renderCards = (cards) => `
           </div>
         </section>`;
 
+const renderMedia = (items) => `
+        <section class="page-block">
+          <h2>Catalog Preview</h2>
+          <div class="page-media-grid">
+            ${items
+              .map(
+                ([src, alt]) => `<figure class="page-media-card">
+                  <img src="${src}" alt="${escapeHtml(alt)}">
+                  <figcaption>${escapeHtml(alt)}</figcaption>
+                </figure>`
+              )
+              .join("\n            ")}
+          </div>
+        </section>`;
+
 const renderSections = (page) => {
   const blocks = [];
   if (page.range) {
@@ -521,6 +542,9 @@ const renderSections = (page) => {
   }
   if (page.cards) {
     blocks.push(renderCards(page.cards));
+  }
+  if (page.media) {
+    blocks.push(renderMedia(page.media));
   }
   if (page.sections) {
     page.sections.forEach(([heading, items]) => {

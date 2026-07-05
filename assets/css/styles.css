@@ -1187,6 +1187,33 @@ textarea:focus {
   font-size: 14px;
 }
 
+.page-media-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.page-media-card {
+  background: var(--panel-soft);
+  border: 1px solid var(--line);
+  margin: 0;
+  padding: 12px;
+}
+
+.page-media-card img {
+  aspect-ratio: 4 / 3;
+  background: white;
+  object-fit: contain;
+  width: 100%;
+}
+
+.page-media-card figcaption {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+  margin-top: 10px;
+}
+
 .page-aside {
   align-self: start;
   background: var(--navy-950);
@@ -1437,6 +1464,10 @@ textarea:focus {
   }
 
   .page-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-media-grid {
     grid-template-columns: 1fr;
   }
 }
