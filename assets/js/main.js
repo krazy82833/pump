@@ -39,13 +39,13 @@ const english = {
   metaDescription:
     "JSG DC Pump manufactures diaphragm air pumps, vacuum pumps, diaphragm liquid pumps, piston air pumps, mini compressors, accessories, and OEM fluid control modules for global equipment manufacturers.",
   brandSmall: "Micro Pump & Fluid Control",
-  nav: ["Products", "Pump Finder", "Technology", "OEM/ODM", "Blog", "Industries", "About", "Contact"],
-  navCta: "Request a Quote",
-  heroEyebrow: "Application-first micro pump engineering",
-  heroTitle: "Micro Pump Solutions for OEM Fluid Control",
+  nav: ["Products", "Solutions", "Engineering", "Case Studies", "Resources", "About", "Contact"],
+  navCta: "Contact Us",
+  heroEyebrow: "Precision engineering excellence",
+  heroTitle: "Innovative DC Pump Solutions for Global Industries",
   heroLede:
-    "JSG DC Pump helps equipment teams match diaphragm air pumps, vacuum pumps, liquid pumps, piston pumps, mini compressors, accessories, and custom modules by application requirement, medium, pressure, vacuum, flow, duty cycle, and installation space.",
-  heroActions: ["Find a Pump", "Request a Quote", "View Catalog Pages"],
+    "High-performance micro air, vacuum, liquid, piston, compressor, and OEM fluid-control systems engineered for reliability in demanding industrial equipment.",
+  heroActions: ["Explore Products", "Technical Data", "Use Pump Finder"],
   metrics: ["Years pump experience", "Prototype options", "Years global export"],
   trust: [
     "ISO 9001:2015 quality management",
@@ -257,12 +257,12 @@ const copy = {
     metaTitle: "JSG DC Pump | 微型气泵、液泵、活塞泵与压缩机解决方案",
     metaDescription: "JSG DC Pump 生产微型隔膜气泵、真空泵、隔膜液泵、活塞气泵、迷你压缩机、配件和 OEM 流体控制模块。",
     brandSmall: "微型泵与流体控制",
-    nav: ["产品", "选型器", "技术", "OEM/ODM", "博客", "应用", "关于", "联系"],
-    navCta: "获取报价",
-    heroEyebrow: "以应用为起点的微型泵工程选型",
-    heroTitle: "面向 OEM 流体控制的微型泵解决方案",
-    heroLede: "JSG DC Pump 帮助设备团队按应用、介质、压力、真空、流量、工作周期和安装空间匹配隔膜气泵、真空泵、液泵、活塞泵、迷你压缩机、配件和定制模块。",
-    heroActions: ["查找泵型", "获取报价", "查看目录页"],
+    nav: ["产品", "解决方案", "工程技术", "案例研究", "资源", "关于", "联系"],
+    navCta: "联系我们",
+    heroEyebrow: "精密工程实力",
+    heroTitle: "面向全球工业的创新微型泵解决方案",
+    heroLede: "高性能微型气泵、真空泵、液泵、活塞泵、压缩机和 OEM 流体控制系统，面向严苛工业设备的可靠运行设计。",
+    heroActions: ["浏览产品", "技术资料", "使用选型器"],
     metrics: ["年泵行业经验", "种样机选型", "年全球出口"],
     languageLabel: "语言",
     trust: ["ISO 9001:2015 质量管理体系", "可为选定项目支持 CE / RoHS 合规资料", "OBM、ODM 与 OEM 服务模式", "出口韩国、欧洲、美国、日本、东南亚和澳大利亚"],
@@ -997,7 +997,7 @@ const applyLanguage = (lang) => {
   setText(".hero-copy .eyebrow", t.heroEyebrow);
   setText(".hero-copy h1", t.heroTitle);
   setText(".hero-lede", t.heroLede);
-  setTexts(".hero-actions a", t.heroActions);
+  setTexts(".hero .hero-actions a", t.heroActions);
   setTexts(".hero-metrics dd", t.metrics);
   setTexts(".trust-item strong", t.trust);
 
@@ -1140,7 +1140,7 @@ const staticPageLocales = {
   zh: {
     metaSuffix: "JSG DC Pump",
     brandSmall: "微型泵与流体控制",
-    nav: ["首页", "产品", "应用", "博客", "下载", "常见问题", "关于", "联系"],
+    nav: ["产品", "解决方案", "工程技术", "案例研究", "资源", "关于", "联系"],
     navCta: "获取报价",
     languageLabel: "语言",
     primaryCta: "提交工程询价",

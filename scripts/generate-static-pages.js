@@ -5,12 +5,11 @@ const root = path.resolve(__dirname, "..");
 const siteUrl = "https://www.jsgpump.com";
 
 const nav = [
-  ["Home", "/"],
   ["Products", "/products/"],
-  ["Applications", "/applications/"],
-  ["Blog", "/blog/"],
-  ["Download", "/download/"],
-  ["FAQ", "/faq/"],
+  ["Solutions", "/applications/"],
+  ["Engineering", "/blog/"],
+  ["Case Studies", "/case-studies/"],
+  ["Resources", "/download/"],
   ["About", "/about/"],
   ["Contact", "/contact/"]
 ];
@@ -405,6 +404,48 @@ const infoPages = [
     ]
   },
   {
+    slug: "case-studies",
+    title: "Application Case Studies for Micro Pump Integration",
+    description: "Anonymous application case studies for JSG DC Pump micro air pumps, vacuum pumps, liquid pumps, piston pumps, mini compressors, and OEM fluid control modules.",
+    h1: "Application Case Studies",
+    intro: "Review representative integration patterns for medical, gas sampling, water treatment, ink delivery, automation, and compact pressure systems. These examples focus on engineering requirements instead of customer names.",
+    cards: [
+      {
+        title: "Medical diagnostic air path",
+        body: "Compact diaphragm air and vacuum pump selection for stable sampling flow, low noise, clean air path, and repeated startup validation.",
+        href: "/applications/medical-equipment/"
+      },
+      {
+        title: "Gas sampling module",
+        body: "Vacuum pump and filter-path review for useful flow after tubing, sensors, filters, altitude, and enclosure resistance.",
+        href: "/applications/gas-sampling/"
+      },
+      {
+        title: "Water purifier dispensing path",
+        body: "Self-priming diaphragm liquid pump selection for inlet height, valve loss, wetted materials, leakage control, and cleaning cycles.",
+        href: "/applications/water-purifier/"
+      },
+      {
+        title: "Inkjet fluid handling",
+        body: "Small liquid and ink pump integration for flow stability, material compatibility, bubble handling, and compact installation space.",
+        href: "/applications/inkjet-printing/"
+      },
+      {
+        title: "Automation vacuum and pressure module",
+        body: "Pump plus accessory modules for vacuum suction, pneumatic switching, filters, silencers, PWM control, and stable production assembly.",
+        href: "/applications/automation-robotics/"
+      },
+      {
+        title: "Environmental monitoring sample path",
+        body: "Long-life gas movement review for sampling duty cycle, clean path design, vibration control, and field maintenance constraints.",
+        href: "/applications/environmental-monitoring/"
+      }
+    ],
+    sections: [
+      ["How to read these cases", ["Each case is organized by medium, working function, useful flow, pressure or vacuum, duty cycle, noise target, installation space, and accessory requirements.", "Use the linked application pages to compare pump families and prepare RFQ details for sample matching.", "Final selection should be validated in the real product enclosure with tubing, filters, valves, power supply, and startup load included."]]
+    ]
+  },
+  {
     slug: "thank-you",
     title: "Thank You for Your RFQ",
     description: "Thank you for contacting JSG DC Pump. Your RFQ has been received or can be sent directly to info@jsgpump.com.",
@@ -654,10 +695,14 @@ const navHtml = (currentSlug) =>
       const isProductPage = currentSlug === "products" || productPages.some((page) => page.slug === currentSlug);
       const isBlogPage = currentSlug === "blog" || currentSlug.startsWith("blog/");
       const isApplicationPage = currentSlug === "applications" || currentSlug.startsWith("applications/");
+      const isCaseStudiesPage = currentSlug === "case-studies";
+      const isResourcesPage = currentSlug === "download" || currentSlug === "faq";
       const active =
         (href === "/products/" && isProductPage) ||
         (href === "/blog/" && isBlogPage) ||
         (href === "/applications/" && isApplicationPage) ||
+        (href === "/case-studies/" && isCaseStudiesPage) ||
+        (href === "/download/" && isResourcesPage) ||
         (currentSlug && href === `/${currentSlug}/`);
       return `<a${active ? ' aria-current="page"' : ""} href="${href}">${label}</a>`;
     })
@@ -837,7 +882,7 @@ const renderPage = (page) => {
   <meta property="og:type" content="${isBlog ? "article" : "website"}">
   ${page.noindex ? '<meta name="robots" content="noindex,follow">' : ""}
   <link rel="canonical" href="${canonical}">
-  <link rel="stylesheet" href="/assets/css/styles.css?v=20260705-jsg-redesign">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20260709-precision-engineering">
   <script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@graph": schemaGraph })}</script>
 </head>
 <body>
@@ -861,12 +906,19 @@ const renderPage = (page) => {
   <main id="main">
     <section class="page-hero">
       <div class="page-hero-inner">
-        <p class="eyebrow">${isProduct ? "Product category" : isBlog ? "Engineering article" : "JSG DC Pump"}</p>
-        <h1>${escapeHtml(page.h1)}</h1>
-        <p>${escapeHtml(page.intro)}</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="${rfqPath}">Request Engineering Quote</a>
-          <a class="btn btn-secondary" href="/download/">Request Catalog</a>
+        <div class="page-hero-copy">
+          <p class="eyebrow">${isProduct ? "Product category" : isBlog ? "Engineering article" : "JSG DC Pump"}</p>
+          <h1>${escapeHtml(page.h1)}</h1>
+          <p>${escapeHtml(page.intro)}</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="${rfqPath}">Request Engineering Quote</a>
+            <a class="btn btn-secondary" href="/download/">Request Catalog</a>
+          </div>
+        </div>
+        <div class="page-hero-panel" aria-hidden="true">
+          <span>APPLICATION MATCHING</span>
+          <span>OEM MODULES</span>
+          <span>TECHNICAL RFQ</span>
         </div>
       </div>
     </section>
@@ -901,7 +953,7 @@ const renderPage = (page) => {
     </div>
     <div class="footer-bottom"><span>&copy; 2026 Shenzhen Jingsuguang Technology Co., Ltd.</span><a class="deerflow-link" href="https://deerflow.tech" target="_blank" rel="noopener">Created By Deerflow</a></div>
   </footer>
-  <script src="/assets/js/main.js?v=20260705-jsg-redesign-5"></script>
+  <script src="/assets/js/main.js?v=20260709-precision-engineering"></script>
 </body>
 </html>
 `;
