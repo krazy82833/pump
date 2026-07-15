@@ -869,6 +869,24 @@ h3 {
   position: absolute;
 }
 
+.engineering-video-panel {
+  aspect-ratio: 1;
+  min-height: 0;
+  padding: 0;
+}
+
+.engineering-video-panel::before {
+  display: none;
+}
+
+.engineering-video {
+  background: var(--navy-950);
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
 .panel-topline,
 .spec-list,
 .tech-diagram {
@@ -1960,6 +1978,11 @@ textarea:focus {
   .engineering-panel {
     min-height: 440px;
     padding: 22px;
+  }
+
+  .engineering-video-panel {
+    min-height: 0;
+    padding: 0;
   }
 
   .finder-controls,

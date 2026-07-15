@@ -60,6 +60,12 @@ for (const [index, file] of htmlFiles.entries()) {
     if (canonicalUrl.pathname !== expectedPath) errors.push(`${rel}: canonical path ${canonicalUrl.pathname} does not match sitemap ${expectedPath}`);
   }
 
+  for (const hreflang of ["en", "zh-Hans", "x-default"]) {
+    if (!new RegExp(`<link\\s+rel="alternate"\\s+hreflang="${hreflang}"\\s+href="https://www\\.jsgpump\\.com/`, "i").test(html)) {
+      errors.push(`${rel}: missing ${hreflang} alternate link`);
+    }
+  }
+
   const jsonLdBlocks = [...html.matchAll(/<script\s+type="application\/ld\+json">([\s\S]*?)<\/script>/gi)];
   if (!jsonLdBlocks.length) {
     errors.push(`${rel}: missing JSON-LD`);
@@ -73,7 +79,8 @@ for (const [index, file] of htmlFiles.entries()) {
     }
   }
 
-  if (rel !== "index.html" && !/<nav\s+class="breadcrumbs"\s+aria-label="Breadcrumb">/i.test(html)) {
+  const isHomePage = rel === "index.html" || rel === path.join("zh", "index.html");
+  if (!isHomePage && !/<nav\s+class="breadcrumbs"\s+aria-label="Breadcrumb">/i.test(html)) {
     errors.push(`${rel}: missing visible breadcrumbs`);
   }
 

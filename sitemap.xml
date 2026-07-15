@@ -1,51 +1,1173 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.jsgpump.com/</loc><lastmod>2026-07-05</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://www.jsgpump.com/products/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.jsgpump.com/blog/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.jsgpump.com/contact/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.jsgpump.com/about/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.jsgpump.com/download/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.jsgpump.com/faq/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.jsgpump.com/applications/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.jsgpump.com/case-studies/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.jsgpump.com/applications/medical-equipment/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.jsgpump.com/applications/gas-sampling/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.jsgpump.com/applications/inkjet-printing/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.jsgpump.com/applications/water-purifier/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.jsgpump.com/applications/beauty-aesthetic-equipment/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.jsgpump.com/applications/automation-robotics/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.jsgpump.com/applications/environmental-monitoring/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.jsgpump.com/applications/laboratory-analytical-instruments/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.jsgpump.com/micro-diaphragm-air-pump/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.jsgpump.com/miniature-vacuum-pump/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.jsgpump.com/diaphragm-liquid-pump/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.jsgpump.com/micro-piston-pump/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.jsgpump.com/mini-compressor/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.jsgpump.com/gas-sampling-pump/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.jsgpump.com/ink-pump/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.jsgpump.com/medical-diaphragm-pump/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.jsgpump.com/pump-accessories/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.jsgpump.com/product/bd-01-micro-diaphragm-air-pump/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.jsgpump.com/product/bd-02-micro-air-vacuum-pump/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.jsgpump.com/product/bd-03-diaphragm-air-pump/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.jsgpump.com/product/bd-04-high-flow-diaphragm-pump/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.jsgpump.com/product/bd-01w-micro-liquid-pump/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.jsgpump.com/product/bd-02w-mini-liquid-pump/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.jsgpump.com/product/bd-04w-diaphragm-liquid-pump/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.jsgpump.com/product/bd-07w-high-pressure-liquid-pump/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.jsgpump.com/product/bd-07-micro-piston-pump/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.jsgpump.com/product/bd-79-high-pressure-piston-pump/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.jsgpump.com/product/bd-08-mini-compressor/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.jsgpump.com/product/pump-accessory-control-module/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.jsgpump.com/blog/how-to-choose-micro-diaphragm-air-pump/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.jsgpump.com/blog/12v-vs-24v-dc-pump/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.jsgpump.com/blog/brush-vs-brushless-micro-pump/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.jsgpump.com/blog/reduce-micro-pump-noise/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.jsgpump.com/blog/vacuum-pump-for-gas-sampling/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.jsgpump.com/blog/liquid-pump-for-inkjet-printer/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.jsgpump.com/blog/pump-selection-for-medical-device/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.jsgpump.com/blog/mini-compressor-vs-piston-pump/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.jsgpump.com/blog/epdm-vs-fkm-diaphragm/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.jsgpump.com/blog/how-to-write-oem-pump-rfq/</loc><lastmod>2026-07-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.jsgpump.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/products/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/products/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/products/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/products/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/products/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/products/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/products/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/products/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/contact/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/contact/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/contact/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/contact/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/contact/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/contact/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/about/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/about/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/about/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/about/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/download/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/download/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/download/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/download/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/download/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/download/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/download/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/download/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/faq/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/faq/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/faq/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/faq/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/faq/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/faq/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/faq/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/faq/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/applications/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/applications/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/applications/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/applications/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/applications/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/applications/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/applications/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/applications/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/case-studies/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/case-studies/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/case-studies/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/case-studies/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/case-studies/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/case-studies/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/case-studies/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/case-studies/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/applications/medical-equipment/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/applications/medical-equipment/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/applications/medical-equipment/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/applications/medical-equipment/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/applications/medical-equipment/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/applications/medical-equipment/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/applications/medical-equipment/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/applications/medical-equipment/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/applications/gas-sampling/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/applications/gas-sampling/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/applications/gas-sampling/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/applications/gas-sampling/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/applications/gas-sampling/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/applications/gas-sampling/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/applications/gas-sampling/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/applications/gas-sampling/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/applications/inkjet-printing/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/applications/inkjet-printing/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/applications/inkjet-printing/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/applications/inkjet-printing/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/applications/inkjet-printing/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/applications/inkjet-printing/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/applications/inkjet-printing/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/applications/inkjet-printing/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/applications/water-purifier/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/applications/water-purifier/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/applications/water-purifier/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/applications/water-purifier/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/applications/water-purifier/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/applications/water-purifier/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/applications/water-purifier/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/applications/water-purifier/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/applications/beauty-aesthetic-equipment/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/applications/beauty-aesthetic-equipment/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/applications/beauty-aesthetic-equipment/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/applications/beauty-aesthetic-equipment/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/applications/beauty-aesthetic-equipment/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/applications/beauty-aesthetic-equipment/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/applications/beauty-aesthetic-equipment/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/applications/beauty-aesthetic-equipment/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/applications/automation-robotics/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/applications/automation-robotics/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/applications/automation-robotics/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/applications/automation-robotics/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/applications/automation-robotics/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/applications/automation-robotics/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/applications/automation-robotics/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/applications/automation-robotics/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/applications/environmental-monitoring/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/applications/environmental-monitoring/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/applications/environmental-monitoring/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/applications/environmental-monitoring/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/applications/environmental-monitoring/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/applications/environmental-monitoring/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/applications/environmental-monitoring/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/applications/environmental-monitoring/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/applications/laboratory-analytical-instruments/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/applications/laboratory-analytical-instruments/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/applications/laboratory-analytical-instruments/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/applications/laboratory-analytical-instruments/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/applications/laboratory-analytical-instruments/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/applications/laboratory-analytical-instruments/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/applications/laboratory-analytical-instruments/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/applications/laboratory-analytical-instruments/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/micro-diaphragm-air-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/micro-diaphragm-air-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/micro-diaphragm-air-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/micro-diaphragm-air-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/micro-diaphragm-air-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/micro-diaphragm-air-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/micro-diaphragm-air-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/micro-diaphragm-air-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/miniature-vacuum-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/miniature-vacuum-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/miniature-vacuum-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/miniature-vacuum-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/miniature-vacuum-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/miniature-vacuum-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/miniature-vacuum-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/miniature-vacuum-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/diaphragm-liquid-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/diaphragm-liquid-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/diaphragm-liquid-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/diaphragm-liquid-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/diaphragm-liquid-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/diaphragm-liquid-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/diaphragm-liquid-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/diaphragm-liquid-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/micro-piston-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/micro-piston-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/micro-piston-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/micro-piston-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/micro-piston-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/micro-piston-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/micro-piston-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/micro-piston-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/mini-compressor/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/mini-compressor/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/mini-compressor/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/mini-compressor/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/mini-compressor/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/mini-compressor/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/mini-compressor/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/mini-compressor/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/gas-sampling-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/gas-sampling-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/gas-sampling-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/gas-sampling-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/gas-sampling-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/gas-sampling-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/gas-sampling-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/gas-sampling-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/ink-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/ink-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/ink-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/ink-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/ink-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/ink-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/ink-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/ink-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/medical-diaphragm-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/medical-diaphragm-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/medical-diaphragm-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/medical-diaphragm-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/medical-diaphragm-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/medical-diaphragm-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/medical-diaphragm-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/medical-diaphragm-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/pump-accessories/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/pump-accessories/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/pump-accessories/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/pump-accessories/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/pump-accessories/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/pump-accessories/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/pump-accessories/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/pump-accessories/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/product/bd-01-micro-diaphragm-air-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-01-micro-diaphragm-air-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-01-micro-diaphragm-air-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-01-micro-diaphragm-air-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/product/bd-01-micro-diaphragm-air-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-01-micro-diaphragm-air-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-01-micro-diaphragm-air-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-01-micro-diaphragm-air-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/product/bd-02-micro-air-vacuum-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-02-micro-air-vacuum-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-02-micro-air-vacuum-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-02-micro-air-vacuum-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/product/bd-02-micro-air-vacuum-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-02-micro-air-vacuum-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-02-micro-air-vacuum-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-02-micro-air-vacuum-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/product/bd-03-diaphragm-air-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-03-diaphragm-air-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-03-diaphragm-air-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-03-diaphragm-air-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/product/bd-03-diaphragm-air-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-03-diaphragm-air-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-03-diaphragm-air-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-03-diaphragm-air-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/product/bd-04-high-flow-diaphragm-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-04-high-flow-diaphragm-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-04-high-flow-diaphragm-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-04-high-flow-diaphragm-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/product/bd-04-high-flow-diaphragm-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-04-high-flow-diaphragm-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-04-high-flow-diaphragm-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-04-high-flow-diaphragm-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/product/bd-01w-micro-liquid-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-01w-micro-liquid-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-01w-micro-liquid-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-01w-micro-liquid-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/product/bd-01w-micro-liquid-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-01w-micro-liquid-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-01w-micro-liquid-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-01w-micro-liquid-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/product/bd-02w-mini-liquid-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-02w-mini-liquid-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-02w-mini-liquid-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-02w-mini-liquid-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/product/bd-02w-mini-liquid-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-02w-mini-liquid-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-02w-mini-liquid-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-02w-mini-liquid-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/product/bd-04w-diaphragm-liquid-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-04w-diaphragm-liquid-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-04w-diaphragm-liquid-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-04w-diaphragm-liquid-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/product/bd-04w-diaphragm-liquid-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-04w-diaphragm-liquid-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-04w-diaphragm-liquid-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-04w-diaphragm-liquid-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/product/bd-07w-high-pressure-liquid-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-07w-high-pressure-liquid-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-07w-high-pressure-liquid-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-07w-high-pressure-liquid-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/product/bd-07w-high-pressure-liquid-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-07w-high-pressure-liquid-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-07w-high-pressure-liquid-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-07w-high-pressure-liquid-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/product/bd-07-micro-piston-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-07-micro-piston-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-07-micro-piston-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-07-micro-piston-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/product/bd-07-micro-piston-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-07-micro-piston-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-07-micro-piston-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-07-micro-piston-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/product/bd-79-high-pressure-piston-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-79-high-pressure-piston-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-79-high-pressure-piston-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-79-high-pressure-piston-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/product/bd-79-high-pressure-piston-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-79-high-pressure-piston-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-79-high-pressure-piston-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-79-high-pressure-piston-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/product/bd-08-mini-compressor/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-08-mini-compressor/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-08-mini-compressor/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-08-mini-compressor/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/product/bd-08-mini-compressor/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-08-mini-compressor/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-08-mini-compressor/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-08-mini-compressor/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/product/pump-accessory-control-module/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/pump-accessory-control-module/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/pump-accessory-control-module/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/pump-accessory-control-module/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/product/pump-accessory-control-module/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/pump-accessory-control-module/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/pump-accessory-control-module/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/pump-accessory-control-module/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/product/bd-02ab-brushless-air-vacuum-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-02ab-brushless-air-vacuum-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-02ab-brushless-air-vacuum-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-02ab-brushless-air-vacuum-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/product/bd-02ab-brushless-air-vacuum-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-02ab-brushless-air-vacuum-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-02ab-brushless-air-vacuum-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-02ab-brushless-air-vacuum-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/product/bd-03ab-brushless-diaphragm-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-03ab-brushless-diaphragm-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-03ab-brushless-diaphragm-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-03ab-brushless-diaphragm-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/product/bd-03ab-brushless-diaphragm-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-03ab-brushless-diaphragm-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-03ab-brushless-diaphragm-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-03ab-brushless-diaphragm-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/product/bd-04ab-high-flow-brushless-diaphragm-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-04ab-high-flow-brushless-diaphragm-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-04ab-high-flow-brushless-diaphragm-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-04ab-high-flow-brushless-diaphragm-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/product/bd-04ab-high-flow-brushless-diaphragm-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-04ab-high-flow-brushless-diaphragm-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-04ab-high-flow-brushless-diaphragm-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-04ab-high-flow-brushless-diaphragm-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/product/bd-05t0151500b-brushless-mini-diaphragm-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-05t0151500b-brushless-mini-diaphragm-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-05t0151500b-brushless-mini-diaphragm-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-05t0151500b-brushless-mini-diaphragm-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/product/bd-05t0151500b-brushless-mini-diaphragm-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-05t0151500b-brushless-mini-diaphragm-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-05t0151500b-brushless-mini-diaphragm-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-05t0151500b-brushless-mini-diaphragm-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/product/bd-05t067l-small-brushless-diaphragm-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-05t067l-small-brushless-diaphragm-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-05t067l-small-brushless-diaphragm-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-05t067l-small-brushless-diaphragm-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/product/bd-05t067l-small-brushless-diaphragm-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-05t067l-small-brushless-diaphragm-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-05t067l-small-brushless-diaphragm-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-05t067l-small-brushless-diaphragm-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/product/bd-05tvb-dual-head-brushless-vacuum-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-05tvb-dual-head-brushless-vacuum-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-05tvb-dual-head-brushless-vacuum-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-05tvb-dual-head-brushless-vacuum-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/product/bd-05tvb-dual-head-brushless-vacuum-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-05tvb-dual-head-brushless-vacuum-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-05tvb-dual-head-brushless-vacuum-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-05tvb-dual-head-brushless-vacuum-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/product/bd-05t0512l-dual-head-gas-diaphragm-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-05t0512l-dual-head-gas-diaphragm-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-05t0512l-dual-head-gas-diaphragm-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-05t0512l-dual-head-gas-diaphragm-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/product/bd-05t0512l-dual-head-gas-diaphragm-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-05t0512l-dual-head-gas-diaphragm-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-05t0512l-dual-head-gas-diaphragm-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-05t0512l-dual-head-gas-diaphragm-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/product/bd-05tf110w-micro-liquid-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-05tf110w-micro-liquid-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-05tf110w-micro-liquid-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-05tf110w-micro-liquid-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/product/bd-05tf110w-micro-liquid-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-05tf110w-micro-liquid-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-05tf110w-micro-liquid-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-05tf110w-micro-liquid-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/product/bd-05tf600wb-ink-liquid-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-05tf600wb-ink-liquid-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-05tf600wb-ink-liquid-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-05tf600wb-ink-liquid-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/product/bd-05tf600wb-ink-liquid-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-05tf600wb-ink-liquid-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-05tf600wb-ink-liquid-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-05tf600wb-ink-liquid-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/product/bd-08ab-d-high-flow-mini-compressor/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-08ab-d-high-flow-mini-compressor/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-08ab-d-high-flow-mini-compressor/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-08ab-d-high-flow-mini-compressor/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/product/bd-08ab-d-high-flow-mini-compressor/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/product/bd-08ab-d-high-flow-mini-compressor/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/product/bd-08ab-d-high-flow-mini-compressor/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/product/bd-08ab-d-high-flow-mini-compressor/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/blog/how-to-choose-micro-diaphragm-air-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/how-to-choose-micro-diaphragm-air-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/how-to-choose-micro-diaphragm-air-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/how-to-choose-micro-diaphragm-air-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/blog/how-to-choose-micro-diaphragm-air-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/how-to-choose-micro-diaphragm-air-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/how-to-choose-micro-diaphragm-air-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/how-to-choose-micro-diaphragm-air-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/blog/12v-vs-24v-dc-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/12v-vs-24v-dc-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/12v-vs-24v-dc-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/12v-vs-24v-dc-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/blog/12v-vs-24v-dc-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/12v-vs-24v-dc-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/12v-vs-24v-dc-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/12v-vs-24v-dc-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/blog/brush-vs-brushless-micro-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/brush-vs-brushless-micro-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/brush-vs-brushless-micro-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/brush-vs-brushless-micro-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/blog/brush-vs-brushless-micro-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/brush-vs-brushless-micro-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/brush-vs-brushless-micro-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/brush-vs-brushless-micro-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/blog/reduce-micro-pump-noise/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/reduce-micro-pump-noise/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/reduce-micro-pump-noise/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/reduce-micro-pump-noise/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/blog/reduce-micro-pump-noise/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/reduce-micro-pump-noise/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/reduce-micro-pump-noise/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/reduce-micro-pump-noise/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/blog/vacuum-pump-for-gas-sampling/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/vacuum-pump-for-gas-sampling/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/vacuum-pump-for-gas-sampling/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/vacuum-pump-for-gas-sampling/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/blog/vacuum-pump-for-gas-sampling/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/vacuum-pump-for-gas-sampling/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/vacuum-pump-for-gas-sampling/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/vacuum-pump-for-gas-sampling/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/blog/liquid-pump-for-inkjet-printer/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/liquid-pump-for-inkjet-printer/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/liquid-pump-for-inkjet-printer/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/liquid-pump-for-inkjet-printer/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/blog/liquid-pump-for-inkjet-printer/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/liquid-pump-for-inkjet-printer/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/liquid-pump-for-inkjet-printer/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/liquid-pump-for-inkjet-printer/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/blog/pump-selection-for-medical-device/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/pump-selection-for-medical-device/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/pump-selection-for-medical-device/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/pump-selection-for-medical-device/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/blog/pump-selection-for-medical-device/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/pump-selection-for-medical-device/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/pump-selection-for-medical-device/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/pump-selection-for-medical-device/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/blog/mini-compressor-vs-piston-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/mini-compressor-vs-piston-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/mini-compressor-vs-piston-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/mini-compressor-vs-piston-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/blog/mini-compressor-vs-piston-pump/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/mini-compressor-vs-piston-pump/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/mini-compressor-vs-piston-pump/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/mini-compressor-vs-piston-pump/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/blog/epdm-vs-fkm-diaphragm/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/epdm-vs-fkm-diaphragm/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/epdm-vs-fkm-diaphragm/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/epdm-vs-fkm-diaphragm/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/blog/epdm-vs-fkm-diaphragm/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/epdm-vs-fkm-diaphragm/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/epdm-vs-fkm-diaphragm/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/epdm-vs-fkm-diaphragm/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/blog/how-to-write-oem-pump-rfq/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/how-to-write-oem-pump-rfq/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/how-to-write-oem-pump-rfq/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/how-to-write-oem-pump-rfq/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/blog/how-to-write-oem-pump-rfq/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/how-to-write-oem-pump-rfq/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/how-to-write-oem-pump-rfq/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/how-to-write-oem-pump-rfq/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/blog/mini-air-compressor-design-trade-offs/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/mini-air-compressor-design-trade-offs/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/mini-air-compressor-design-trade-offs/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/mini-air-compressor-design-trade-offs/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/blog/mini-air-compressor-design-trade-offs/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/mini-air-compressor-design-trade-offs/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/mini-air-compressor-design-trade-offs/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/mini-air-compressor-design-trade-offs/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/blog/micro-vacuum-pump-photoionization-detectors/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/micro-vacuum-pump-photoionization-detectors/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/micro-vacuum-pump-photoionization-detectors/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/micro-vacuum-pump-photoionization-detectors/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/blog/micro-vacuum-pump-photoionization-detectors/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/micro-vacuum-pump-photoionization-detectors/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/micro-vacuum-pump-photoionization-detectors/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/micro-vacuum-pump-photoionization-detectors/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/blog/miniature-air-pump-engineers-requirements/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/miniature-air-pump-engineers-requirements/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/miniature-air-pump-engineers-requirements/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/miniature-air-pump-engineers-requirements/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/blog/miniature-air-pump-engineers-requirements/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/miniature-air-pump-engineers-requirements/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/miniature-air-pump-engineers-requirements/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/miniature-air-pump-engineers-requirements/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/blog/miniature-dual-head-diaphragm-air-pumps-guide/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/miniature-dual-head-diaphragm-air-pumps-guide/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/miniature-dual-head-diaphragm-air-pumps-guide/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/miniature-dual-head-diaphragm-air-pumps-guide/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/blog/miniature-dual-head-diaphragm-air-pumps-guide/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/miniature-dual-head-diaphragm-air-pumps-guide/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/miniature-dual-head-diaphragm-air-pumps-guide/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/miniature-dual-head-diaphragm-air-pumps-guide/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/blog/micro-pump-laboratory-analytical-instruments/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/micro-pump-laboratory-analytical-instruments/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/micro-pump-laboratory-analytical-instruments/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/micro-pump-laboratory-analytical-instruments/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/blog/micro-pump-laboratory-analytical-instruments/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/micro-pump-laboratory-analytical-instruments/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/micro-pump-laboratory-analytical-instruments/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/micro-pump-laboratory-analytical-instruments/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/blog/micro-pumps-robotics-automation/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/micro-pumps-robotics-automation/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/micro-pumps-robotics-automation/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/micro-pumps-robotics-automation/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/blog/micro-pumps-robotics-automation/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/blog/micro-pumps-robotics-automation/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/blog/micro-pumps-robotics-automation/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/blog/micro-pumps-robotics-automation/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/site-map/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/site-map/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/site-map/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/site-map/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.jsgpump.com/zh/site-map/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jsgpump.com/site-map/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.jsgpump.com/zh/site-map/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jsgpump.com/site-map/" />
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>

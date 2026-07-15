@@ -13,6 +13,9 @@ const finderNext = document.querySelector("[data-finder-next]");
 const finderLink = document.querySelector("[data-finder-link]");
 const finderRfq = document.querySelector("[data-finder-rfq]");
 const rfqEmail = "info@jsgpump.com";
+const isStaticPageShell = Boolean(document.querySelector(".page-hero"));
+const initialDocumentTitle = document.title;
+const initialMetaDescription = document.querySelector("meta[name='description']")?.getAttribute("content") || "";
 
 const languages = ["en", "zh"];
 const langAttrs = {
@@ -984,8 +987,13 @@ const applyLanguage = (lang) => {
   const t = copy[active];
 
   document.documentElement.lang = langAttrs[active];
-  document.title = t.metaTitle;
-  document.querySelector("meta[name='description']")?.setAttribute("content", t.metaDescription || english.metaDescription);
+  if (isStaticPageShell) {
+    document.title = initialDocumentTitle;
+    document.querySelector("meta[name='description']")?.setAttribute("content", initialMetaDescription);
+  } else {
+    document.title = t.metaTitle;
+    document.querySelector("meta[name='description']")?.setAttribute("content", t.metaDescription || english.metaDescription);
+  }
   refreshLanguageOptionLabels();
   languageSelect && (languageSelect.value = active);
 
@@ -1892,10 +1900,21 @@ const translateStaticText = (source, locale) => {
   return translated;
 };
 
-const localizeStaticNode = (node, locale, active) => {
+const translateStaticTextExact = (source, locale) => {
+  const text = source.trim();
+  if (!text || !locale) return source;
+  return locale.exact?.[text] || source;
+};
+
+const localizeStaticNode = (node, locale, active, mode = "full") => {
   if (!node || node.closest("script, style")) return;
   if (!node.dataset.i18nSource) node.dataset.i18nSource = node.textContent.trim();
-  node.textContent = active === "en" ? node.dataset.i18nSource : translateStaticText(node.dataset.i18nSource, locale);
+  node.textContent =
+    active === "en"
+      ? node.dataset.i18nSource
+      : mode === "exact"
+        ? translateStaticTextExact(node.dataset.i18nSource, locale)
+        : translateStaticText(node.dataset.i18nSource, locale);
 };
 
 function applyStaticPageLanguage(active) {
@@ -1930,7 +1949,7 @@ function applyStaticPageLanguage(active) {
 
   document
     .querySelectorAll(".page-hero .eyebrow, .page-hero h1, .page-hero p, .page-block h2, .matrix-table th, .matrix-table td, .page-list li, .page-card-link strong, .page-card-link span, .page-media-card figcaption, .page-link-grid a")
-    .forEach((node) => localizeStaticNode(node, locale, active));
+    .forEach((node) => localizeStaticNode(node, locale, active, "exact"));
 
   const h1 = document.querySelector(".page-hero h1")?.textContent.trim();
   if (h1) document.title = `${h1} | ${locale.metaSuffix || "JSG DC Pump"}`;
@@ -2007,14 +2026,6 @@ const detectInitialLanguage = () => {
   const stored = localStorage.getItem("jsg-language");
   if (languages.includes(stored)) return stored;
 
-  const browserLang = (navigator.language || "en").toLowerCase();
-  if (browserLang.startsWith("zh")) return "zh";
-  if (browserLang.startsWith("fr")) return "fr";
-  if (browserLang.startsWith("de")) return "de";
-  if (browserLang.startsWith("id")) return "id";
-  if (browserLang.startsWith("it")) return "it";
-  if (browserLang.startsWith("ko")) return "ko";
-  if (browserLang.startsWith("es")) return "es";
   return "en";
 };
 
@@ -2299,3 +2310,9 @@ const revealObserver = new IntersectionObserver(
 );
 
 document.querySelectorAll(".reveal").forEach((node) => revealObserver.observe(node));
+
+const engineeringVideo = document.querySelector(".engineering-video");
+if (engineeringVideo && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  engineeringVideo.removeAttribute("autoplay");
+  engineeringVideo.pause();
+}
