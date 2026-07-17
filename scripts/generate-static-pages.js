@@ -1111,11 +1111,18 @@ const overviewPages = [
     description: "Browse JSG DC Pump product categories including micro diaphragm air pumps, vacuum pumps, liquid pumps, piston pumps, mini compressors, gas sampling pumps, ink pumps, medical pumps, and accessories.",
     h1: "Micro Pump Product Categories",
     intro: "Start with the product family that matches your medium, pressure, vacuum, flow, duty cycle, and installation space. Each category page includes engineering ranges, typical applications, and RFQ selection notes.",
-    cards: productPages.map((page) => ({
-      title: page.h1,
-      body: page.description,
-      href: `/${page.slug}/`
-    })),
+    cards: [
+      {
+        title: "Product Series & Specifications",
+        body: "Compare JSG air, vacuum, liquid, piston, and compressor series by representative specifications and typical applications.",
+        href: "/product-materials/"
+      },
+      ...productPages.map((page) => ({
+        title: page.h1,
+        body: page.description,
+        href: `/${page.slug}/`
+      }))
+    ],
     sections: [
       ["Model family matrix", [
         "Micro diaphragm air / vacuum: BD-01, BD-02, BD-02AB, BD-03, BD-03AB, BD-04, BD-04AB, BD-05T precision gas variants.",
@@ -1177,6 +1184,7 @@ const escapeHtml = (value) =>
 
 const zhTitleExact = {
   "Micro Pump Product Categories": "微型泵产品分类",
+  "Product Series & Specifications": "产品系列与参数",
   "Micro Pump Engineering Blog": "微型泵工程博客",
   "Micro Pump Applications": "微型泵应用",
   "Application Case Studies": "应用案例",
@@ -1226,6 +1234,7 @@ const zhTitleExact = {
 };
 
 const zhPhrasePairs = [
+  ["Compare JSG air, vacuum, liquid, piston, and compressor series by representative specifications and typical applications.", "对比 JSG 气泵、真空泵、液泵、活塞泵与压缩机系列的代表参数和典型应用。"],
   ["Micro Pump Applications for Automation and Robotics", "自动化与机器人微型泵应用"],
   ["Micro Pumps for Laboratory and Analytical Instruments", "实验室与分析仪器微型泵应用"],
   ["Micro Pumps for Environmental Monitoring", "环境监测微型泵应用"],
@@ -1845,6 +1854,7 @@ const renderRelatedProducts = (locale = "en") => `
 const renderPage = (page, locale = "en") => {
   const isProduct = productPages.includes(page) || modelPages.includes(page);
   const isBlog = page.slug.startsWith("blog/");
+  const isProductsOverview = page.slug === "products";
   const content = locale === "zh" ? localizePageForZh(page) : page;
   const canonical = localizedUrl(page.slug, locale);
   const pageUrl = canonical;
@@ -1955,8 +1965,11 @@ const renderPage = (page, locale = "en") => {
           <h1>${escapeHtml(content.h1)}</h1>
           <p>${escapeHtml(content.intro)}</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="${localizedHref(rfqPath, locale)}">${locale === "zh" ? "提交工程询价" : "Request Engineering Quote"}</a>
-            <a class="btn btn-secondary" href="${localizedHref("/download/", locale)}">${locale === "zh" ? "索取产品目录" : "Request Catalog"}</a>
+            ${isProductsOverview
+              ? `<a class="btn btn-primary" href="${localizedHref("/product-materials/", locale)}">${locale === "zh" ? "查看系列参数" : "View Series Specifications"}</a>
+            <a class="btn btn-secondary" href="${localizedHref(rfqPath, locale)}">${locale === "zh" ? "提交工程询价" : "Request Engineering Quote"}</a>`
+              : `<a class="btn btn-primary" href="${localizedHref(rfqPath, locale)}">${locale === "zh" ? "提交工程询价" : "Request Engineering Quote"}</a>
+            <a class="btn btn-secondary" href="${localizedHref("/download/", locale)}">${locale === "zh" ? "索取产品目录" : "Request Catalog"}</a>`}
           </div>
         </div>
         <div class="page-hero-panel" aria-hidden="true">

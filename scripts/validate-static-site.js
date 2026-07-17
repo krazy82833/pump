@@ -86,6 +86,25 @@ for (const file of publicHtmlFiles) {
   }
 }
 
+const productOverviewCtas = [
+  {
+    rel: path.join("products", "index.html"),
+    primary: '<a class="btn btn-primary" href="/product-materials/">View Series Specifications</a>',
+    secondary: '<a class="btn btn-secondary" href="/#rfq">Request Engineering Quote</a>',
+  },
+  {
+    rel: path.join("zh", "products", "index.html"),
+    primary: '<a class="btn btn-primary" href="/zh/product-materials/">查看系列参数</a>',
+    secondary: '<a class="btn btn-secondary" href="/zh/#rfq">提交工程询价</a>',
+  },
+];
+
+for (const { rel, primary, secondary } of productOverviewCtas) {
+  const html = fs.readFileSync(path.join(root, rel), "utf8");
+  if (!html.includes(primary)) errors.push(`${rel}: product overview primary CTA must open the series specifications page`);
+  if (!html.includes(secondary)) errors.push(`${rel}: product overview secondary CTA must open the matching RFQ section`);
+}
+
 for (const [index, file] of htmlFiles.entries()) {
   const rel = path.relative(root, file);
   const sitemapUrl = sitemapUrls[index];
