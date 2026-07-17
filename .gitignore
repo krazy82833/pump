@@ -1,4 +1,6 @@
 .vercel
+.deploy-cli/
+tmp/
 cloud-mail/
 knf_firecrawl_site_research.md
 remotion-bar-chart/

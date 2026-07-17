@@ -14,6 +14,7 @@ const finderLink = document.querySelector("[data-finder-link]");
 const finderRfq = document.querySelector("[data-finder-rfq]");
 const rfqEmail = "info@jsgpump.com";
 const isStaticPageShell = Boolean(document.querySelector(".page-hero"));
+const isHomePageShell = Boolean(document.querySelector(".hero")) && !isStaticPageShell;
 const initialDocumentTitle = document.title;
 const initialMetaDescription = document.querySelector("meta[name='description']")?.getAttribute("content") || "";
 
@@ -109,6 +110,7 @@ const english = {
       specs: ["PU / silicone tube, check valve, filters", "Silencer, shock absorber, absorbing cotton", "PWM controller, flow meter, solenoid valve"]
     }
   ],
+  productCodes: ["BD AIR", "BD LIQUID", "PISTON", "BD-08", "SPECIAL", "ACCESS"],
   askSpecs: "Ask for Specs",
   matrixHeading: {
     eyebrow: "Series matrix",
@@ -233,6 +235,7 @@ const english = {
   footer: {
     body:
       "A professional micro pump supplier integrating R&D, production, sales, and service for BD-series air, liquid, piston, compressor, accessory, and OEM fluid control products.",
+    companyName: "Shenzhen Jingsuguang Technology Co., Ltd.",
     headings: ["Products", "Applications", "RFQ"],
     links: [
       ["Diaphragm air pumps", "Diaphragm liquid pumps", "Piston air pumps", "Mini compressors"],
@@ -282,18 +285,90 @@ const copy = {
       title: "按介质、压力、真空度、流量、工况和安装空间选型。",
       body: "JSG 产品覆盖空气、真空、气体采样、液体输送、墨水输送、高压活塞平台、紧凑压缩机和完整 OEM 流体控制组件所需配件。"
     },
+    productCards: [
+      {
+        title: "微型隔膜气泵与真空泵",
+        body: "BD-01、BD-02、BD-03 和 BD-04 平台适用于无油洁净空气增压、真空吸附、气体采样、医疗设备和紧凑气动模块。",
+        specs: ["流量：0.3–22 L/min", "压力：0.5–3.5 bar", "真空度：-30 至 -85 kPa"]
+      },
+      {
+        title: "隔膜液泵与墨泵",
+        body: "自吸式隔膜液泵适用于精密分配、墨水输送、液体转移、净化、灌装、清洗、饮料设备和实验室系统。",
+        specs: ["水流量：100 mL/min–1.5 L/min", "BD-07W 压力：最高 10 bar", "膜片：EPDM / FKM"]
+      },
+      {
+        title: "活塞气泵",
+        body: "高压活塞气泵平台适用于医疗、美容、家电、电动工具、自动化和机器人系统。",
+        specs: ["流量：15–45 L/min", "压力：4.5–7 bar", "真空度：-80 至 -85 kPa"]
+      },
+      {
+        title: "迷你压缩机",
+        body: "紧凑型无油压缩机系列适用于康复设备、3D 打印、泡沫清洗、便携工具、环境监测和大流量压力系统。",
+        specs: ["流量：40–80 L/min", "压力：2–7 bar", "功率：60–150W"]
+      },
+      {
+        title: "气体采样、医疗与专用泵",
+        body: "面向 IVD 仪器、气体采样、吸乳器、牙科抽吸、制氧设备、喷墨系统和定制紧凑设备的应用型泵方案。",
+        specs: ["介质：空气、气体、真空、液体、墨水", "电机：有刷、无刷、空心杯可选", "可定制电压、接头和材料"]
+      },
+      {
+        title: "配件与控制组件",
+        body: "用于优化管路洁净度、降低噪音、过滤、调速、减振、流量反馈和气路切换的系统配件。",
+        specs: ["PU / 硅胶管、单向阀、过滤器", "消音器、减振器、吸音棉", "PWM 控制器、流量计、电磁阀"]
+      }
+    ],
+    productCodes: ["BD 气泵", "BD 液泵", "活塞泵", "BD-08 压缩机", "专用泵", "配件"],
     askSpecs: "索取参数",
     matrixHeading: { eyebrow: "系列参数", title: "用于快速初筛的工程参数范围。", body: "这些范围用于前期选型。最终数据取决于电机类型、膜片材料、电压、工作周期、管路、负载启动、海拔、环境温度和测试标准。" },
     matrixHeaders: ["系列", "类型", "流量", "压力", "真空", "功率 / 电压", "备注"],
     catalogHeading: { eyebrow: "目录概览", title: "空气、真空、液体、压力和配件系统的核心产品系列。", body: "在详细 RFQ 前，可先查看核心系列、性能范围和配件类别以完成初步筛选。" },
     technologyHeading: { eyebrow: "技术中心", title: "样品确认前，采购和工程师需要先了解的关键主题。", body: "通过这些入口，从简单型号咨询推进到可量产的泵模块评审。" },
     technologyCards: [["隔膜泵原理", "适用于紧凑 OEM 设备的无油空气、真空、气体和液体路径。"], ["材料兼容性", "EPDM、FKM、液体化学性质、温度、密封和寿命评估。"], ["噪音与振动控制", "安装、消音器、管路、PWM、外壳共振和整机测试。"], ["配件集成", "过滤器、阀门、管路、消音器、控制器和流量反馈，让模块更稳定。"]],
+    catalogCaptions: ["BD-01 至 BD-04 隔膜气泵系列", "BD 液泵系列与 BD-07W 高压液泵", "BD-07 与 BD-79 活塞气泵系列", "BD-08 迷你压缩机与核心配件类别"],
     oem: { ...english.oem, eyebrow: "OEM / ODM / 设备开发", title: "围绕设备约束定制泵模块与集成设备方案。", body: "JSG 支持型号匹配、产品系列定制、样机开发、电压和电机选择、膜片材料选择、气路或液路优化、配件集成，以及基于泵的设备从概念到量产开发。", steps: ["分析应用、介质、压力、真空、流量、电压和负载启动", "选择泵原理、电机类型、过流材料、阀门、管路和接头", "制作样机模块并调校噪音、振动、气流、液路和控制", "验证样品，确定模具或配置，并准备稳定量产"], panelTop: ["开发路径", "泵 / 压缩机 / 模块 / 设备"], specTerms: ["电压", "电机", "膜片", "控制"], specDefs: ["常见 3V 至 24V；部分型号可到 220V", "有刷、无刷、空心杯、罩极电机", "EPDM / FKM 选项", "PWM 控制器、阀件、流量计、传感器选项"] },
+    blogHeading: { eyebrow: "微型泵博客", title: "泵选型、OEM 集成与流体控制设计的工程文章。", body: "提供微型气泵、液泵、活塞泵、迷你压缩机和完整流体控制模块的实用选型说明。" },
+    blogPosts: [
+      ["选型指南", "医疗设备如何选择微型隔膜气泵"],
+      ["液泵选型", "精密分配与净水设备的隔膜液泵选型"],
+      ["压力系统", "活塞气泵与迷你压缩机：压力、流量和工作周期"],
+      ["OEM 集成", "降低 OEM 微型泵模块的噪音与振动"],
+      ["配件", "提升可靠性的泵配件：阀门、管路、过滤器和消音器"]
+    ],
+    blogExcerpts: [
+      "医疗设备通常需要紧凑、无油、低噪音并能在重复工作周期下稳定运行的微型隔膜气泵。",
+      "用于液体分配、净水模块和小型灌装系统时，自吸隔膜液泵需要匹配流量、压力、介质和膜片材料。",
+      "活塞气泵和迷你压缩机都可用于高压空气系统，但并不能在所有 OEM 设计中互相替代。",
+      "低噪音不只是泵本身的参数，还取决于电机、安装结构、管路、外壳共振和气路设计。",
+      "可靠的泵模块不只有泵，配件还会影响流量稳定性、污染风险、启动负载、噪音和维护寿命。"
+    ],
+    blogBodies: [
+      ["应根据流量、真空度、压力、电压、噪音、寿命和安装空间进行选型。", "BD-01 至 BD-04 平台覆盖从低流量采样到较强吸力的紧凑空气与真空需求。", "应测试包括管路、过滤器、阀门和外壳在内的完整气路。", "量产前确认工作周期、环境温度和负载启动条件。"],
+      ["设备需要自吸输送并隔离电机与液体时，可使用隔膜液泵。", "确认粘度、化学性质、吸程、出口阻力以及是否可能干启动。", "根据介质匹配 EPDM 或 FKM 膜片。", "同时验证管径、单向阀、过滤器和防泄漏设计。"],
+      ["活塞气泵和迷你压缩机应按压力、流量、温升、噪音和功率选型。", "BD-07、BD-79 和 BD-08 平台分别覆盖不同的 OEM 压力与流量区间。", "设计时加入泄压阀、减振和声学控制。", "应按实际工作周期测试，不能只依赖额定数据。"],
+      ["整机噪音取决于整个系统，而不只是泵的参数表。", "刚性安装、过细管路、高阻过滤器、不稳定电压和外壳共振都会增加噪音。", "可采用软安装、消音器、稳定 PWM 控制和合适管径。", "应在真实外壳中测量最终产品。"],
+      ["配件会直接影响泵模块量产后的可靠性。", "单向阀、过滤器、消音器、管路、接头、流量计和电磁阀会影响压损、噪音、污染和寿命。", "应尽早确定接头尺寸、过滤需求和控制方式。", "量产前验证完整的泵加配件模块。"]
+    ],
+    readArticle: "阅读文章",
+    company: { eyebrow: "公司能力", title: "集研发、生产、销售和服务于一体的微型泵供应商。", body: "深圳市精塑光科技有限公司专注于微型泵流体产品与解决方案，业务覆盖研发、生产、销售和服务，并具备长期出口经验。产品包括隔膜气泵、液泵、活塞气泵、迷你压缩机、配件和定制模块。", proofs: ["用于选型和定制的微型泵样机", "自有品牌供货及 ODM、OEM 服务模式", "ISO 9001:2015 质量管理基础"] },
     industriesHeading: { eyebrow: "应用行业", title: "适用于对泵稳定性和噪音控制要求高的设备类别。" },
     serviceHeading: { eyebrow: "服务与支持", title: "让工程师用更少沟通完成选型、测试和采购判断。" },
     serviceCards: [["目录和参数资料申请", "查看产品目录页，并申请图纸、性能曲线或型号参数表。"], ["询盘清单", "介质、流量、压力、真空、电压、工作周期、空间、噪音和数量。"], ["应用页面", "医疗、气体采样、喷墨、环保、美容和机器人系统的应用说明。"]],
+    industries: [
+      ["医疗设备", "诊断、治疗、采样"], ["美容仪器", "吸附、压力、液体处理"], ["真空采样", "监测与分析系统"],
+      ["食品与饮料", "分配、灌装、输送"], ["家用电器", "气路与液路模块"], ["电动工具", "紧凑压力系统"],
+      ["自动化与机器人", "空气、真空和控制"], ["清洁与消毒", "液泵和压缩机系统"], ["净水设备", "自吸液泵模块"],
+      ["3D 打印", "迷你压缩机应用"], ["环境监测", "采样与泵寿命控制"], ["科学实验", "精密液体与气体输送"]
+    ],
     rfq: { ...english.rfq, eyebrow: "工程询盘", title: "提交泵需求，获取匹配系列建议。", body: "请提供介质、流量、压力、真空、电压、工作周期、噪音目标、尺寸限制、启动负载、环境，以及需要单泵还是泵加配件模块。", strip: "OEM 和 ODM 泵项目工程选型建议", labels: ["姓名 *", "公司 *", "邮箱 *", "国家 / 地区", "产品类型", "年采购量", "介质 / 流量 / 压力 / 真空 / 电压", "应用说明 *"], quantityPlaceholder: "例如 5,000 件/年", requirementsPlaceholder: "例如 空气，12V，5 L/min，-70 kPa，低噪音", messagePlaceholder: "请说明设备类型、负载启动、环境、尺寸限制和配件需求。", submit: "提交询盘" },
-    footer: { ...english.footer, headings: ["产品", "应用", "询盘"], copyright: "© 2026 深圳市精塑光科技有限公司" },
+    productOptions: ["BD-01/02/03/04 隔膜气泵", "BD-01W/02W/03W/04W/07W 隔膜液泵", "BD-07/79 活塞气泵", "BD-08 迷你压缩机", "气体采样、医疗与专用泵", "泵配件与控制组件"],
+    catalogStrip: ["采购提示", "选型前请明确需求、介质类型、启动负载、使用环境、尺寸限制和测试标准。", "索取产品目录"],
+    footer: {
+      body: "专业微型泵供应商，集研发、生产、销售和服务于一体，覆盖 BD 系列气泵、液泵、活塞泵、压缩机、配件和 OEM 流体控制产品。",
+      companyName: "深圳市精塑光科技有限公司",
+      headings: ["产品", "应用", "询盘"],
+      links: [["隔膜气泵", "隔膜液泵", "活塞气泵", "迷你压缩机"], ["医疗设备", "美容仪器", "液体分配", "自动化"], ["info@jsgpump.com", "提交询盘", "查看产品目录"]],
+      copyright: "© 2026 深圳市精塑光科技有限公司"
+    },
     status: { ...english.status, required: "请先填写所有必填项。", email: "请输入有效的商务邮箱。", sending: "正在发送询盘...", success: "谢谢，您的询盘已发送至 info@jsgpump.com。", serverError: "暂时无法发送询盘，请直接邮件联系 info@jsgpump.com。", commentRequired: "请填写姓名和问题。", commentSuccess: "邮件客户端应已打开并生成内容。", application: "应用：{industry}。请推荐合适的微型泵方案。" }
   },
   fr: {
@@ -990,10 +1065,20 @@ const applyLanguage = (lang) => {
   if (isStaticPageShell) {
     document.title = initialDocumentTitle;
     document.querySelector("meta[name='description']")?.setAttribute("content", initialMetaDescription);
-  } else {
-    document.title = t.metaTitle;
-    document.querySelector("meta[name='description']")?.setAttribute("content", t.metaDescription || english.metaDescription);
+    refreshLanguageOptionLabels();
+    languageSelect && (languageSelect.value = active);
+    applyStaticSharedChrome(active);
+    const canonicalRouteUrl = new URL(window.location.href);
+    if (canonicalRouteUrl.searchParams.has("lang")) {
+      canonicalRouteUrl.searchParams.delete("lang");
+      window.history.replaceState({}, "", canonicalRouteUrl);
+    }
+    window.__activeCopy = t;
+    return;
   }
+
+  document.title = t.metaTitle;
+  document.querySelector("meta[name='description']")?.setAttribute("content", t.metaDescription || english.metaDescription);
   refreshLanguageOptionLabels();
   languageSelect && (languageSelect.value = active);
 
@@ -1024,6 +1109,7 @@ const applyLanguage = (lang) => {
   setText("#products .section-heading p:not(.eyebrow)", t.productsHeading.body);
   document.querySelectorAll(".product-card").forEach((card, index) => {
     const item = t.productCards[index] || english.productCards[index];
+    setTextFrom(card, ".product-code", (t.productCodes || english.productCodes)[index]);
     setTextFrom(card, "h3", item.title);
     setTextFrom(card, "p", item.body);
     card.querySelectorAll("li").forEach((li, liIndex) => {
@@ -1119,6 +1205,7 @@ const applyLanguage = (lang) => {
 
   setTexts(".catalog-strip span, .catalog-strip strong, .catalog-strip a", t.catalogStrip);
   setText(".site-footer p", t.footer.body);
+  setText(".footer-brand small", t.footer.companyName || t.brandSmall);
   setTexts(".site-footer h3", t.footer.headings);
   document.querySelectorAll(".footer-grid > div:not(:first-child)").forEach((col, colIndex) => {
     col.querySelectorAll("a").forEach((link, linkIndex) => {
@@ -1127,6 +1214,15 @@ const applyLanguage = (lang) => {
     });
   });
   setText(".footer-bottom span", t.footer.copyright);
+  if (isHomePageShell) {
+    localizeHomeLinks(active);
+    const canonicalHomeUrl = new URL(window.location.href);
+    if (canonicalHomeUrl.searchParams.has("lang")) {
+      canonicalHomeUrl.pathname = localizedStaticPath(canonicalHomeUrl.pathname, active);
+      canonicalHomeUrl.searchParams.delete("lang");
+      window.history.replaceState({}, "", canonicalHomeUrl);
+    }
+  }
 
   window.__activeCopy = t;
   if (finderMedium) updateFinder();
@@ -2015,12 +2111,84 @@ const renderDcPumpArticles = (lang = document.documentElement.lang === "zh-CN" ?
   container.appendChild(fragment);
 };
 
+const localizedStaticPath = (pathname, lang) => {
+  const segments = pathname.split("/").filter(Boolean);
+  const coreSegments = segments[0] === "zh" ? segments.slice(1) : segments;
+  if (!coreSegments.length) return lang === "zh" ? "/zh/" : "/";
+
+  const prefix = lang === "zh" ? "/zh/" : "/";
+  const fileLikePath = coreSegments.at(-1)?.includes(".");
+  const suffix = pathname.endsWith("/") || !fileLikePath ? "/" : "";
+  return `${prefix}${coreSegments.join("/")}${suffix}`;
+};
+
+const localizeHomeLinks = (lang) => {
+  document.querySelectorAll("a[href]").forEach((link) => {
+    const rawHref = link.getAttribute("href");
+    if (!rawHref || rawHref.startsWith("#") || /^(?:mailto:|tel:|https?:\/\/|\/\/)/i.test(rawHref)) return;
+
+    const url = new URL(rawHref, window.location.origin);
+    if (url.origin !== window.location.origin || url.pathname.startsWith("/api/")) return;
+    url.pathname = localizedStaticPath(url.pathname, lang);
+    link.setAttribute("href", `${url.pathname}${url.search}${url.hash}`);
+  });
+};
+
+const applyStaticSharedChrome = (lang) => {
+  const isZh = lang === "zh";
+  const routeLabels = {
+    "/": isZh ? "首页" : "Home",
+    "/products/": isZh ? "产品" : "Products",
+    "/applications/": isZh ? "应用" : "Applications",
+    "/blog/": isZh ? "工程文章" : "Engineering",
+    "/case-studies/": isZh ? "案例研究" : "Case Studies",
+    "/download/": isZh ? "资料下载" : "Resources",
+    "/about/": isZh ? "关于我们" : "About",
+    "/contact/": isZh ? "联系我们" : "Contact",
+  };
+  const routeFor = (href) => {
+    const pathname = new URL(href, window.location.origin).pathname.replace(/^\/zh(?=\/)/, "");
+    return routeLabels[pathname];
+  };
+
+  setText(".skip-link", isZh ? "跳到主要内容" : "Skip to content");
+  setText("header .brand small", isZh ? "微型泵与流体控制" : "Micro Pump & Fluid Control");
+  setText(".language-select span", isZh ? "语言" : "Language");
+  setText(".nav-cta", isZh ? "提交询价" : "Request a Quote");
+  document.querySelector("header nav")?.setAttribute("aria-label", isZh ? "主导航" : "Primary navigation");
+  document.querySelector("header .brand")?.setAttribute("aria-label", isZh ? "JSG DC Pump 首页" : "JSG DC Pump home");
+  document.querySelector("[data-menu-toggle]")?.setAttribute("aria-label", isZh ? "打开导航" : "Open navigation");
+  languageSelect?.setAttribute("aria-label", isZh ? "选择语言" : "Select language");
+
+  document.querySelectorAll(".nav-links a").forEach((link) => {
+    const label = routeFor(link.getAttribute("href") || "");
+    if (label) link.textContent = label;
+  });
+  document.querySelectorAll(".breadcrumbs a").forEach((link) => {
+    const label = routeFor(link.getAttribute("href") || "");
+    if (label) link.textContent = label;
+  });
+  document.querySelector(".breadcrumbs")?.setAttribute("aria-label", isZh ? "面包屑导航" : "Breadcrumb");
+
+  setText(".footer-brand small", isZh ? "深圳市精塑光科技有限公司" : "Shenzhen Jingsuguang Technology Co., Ltd.");
+  setText(".footer-bottom span", isZh ? "© 2026 深圳市精塑光科技有限公司" : "© 2026 Shenzhen Jingsuguang Technology Co., Ltd.");
+};
+
 const detectInitialLanguage = () => {
+  const pathLang = window.location.pathname.split("/").filter(Boolean)[0];
   const params = new URLSearchParams(window.location.search);
   const queryLang = params.get("lang");
+  if (isStaticPageShell) {
+    if (pathLang === "zh") return "zh";
+    return document.documentElement.lang.toLowerCase().startsWith("zh") ? "zh" : "en";
+  }
+  if (isHomePageShell) {
+    if (languages.includes(queryLang)) return queryLang;
+    return pathLang === "zh" ? "zh" : "en";
+  }
+
   if (languages.includes(queryLang)) return queryLang;
 
-  const pathLang = window.location.pathname.split("/").filter(Boolean)[0];
   if (languages.includes(pathLang)) return pathLang;
 
   const stored = localStorage.getItem("jsg-language");
@@ -2180,6 +2348,15 @@ updateFinder();
 languageSelect?.addEventListener("change", () => {
   const lang = languageSelect.value;
   localStorage.setItem("jsg-language", lang);
+
+  if (isStaticPageShell || isHomePageShell) {
+    const url = new URL(window.location.href);
+    url.pathname = localizedStaticPath(url.pathname, lang);
+    url.searchParams.delete("lang");
+    window.location.href = url.toString();
+    return;
+  }
+
   applyLanguage(lang);
   const url = new URL(window.location.href);
   url.searchParams.set("lang", lang);
@@ -2282,7 +2459,8 @@ rfqForm?.addEventListener("submit", async (event) => {
     rfqForm.classList.add("is-submitted");
     rfqForm.reset();
     window.setTimeout(() => {
-      window.location.href = "/thank-you/";
+      const activeLang = document.documentElement.lang.toLowerCase().startsWith("zh") ? "zh" : "en";
+      window.location.href = localizedStaticPath("/thank-you/", activeLang);
     }, 700);
   } catch (error) {
     formStatus.textContent = status.serverError;

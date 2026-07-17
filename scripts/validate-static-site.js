@@ -3,6 +3,8 @@ const path = require("path");
 
 const root = path.resolve(__dirname, "..");
 const siteUrl = "https://www.jsgpump.com";
+const mainScriptVersion = "/assets/js/main.js?v=20260717-bilingual-site-4";
+const styleVersion = "/assets/css/styles.css?v=20260717-control-heights-2";
 
 const existsForPath = (href) => {
   const clean = href.split("#")[0].split("?")[0];
@@ -24,6 +26,14 @@ const htmlFiles = sitemapUrls.map((href) => {
 
 const errors = [];
 const seenSitemapUrls = new Set();
+const sitemapPaths = new Set(sitemapUrls.map((href) => new URL(href).pathname));
+
+const bilingualPathsFor = (pathname) => {
+  const isChinese = pathname === "/zh/" || pathname.startsWith("/zh/");
+  const english = isChinese ? pathname.replace(/^\/zh(?=\/)/, "") : pathname;
+  const chinese = english === "/" ? "/zh/" : `/zh${english}`;
+  return { english, chinese };
+};
 
 for (const href of sitemapUrls) {
   if (seenSitemapUrls.has(href)) errors.push(`sitemap.xml: duplicate URL ${href}`);
@@ -33,6 +43,47 @@ for (const href of sitemapUrls) {
 
 if (!/Sitemap:\s*https:\/\/www\.jsgpump\.com\/sitemap\.xml/i.test(fs.readFileSync(path.join(root, "robots.txt"), "utf8"))) {
   errors.push("robots.txt: missing sitemap declaration");
+}
+
+const publicHtmlFiles = [...new Set([
+  ...htmlFiles,
+  path.join(root, "404.html"),
+  path.join(root, "zh", "404.html"),
+  path.join(root, "thank-you", "index.html"),
+  path.join(root, "zh", "thank-you", "index.html"),
+])];
+
+for (const file of publicHtmlFiles) {
+  const rel = path.relative(root, file);
+  const html = fs.readFileSync(file, "utf8");
+  const isChineseFile = rel.startsWith(`zh${path.sep}`);
+  const partnerRel = isChineseFile ? rel.slice(3) : path.join("zh", rel);
+  const expectedLang = isChineseFile ? "zh-CN" : "en";
+  const documentLang = html.match(/<html\b[^>]*\blang="([^"]+)"/i)?.[1];
+
+  if (!fs.existsSync(path.join(root, partnerRel))) errors.push(`${rel}: missing bilingual partner ${partnerRel}`);
+  if (!html.includes("data-language-select")) errors.push(`${rel}: missing language selector`);
+  if (!html.includes(mainScriptVersion)) errors.push(`${rel}: missing current bilingual script ${mainScriptVersion}`);
+  if (!html.includes(styleVersion)) errors.push(`${rel}: missing current shared stylesheet ${styleVersion}`);
+  if (documentLang !== expectedLang) errors.push(`${rel}: html lang must be ${expectedLang}, found ${documentLang || "missing"}`);
+
+  if (isChineseFile) {
+    const forbiddenChineseShellText = [
+      ">Skip to content<",
+      'aria-label="Primary navigation"',
+      'aria-label="Open navigation"',
+      'aria-label="Select language"',
+      ">Request a Quote<",
+      ">BD AIR<",
+      ">BD LIQUID<",
+      ">PISTON<",
+      ">SPECIAL<",
+      ">ACCESS<",
+    ];
+    forbiddenChineseShellText.forEach((token) => {
+      if (html.includes(token)) errors.push(`${rel}: untranslated Chinese-page shell token ${token}`);
+    });
+  }
 }
 
 for (const [index, file] of htmlFiles.entries()) {
@@ -46,6 +97,14 @@ for (const [index, file] of htmlFiles.entries()) {
   }
 
   const html = fs.readFileSync(file, "utf8");
+  const { english: englishPath, chinese: chinesePath } = bilingualPathsFor(expectedPath);
+
+  if (!sitemapPaths.has(englishPath)) errors.push(`${rel}: missing English sitemap partner ${englishPath}`);
+  if (!sitemapPaths.has(chinesePath)) errors.push(`${rel}: missing Chinese sitemap partner ${chinesePath}`);
+
+  const documentLang = html.match(/<html\b[^>]*\blang="([^"]+)"/i)?.[1];
+  const expectedLang = expectedPath === "/zh/" || expectedPath.startsWith("/zh/") ? "zh-CN" : "en";
+  if (documentLang !== expectedLang) errors.push(`${rel}: html lang must be ${expectedLang}, found ${documentLang || "missing"}`);
 
   if (!/<title>[^<]{12,}<\/title>/i.test(html)) errors.push(`${rel}: missing or weak title`);
   if (!/<meta\s+name="description"\s+content="[^"]{50,}"/i.test(html)) errors.push(`${rel}: missing or weak meta description`);
@@ -60,9 +119,20 @@ for (const [index, file] of htmlFiles.entries()) {
     if (canonicalUrl.pathname !== expectedPath) errors.push(`${rel}: canonical path ${canonicalUrl.pathname} does not match sitemap ${expectedPath}`);
   }
 
-  for (const hreflang of ["en", "zh-Hans", "x-default"]) {
-    if (!new RegExp(`<link\\s+rel="alternate"\\s+hreflang="${hreflang}"\\s+href="https://www\\.jsgpump\\.com/`, "i").test(html)) {
+  const expectedAlternates = {
+    en: englishPath,
+    "zh-Hans": chinesePath,
+    "x-default": englishPath,
+  };
+  for (const [hreflang, alternatePath] of Object.entries(expectedAlternates)) {
+    const alternate = html.match(new RegExp(`<link\\s+rel="alternate"\\s+hreflang="${hreflang}"\\s+href="([^"]+)"`, "i"));
+    if (!alternate) {
       errors.push(`${rel}: missing ${hreflang} alternate link`);
+      continue;
+    }
+    const alternateUrl = new URL(alternate[1]);
+    if (alternateUrl.origin !== siteUrl || alternateUrl.pathname !== alternatePath) {
+      errors.push(`${rel}: ${hreflang} alternate must be ${siteUrl}${alternatePath}`);
     }
   }
 
@@ -80,7 +150,7 @@ for (const [index, file] of htmlFiles.entries()) {
   }
 
   const isHomePage = rel === "index.html" || rel === path.join("zh", "index.html");
-  if (!isHomePage && !/<nav\s+class="breadcrumbs"\s+aria-label="Breadcrumb">/i.test(html)) {
+  if (!isHomePage && !/<nav\s+class="breadcrumbs"\s+aria-label="[^"]+">/i.test(html)) {
     errors.push(`${rel}: missing visible breadcrumbs`);
   }
 
@@ -113,4 +183,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`Validated ${htmlFiles.length} HTML files.`);
+console.log(`Validated ${htmlFiles.length} sitemap HTML files and ${publicHtmlFiles.length} bilingual public HTML files.`);

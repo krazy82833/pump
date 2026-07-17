@@ -44,12 +44,11 @@ const alternateLinks = (slug, canonical, locale = "en") => `
   <link rel="alternate" hreflang="zh-Hans" href="${localizedUrl(slug, "zh")}">
   <link rel="alternate" hreflang="x-default" href="${localizedUrl(slug, "en")}">`;
 
-const languageSelectHtml = `
+const languageSelectHtml = (locale = "en") => `
         <label class="language-select">
-          <span>Language</span>
-          <select data-language-select aria-label="Select language">
-            <option value="en">EN English</option>
-            <option value="zh">CN 简体中文</option>
+          <span>${locale === "zh" ? "语言" : "Language"}</span>
+          <select data-language-select aria-label="${locale === "zh" ? "选择语言" : "Select language"}">
+            ${locale === "zh" ? '<option value="zh">CN 简体中文</option><option value="en">EN English</option>' : '<option value="en">EN English</option><option value="zh">CN 简体中文</option>'}
           </select>
         </label>`;
 
@@ -1718,7 +1717,8 @@ const navHtml = (currentSlug, locale = "en") =>
         (href === "/case-studies/" && isCaseStudiesPage) ||
         (href === "/download/" && isResourcesPage) ||
         (currentSlug && href === `/${currentSlug}/`);
-      const localizedLabel = locale === "zh" ? zhTitle(label) : label;
+      const zhNavLabels = { "/products/": "产品", "/applications/": "应用", "/blog/": "工程文章", "/case-studies/": "案例研究", "/download/": "资料下载", "/about/": "关于我们", "/contact/": "联系我们" };
+      const localizedLabel = locale === "zh" ? (zhNavLabels[href] || zhTitle(label)) : label;
       return `<a${active ? ' aria-current="page"' : ""} href="${localizedHref(href, locale)}">${localizedLabel}</a>`;
     })
     .join("\n          ");
@@ -1796,10 +1796,11 @@ const getBreadcrumbItems = (page) => {
 
 const renderBreadcrumbs = (page, locale = "en") => {
   const items = getBreadcrumbItems(page);
-  return `<nav class="breadcrumbs" aria-label="Breadcrumb">
+  const zhBreadcrumbLabels = { Home: "首页", Products: "产品", Applications: "应用", Blog: "工程文章", "Case Studies": "案例研究", Download: "资料下载", About: "关于我们", Contact: "联系我们" };
+  return `<nav class="breadcrumbs" aria-label="${locale === "zh" ? "面包屑导航" : "Breadcrumb"}">
         ${items
           .map((item, index) => {
-            const label = escapeHtml(locale === "zh" ? zhTitle(item.name) : item.name);
+            const label = escapeHtml(locale === "zh" ? (zhBreadcrumbLabels[item.name] || zhTitle(item.name)) : item.name);
             return index === items.length - 1
               ? `<span aria-current="page">${label}</span>`
               : `<a href="${localizedHref(item.href, locale)}">${label}</a><span class="crumb-separator">/</span>`;
@@ -1925,25 +1926,25 @@ const renderPage = (page, locale = "en") => {
   ${page.noindex ? '<meta name="robots" content="noindex,follow">' : ""}
   ${alternateLinks(page.slug, canonical, locale)}
   <link rel="icon" href="/assets/img/micro-pump-hero.png" type="image/png">
-  <link rel="stylesheet" href="/assets/css/styles.css?v=20260715-engineering-video-1">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=20260717-control-heights-2">
   <script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@graph": schemaGraph })}</script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main">${locale === "zh" ? "跳到主要内容" : "Skip to content"}</a>
   <header class="site-header" data-header>
-    <nav class="nav-shell" aria-label="Primary navigation">
-      <a class="brand" href="${localizedHref("/", locale)}" aria-label="JSG DC Pump home">
+    <nav class="nav-shell" aria-label="${locale === "zh" ? "主导航" : "Primary navigation"}">
+      <a class="brand" href="${localizedHref("/", locale)}" aria-label="${locale === "zh" ? "JSG DC Pump 首页" : "JSG DC Pump home"}">
         <span class="brand-mark">JG</span>
         <span>
           <strong>JSG DC Pump</strong>
-          <small>Micro Pump & Fluid Control</small>
+          <small>${locale === "zh" ? "微型泵与流体控制" : "Micro Pump & Fluid Control"}</small>
         </span>
       </a>
-      <button class="menu-toggle" type="button" data-menu-toggle aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-label="${locale === "zh" ? "打开导航" : "Open navigation"}" aria-expanded="false"><span></span><span></span></button>
       <div class="nav-links" data-nav-links>
           ${navHtml(page.slug, locale)}
       </div>
-      <div class="nav-actions">${languageSelectHtml}<a class="btn btn-primary nav-cta" href="${localizedHref(rfqPath, locale)}">Request a Quote</a></div>
+      <div class="nav-actions">${languageSelectHtml(locale)}<a class="btn btn-primary nav-cta" href="${localizedHref(rfqPath, locale)}">${locale === "zh" ? "提交询价" : "Request a Quote"}</a></div>
     </nav>
   </header>
   <main id="main">
@@ -1986,7 +1987,7 @@ const renderPage = (page, locale = "en") => {
       <div>
         <a class="brand footer-brand" href="${localizedHref("/", locale)}">
           <span class="brand-mark">JG</span>
-          <span><strong>JSG DC Pump</strong><small>Shenzhen Jingsuguang Technology Co., Ltd.</small></span>
+          <span><strong>JSG DC Pump</strong><small>${locale === "zh" ? "深圳市精塑光科技有限公司" : "Shenzhen Jingsuguang Technology Co., Ltd."}</small></span>
         </a>
         <p>${locale === "zh" ? "JSG DC Pump 是集研发、生产、销售和服务于一体的微型泵供应商，覆盖 BD 系列气泵、液泵、活塞泵、压缩机、配件和 OEM 流体控制产品。" : "A professional micro pump supplier integrating R&D, production, sales, and service for BD-series air, liquid, piston, compressor, accessory, and OEM fluid control products."}</p>
       </div>
@@ -1994,9 +1995,9 @@ const renderPage = (page, locale = "en") => {
       <div><h3>${locale === "zh" ? "资源" : "Resources"}</h3><a href="${localizedHref("/applications/", locale)}">${locale === "zh" ? "应用" : "Applications"}</a><a href="${localizedHref("/download/", locale)}">${locale === "zh" ? "下载" : "Download"}</a><a href="${localizedHref("/faq/", locale)}">FAQ</a><a href="${localizedHref("/blog/", locale)}">${locale === "zh" ? "博客" : "Blog"}</a><a href="${localizedHref("/site-map/", locale)}">${locale === "zh" ? "网站地图" : "Site Map"}</a></div>
       <div><h3>${locale === "zh" ? "联系" : "Contact"}</h3><a href="mailto:info@jsgpump.com">info@jsgpump.com</a><a href="${localizedHref(rfqPath, locale)}">${locale === "zh" ? "提交询价" : "Submit RFQ"}</a><a href="${localizedHref("/contact/", locale)}">${locale === "zh" ? "联系页面" : "Contact page"}</a></div>
     </div>
-    <div class="footer-bottom"><span>&copy; 2026 Shenzhen Jingsuguang Technology Co., Ltd.</span><a class="deerflow-link" href="https://deerflow.tech" target="_blank" rel="noopener">Created By Deerflow</a></div>
+    <div class="footer-bottom"><span>&copy; 2026 ${locale === "zh" ? "深圳市精塑光科技有限公司" : "Shenzhen Jingsuguang Technology Co., Ltd."}</span></div>
   </footer>
-  <script src="/assets/js/main.js?v=20260715-engineering-video-1"></script>
+  <script src="/assets/js/main.js?v=20260717-bilingual-site-4"></script>
 </body>
 </html>
 `;
@@ -2015,6 +2016,11 @@ allPages.forEach((page) => {
 
 const homeAlternateHead = (locale = "en") => alternateLinks("", localizedUrl("", locale), locale);
 
+const homeProductCodes = {
+  en: ["BD AIR", "BD LIQUID", "PISTON", "BD-08", "SPECIAL", "ACCESS"],
+  zh: ["BD 气泵", "BD 液泵", "活塞泵", "BD-08 压缩机", "专用泵", "配件"]
+};
+
 const applyHomeSeo = (html, locale = "en") => {
   let output = html
     .replace(/<html lang="[^"]*">/i, `<html lang="${locale === "zh" ? "zh-CN" : "en"}">`)
@@ -2027,6 +2033,7 @@ const applyHomeSeo = (html, locale = "en") => {
   }
 
   if (locale === "zh") {
+    let productCodeIndex = 0;
     output = output
       .replace(/href="assets\//g, 'href="/assets/')
       .replace(/src="assets\//g, 'src="/assets/')
@@ -2034,7 +2041,9 @@ const applyHomeSeo = (html, locale = "en") => {
       .replace(/href="\/#/g, 'href="/zh/#')
       .replace(/href="\/(?!zh\/|assets\/|api\/|#)([^"#]*)"/g, 'href="/zh/$1"')
       .replace(/href="\/zh\/"/g, 'href="/zh/"')
-      .replace(/href="\/zh\/#rfq"/g, 'href="/zh/#rfq"');
+      .replace(/href="\/zh\/#rfq"/g, 'href="/zh/#rfq"')
+      .replace(/aria-label="Select language"/g, 'aria-label="选择语言"')
+      .replace(/(<span class="product-code">)[^<]*(<\/span>)/g, (_, open, close) => `${open}${homeProductCodes.zh[productCodeIndex++] || "产品系列"}${close}`);
   }
 
   return output;
